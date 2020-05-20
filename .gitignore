@@ -1,0 +1,5 @@
+.DS_Store
+*.vcd
+*.raw
+*.vvp
+a.out
