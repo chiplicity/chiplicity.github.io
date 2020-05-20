@@ -1,0 +1,845 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Open Standards in the Portuguese National Regulation on Digital Interoperability &mdash; Wiser 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Geospatial Data Server" href="GeodataServer.html" />
+    <link rel="prev" title="Database Management System" href="DatabaseManagementSystem.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Wiser
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Using_Forum/index.html">Using Forum or Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Sphinx/index.html">Using the technical documentation generator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Git/index.html">Using the version control system</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Commercial-Off-the-Shelf Software Selection Process</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html">Software selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#factors">Factors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#total-cost-of-ownership">Total Cost of Ownership</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#additional-references">Additional References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProjectManagementInfrastructure.html">Project Management Infrastructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VersionControlSystem.html">Version Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DocumentationGenerator.html">Documentation Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IssueTrackingSystem.html">Issue Tracking System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuestionnaireManagement.html">Questionnaire Management System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebBrowsers_DynamicCharts.html">Dynamic charts on web browser usage statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebMapping_ToolList.html">OSGEO list of webmapping tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html">Web Server and Servlet COntainer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html#rationale">Rationale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html#analysis-of-alternatives">Analysis of alternatives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OperatingSystems.html">Operating Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DatabaseManagementSystem.html">Database Management System</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Open Standards in the Portuguese National Regulation on Digital Interoperability</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#data-formats">Data formats</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#comments">Comments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#table">Table</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#document-formats">Document formats</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Comments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Table</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#web-interface-technologies">Web interface technologies</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Comments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">Table</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#streaming-protocols">Streaming protocols</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id6">Comments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">Table</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#electronic-mail-protocols">Electronic mail protocols</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id8">Comments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">Table</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#geographical-information-systems">Geographical information systems</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id10">Comments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id11">Table</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#communication-protocols">Communication protocols</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id12">Comments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id13">Table</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#network-security">Network security</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id14">Comments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id15">Table</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#data-exchange-and-service-integration-and-orchestration">Data exchange and service integration and orchestration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id16">Comments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id17">Table</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="GeodataServer.html">Geospatial Data Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebMapping.html">Web Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebBrowsers.html">Web Browser</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Notebook/index.html">Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_TaskMan/index.html">Using the issue tracking system</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Wiser</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Commercial-Off-the-Shelf Software Selection Process</a> &raquo;</li>
+        
+      <li>Open Standards in the Portuguese National Regulation on Digital Interoperability</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/On_Software/Z_RNIDOpenStandards.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="open-standards-in-the-portuguese-national-regulation-on-digital-interoperability">
+<span id="pt-open-standards-ref"></span><h1>Open Standards in the Portuguese National Regulation on Digital Interoperability<a class="headerlink" href="#open-standards-in-the-portuguese-national-regulation-on-digital-interoperability" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="data-formats">
+<h2>Data formats<a class="headerlink" href="#data-formats" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="comments">
+<h3>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h3>
+<p>All the listed open standards are recognised as applicable
+to different components of the software solution, except XMPP.</p>
+</div>
+<div class="section" id="table">
+<h3>Table<a class="headerlink" href="#table" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Standard</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+<td><p><strong>Status</strong></p></td>
+<td><p><strong>Deadline</strong></p></td>
+<td><p><strong>Reference</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>SQL</p></td>
+<td><p>Structured Query Language</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://www.w3schools.com/sql/default.asp">http://www.w3schools.com/sql/default.asp</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>PNG</p></td>
+<td><p>Portable Network Graphics</p></td>
+<td><p>Recommended</p></td>
+<td><p>n/a</p></td>
+<td><p><a class="reference external" href="http://www.w3.org/TR/PNG">http://www.w3.org/TR/PNG</a></p></td>
+</tr>
+<tr class="row-even"><td><p>SVG</p></td>
+<td><p>Scalable Vector Graphics</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://www.w3.org/TR/SVG">http://www.w3.org/TR/SVG</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>XML</p></td>
+<td><p>Extensible Markup Language</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://www.w3.org/TR/REC-xml/">http://www.w3.org/TR/REC-xml/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>XSLT 2.0</p></td>
+<td><p>XSL Transformations</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://www.w3.org/TR/xslt20/">http://www.w3.org/TR/xslt20/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>XSD</p></td>
+<td><p>XML Schema Definition</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://www.w3.org/TR/xmlschema-0/">http://www.w3.org/TR/xmlschema-0/</a> <a class="reference external" href="http://www.w3.org/TR/2004/REC-xmlschema-1-20041028/structures.html">http://www.w3.org/TR/2004/REC-xmlschema-1-20041028/structures.html</a>
+<a class="reference external" href="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/datatypes.html">http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/datatypes.html</a></p></td>
+</tr>
+<tr class="row-even"><td><p>XSL 1.1</p></td>
+<td><p>Extensible Stylesheet Language</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://www.w3.org/Style/XSL/">http://www.w3.org/Style/XSL/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>XMPP</p></td>
+<td><p>Extensible Messaging and Presence Protocol</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://xmpp.org/rfcs/rfc6120.html">http://xmpp.org/rfcs/rfc6120.html</a></p></td>
+</tr>
+<tr class="row-even"><td><p>UTF-8</p></td>
+<td><p>8-bit Unicode Transformation Format</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://tools.ietf.org/html/rfc3629">http://tools.ietf.org/html/rfc3629</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="document-formats">
+<h2>Document formats<a class="headerlink" href="#document-formats" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Comments<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>All the listed open standards are recognised as applicable
+to the documentation of the project
+and the file-based data exchange requirements.</p>
+</div>
+<div class="section" id="id2">
+<h3>Table<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Standard</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+<td><p><strong>Status</strong></p></td>
+<td><p><strong>Deadline</strong></p></td>
+<td><p><strong>Reference</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>ODF 1.1</p></td>
+<td><p>Open Document Format v1.1 (Second Edition)</p></td>
+<td><p>Mandatory</p></td>
+<td><p>Publicly Available Documents: 2013.02.06
+Other Documents: 2014.06.01</p></td>
+<td><p><a class="reference external" href="http://docs.oasis-open.org/office/v1.1/OS/OpenDocument-v1.1.pdf">http://docs.oasis-open.org/office/v1.1/OS/OpenDocument-v1.1.pdf</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>PDF 1.7</p></td>
+<td><p>Portable Document Format</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://wwwimages.adobe.com/www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf">http://wwwimages.adobe.com/www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/PDF32000_2008.pdf</a></p></td>
+</tr>
+<tr class="row-even"><td><p>XML 1.0</p></td>
+<td><p>Extensible Markup Language</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://www.w3.org/TR/REC-xml/">http://www.w3.org/TR/REC-xml/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>HTML 4.01</p></td>
+<td><p>Hypertext Markup Language</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://www.w3.org/TR/html401/">http://www.w3.org/TR/html401/</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="web-interface-technologies">
+<h2>Web interface technologies<a class="headerlink" href="#web-interface-technologies" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>Comments<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-todo admonition" id="id4">
+<p class="admonition-title">Todo</p>
+<p>Atom ? RSS ?</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>Table<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Standard</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+<td><p><strong>Status</strong></p></td>
+<td><p><strong>Deadline</strong></p></td>
+<td><p><strong>Reference</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>ATOM 1.0</p></td>
+<td><p>Atom Syndication Format 1.0</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://tools.ietf.org/html/rfc4287">http://tools.ietf.org/html/rfc4287</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>CalDav</p></td>
+<td><p>Calendaring Extensions to web DAV (CalDAV)</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2014.06.01</p></td>
+<td><p><a class="reference external" href="http://tools.ietf.org/html/rfc4791">http://tools.ietf.org/html/rfc4791</a></p></td>
+</tr>
+<tr class="row-even"><td><p>CSS2.1</p></td>
+<td><p>Cascading Style Sheets 2.1</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://www.w3.org/TR/REC-CSS2">http://www.w3.org/TR/REC-CSS2</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>HTML 4.01</p></td>
+<td><p>Hypertext Markup Language</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://www.w3.org/TR/html401/">http://www.w3.org/TR/html401/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>HTTP/1.1</p></td>
+<td><p>Hypertext Transfer Protocol</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://tools.ietf.org/html/rfc2616">http://tools.ietf.org/html/rfc2616</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>HTTPS</p></td>
+<td><p>Hypertext Transfer Protocol Secure</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://tools.ietf.org/html/rfc2818">http://tools.ietf.org/html/rfc2818</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Javascript 1.5</p></td>
+<td><p>Javascript 1.5</p></td>
+<td><p>Recommended</p></td>
+<td><p>n/a</p></td>
+<td><p><a class="reference external" href="http://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-262,%203rd%20edition,%20December%201999.pdf">http://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-262,%203rd%20edition,%20December%201999.pdf</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>WCAG 2.0 – level «A»</p></td>
+<td><p>Web Content Accessibility Guidelines 2.0 – level «A»</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://www.w3.org/TR/WCAG20">http://www.w3.org/TR/WCAG20</a></p></td>
+</tr>
+<tr class="row-even"><td><p>WCAG 2.0 – level «AA»</p></td>
+<td><p>Web Content Accessibility Guidelines 2.0 – level «AA»</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://www.w3.org/TR/WCAG20">http://www.w3.org/TR/WCAG20</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>WCAG 2.0 – level «AA» or «AAA»</p></td>
+<td><p>Web Content Accessibility Guidelines 2.0 – level «AA» or «AAA»</p></td>
+<td><p>Recommended</p></td>
+<td><p>n/a</p></td>
+<td><p><a class="reference external" href="http://www.w3.org/TR/WCAG20">http://www.w3.org/TR/WCAG20</a></p></td>
+</tr>
+<tr class="row-even"><td><p>WCAG 2.0 – level «AAA»</p></td>
+<td><p>Web Content Accessibility Guidelines 2.0 – level «AAA»</p></td>
+<td><p>Recommended</p></td>
+<td><p>n/a</p></td>
+<td><p><a class="reference external" href="http://www.w3.org/TR/WCAG20">http://www.w3.org/TR/WCAG20</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>WebDAV</p></td>
+<td><p>Web Distributed Authoring and Versioning Access Control Protocol</p></td>
+<td><p>Recommended</p></td>
+<td><p>n/a</p></td>
+<td><p><a class="reference external" href="http://tools.ietf.org/html/rfc3744">http://tools.ietf.org/html/rfc3744</a></p></td>
+</tr>
+<tr class="row-even"><td><p>XML 1.0</p></td>
+<td><p>Extensible Markup Language</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://www.w3.org/TR/REC-xml/">http://www.w3.org/TR/REC-xml/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>XSL v1.1</p></td>
+<td><p>XML stylesheet language XSL v1.1</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://www.w3.org/TR/2006/REC-xsl11-20061205">http://www.w3.org/TR/2006/REC-xsl11-20061205</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="streaming-protocols">
+<h2>Streaming protocols<a class="headerlink" href="#streaming-protocols" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h3>Comments<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>Not applicable.</p>
+</div>
+<div class="section" id="id7">
+<h3>Table<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Standard</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+<td><p><strong>Status</strong></p></td>
+<td><p><strong>Deadline</strong></p></td>
+<td><p><strong>Reference</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>RTSP</p></td>
+<td><p>Real Time Streaming Protocol</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://www.ietf.org/rfc/rfc2326.txt">http://www.ietf.org/rfc/rfc2326.txt</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="electronic-mail-protocols">
+<h2>Electronic mail protocols<a class="headerlink" href="#electronic-mail-protocols" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id8">
+<h3>Comments<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>Not directly required. Obligations shall be complied with, where applicable.</p>
+</div>
+<div class="section" id="id9">
+<h3>Table<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Standard</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+<td><p><strong>Status</strong></p></td>
+<td><p><strong>Deadline</strong></p></td>
+<td><p><strong>Reference</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>IMAP 4</p></td>
+<td><p>Internet Message Access Protocol</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://tools.ietf.org/html/rfc3501">http://tools.ietf.org/html/rfc3501</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>MIME</p></td>
+<td><p>RFC 2045, 2046, 2047 – Multipurpose Internet Mail Extensions</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://tools.ietf.org/html/">http://tools.ietf.org/html/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>POP3</p></td>
+<td><p>RFC 1939 – Post Office Protocol</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://www.ietf.org/rfc/rfc1939.txt">http://www.ietf.org/rfc/rfc1939.txt</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>POP3S, IMAPS</p></td>
+<td><p>RFC 2595 Using TLS with IMAP, POP3 and ACAP</p></td>
+<td><p>Recommended</p></td>
+<td><p>n/a</p></td>
+<td><p><a class="reference external" href="http://tools.ietf.org/html/rfc2595">http://tools.ietf.org/html/rfc2595</a></p></td>
+</tr>
+<tr class="row-even"><td><p>SMTP</p></td>
+<td><p>Simple Mail Transfer Protocol – RFC 5321</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://www.ietf.org/rfc/rfc2821.txt">http://www.ietf.org/rfc/rfc2821.txt</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>SMTPS</p></td>
+<td><p>RFC 3207 SMTP Service Extension for Secure SMTP over Transport Layer Security - <a class="reference external" href="http://www.ietf.org/rfc/rfc3207.txt">http://www.ietf.org/rfc/rfc3207.txt</a></p></td>
+<td><p>Recommended</p></td>
+<td><p>n/a</p></td>
+<td><p><a class="reference external" href="http://www.ietf.org/rfc/rfc3207.txt">http://www.ietf.org/rfc/rfc3207.txt</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="geographical-information-systems">
+<h2>Geographical information systems<a class="headerlink" href="#geographical-information-systems" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id10">
+<h3>Comments<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p>WFS and WMS are applicable and required. WCS is not required in this project.</p>
+<p>No requirement has currently been identified that strictly requires WPS.</p>
+<p>WMTS-client applications will be required, WMTS-server applications probably will not.</p>
+</div>
+<div class="section" id="id11">
+<h3>Table<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Standard</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+<td><p><strong>Status</strong></p></td>
+<td><p><strong>Deadline</strong></p></td>
+<td><p><strong>Reference</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>WCS</p></td>
+<td><p>Web Coverage Service</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://www.opengeos-patial.org/standards/wcs">http://www.opengeos-patial.org/standards/wcs</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>WFS</p></td>
+<td><p>Web Feature Service</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://www.opengeospatial.org/standards/wfs">http://www.opengeospatial.org/standards/wfs</a></p></td>
+</tr>
+<tr class="row-even"><td><p>WMS</p></td>
+<td><p>Web Map Service</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://www.opengeospatial.org/standards/wms">http://www.opengeospatial.org/standards/wms</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>WPS</p></td>
+<td><p>Web Processing Service</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://www.opengeospatial.org/standards/wps">http://www.opengeospatial.org/standards/wps</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="communication-protocols">
+<h2>Communication protocols<a class="headerlink" href="#communication-protocols" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id12">
+<h3>Comments<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<p>Not directly required. Recommendation shall be followed, where applicable.</p>
+</div>
+<div class="section" id="id13">
+<h3>Table<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Standard</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+<td><p><strong>Status</strong></p></td>
+<td><p><strong>Deadline</strong></p></td>
+<td><p><strong>Reference</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>IPV6</p></td>
+<td><p>Internet Protocol, Version 6 (IPv6)</p></td>
+<td><p>Recommended</p></td>
+<td><p>n/a</p></td>
+<td><p><a class="reference external" href="http://tools.ietf.org/html/rfc2460">http://tools.ietf.org/html/rfc2460</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="network-security">
+<h2>Network security<a class="headerlink" href="#network-security" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id14">
+<h3>Comments<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<p>Obligation shall be complied with, where applicable.</p>
+</div>
+<div class="section" id="id15">
+<h3>Table<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Standard</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+<td><p><strong>Status</strong></p></td>
+<td><p><strong>Deadline</strong></p></td>
+<td><p><strong>Reference</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>TLS 1.0</p></td>
+<td><p>Transport Layer Security</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2014.01.01</p></td>
+<td><p><a class="reference external" href="http://tools.ietf.org/html/rfc2246">http://tools.ietf.org/html/rfc2246</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="data-exchange-and-service-integration-and-orchestration">
+<h2>Data exchange and service integration and orchestration<a class="headerlink" href="#data-exchange-and-service-integration-and-orchestration" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id16">
+<h3>Comments<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Note on REST?</p>
+</div>
+</div>
+<div class="section" id="id17">
+<h3>Table<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 5%" />
+<col style="width: 5%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Standard</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+<td><p><strong>Status</strong></p></td>
+<td><p><strong>Deadline</strong></p></td>
+<td><p><strong>Reference</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>BPMN 2.0</p></td>
+<td><p>Business Process Model and Notation</p></td>
+<td><p>Recommended</p></td>
+<td><p>n/a</p></td>
+<td><p><a class="reference external" href="http://www.omg.org/spec/BPMN/2.0">http://www.omg.org/spec/BPMN/2.0</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>HTTP/1.1</p></td>
+<td><p>Hypertext Transfer Protocol</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://tools.ietf.org/html/rfc2616">http://tools.ietf.org/html/rfc2616</a></p></td>
+</tr>
+<tr class="row-even"><td><p>HTTPS</p></td>
+<td><p>Hypertext Transfer Protocol Secure</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://tools.ietf.org/html/rfc2818">http://tools.ietf.org/html/rfc2818</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>LDAP</p></td>
+<td><p>Lightweight Directory Access Protocol</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://www.ietf.org/rfc/rfc1777.txt">http://www.ietf.org/rfc/rfc1777.txt</a></p></td>
+</tr>
+<tr class="row-even"><td><p>SAML 2.0</p></td>
+<td><p>Security Assertion Markup Language 2.0</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://docs.oasis-open.org/security/saml/v2.0/">http://docs.oasis-open.org/security/saml/v2.0/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>SOAP 1.1</p></td>
+<td><p>Simple Object Access Protocol 1.1</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://www.w3.org/TR/2000/NOTE-SOAP-20000508/">http://www.w3.org/TR/2000/NOTE-SOAP-20000508/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>WS-Addressing 1.0</p></td>
+<td><p>Web Services Addressing</p></td>
+<td><p>Mandatory</p></td>
+<td><p>2013.02.06</p></td>
+<td><p><a class="reference external" href="http://www.w3.org/TR/ws-addr-core/">http://www.w3.org/TR/ws-addr-core/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>WS-RM 1.1</p></td>
+<td><p>WS-Reliable Messaging 1.1</p></td>
+<td><p>Recommended</p></td>
+<td><p>n/a</p></td>
+<td><p><a class="reference external" href="http://docs.oasis-open.org/ws-rx/wsrm/200702/wsrm-1.1-spec-os-01.pdf">http://docs.oasis-open.org/ws-rx/wsrm/200702/wsrm-1.1-spec-os-01.pdf</a></p></td>
+</tr>
+<tr class="row-even"><td><p>WS-Security 1.2</p></td>
+<td><p>Web Services Security 1.2</p></td>
+<td><p>Recommended</p></td>
+<td><p>n/a</p></td>
+<td><p><a class="reference external" href="http://docs.oasis-open.org/ws-sx/ws-security-policy/v1.2/ws-securitypolicy.html">http://docs.oasis-open.org/ws-sx/ws-security-policy/v1.2/ws-securitypolicy.html</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>WS-Security Username Token Profile 1.0</p></td>
+<td><p>WS-Security Username Token Profile 1.0</p></td>
+<td><p>Recommended</p></td>
+<td><p>n/a</p></td>
+<td><p><a class="reference external" href="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf">http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="GeodataServer.html" class="btn btn-neutral float-right" title="Geospatial Data Server" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="DatabaseManagementSystem.html" class="btn btn-neutral float-left" title="Database Management System" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, the Nile team | CC BY-SA 3.0 | Exceptions apply! See the sources and metadata for each doc.
+      <span class="lastupdated">
+        Last updated on May 19, 2020.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

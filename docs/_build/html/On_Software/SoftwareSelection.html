@@ -1,0 +1,895 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Software selection &mdash; Wiser 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Project Management Infrastructure" href="ProjectManagementInfrastructure.html" />
+    <link rel="prev" title="Overview" href="Overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Wiser
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Using_Forum/index.html">Using Forum or Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Sphinx/index.html">Using the technical documentation generator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Git/index.html">Using the version control system</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Commercial-Off-the-Shelf Software Selection Process</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Overview.html">Overview</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Software selection</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#process">Process</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#constraints">Constraints</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#major-constraints">Major constraints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#maturity-and-sustainability">Maturity and Sustainability</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#open-standards">Open Standards</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#factors">Factors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#total-cost-of-ownership">Total Cost of Ownership</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#additional-references">Additional References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProjectManagementInfrastructure.html">Project Management Infrastructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VersionControlSystem.html">Version Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DocumentationGenerator.html">Documentation Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IssueTrackingSystem.html">Issue Tracking System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuestionnaireManagement.html">Questionnaire Management System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebBrowsers_DynamicCharts.html">Dynamic charts on web browser usage statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebMapping_ToolList.html">OSGEO list of webmapping tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html">Web Server and Servlet COntainer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html#rationale">Rationale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html#analysis-of-alternatives">Analysis of alternatives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OperatingSystems.html">Operating Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DatabaseManagementSystem.html">Database Management System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Z_RNIDOpenStandards.html">Open Standards in the Portuguese National Regulation on Digital Interoperability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeodataServer.html">Geospatial Data Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebMapping.html">Web Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebBrowsers.html">Web Browser</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Notebook/index.html">Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_TaskMan/index.html">Using the issue tracking system</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Wiser</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Commercial-Off-the-Shelf Software Selection Process</a> &raquo;</li>
+        
+      <li>Software selection</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/On_Software/SoftwareSelection.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="software-selection">
+<span id="sw-selection-ref"></span><h1>Software selection<a class="headerlink" href="#software-selection" title="Permalink to this headline">¶</a></h1>
+<p>Several commercial Off-the-Shelf (COTS) components
+will be required by the software solution to be developed.
+A basic set of components can be identified and selected at this early stage,
+namely a <a class="reference internal" href="DatabaseManagementSystem.html#sw-database-ref"><span class="std std-ref">Database Management System</span></a> and a <a class="reference internal" href="GeodataServer.html#sw-geowebserver-ref"><span class="std std-ref">Geospatial Data Server</span></a>.
+This is still a preliminary and incomplete selection,
+since the functional requirements have not been fully specified and approved.</p>
+<p>The project involves the exchange of statistical data
+between European Union Member States and EU institutions,
+such as Eurostat.
+The <a class="reference external" href="http://sdmx.org">SDMX</a> standards and content guidelines will be adopted
+where applicable.
+The <a class="reference external" href="https://webgate.ec.europa.eu/fpfis/mwikis/sdmx/index.php">Open Source Software for SDMX developed by EuroStat</a>
+will be used ‘by default’ where required and applicable.
+Eurostat’s SDMX tools are thus excluded
+from the selection process applied to COTS components,
+except with regard to the portability constraint
+(see <a class="reference internal" href="#sw-constraints-ref"><span class="std std-ref">Constraints</span></a>).</p>
+<p>In addition, a software portfolio is selected to support the project’s
+<a class="reference internal" href="ProjectManagementInfrastructure.html#sw-technical-infrastructure-ref"><span class="std std-ref">Project Management Infrastructure</span></a>.
+The functional requirements for these components are generic and well
+known for open technology development
+(see <a class="reference internal" href="#hosg09" id="id1"><span>[HOSG09]</span></a> or <a class="reference internal" href="#foge09" id="id2"><span>[Foge09]</span></a>) and an integrated solution can be proposed.</p>
+<p>The following generic technical goals for open-technology development
+direct the selection process:</p>
+<div class="topic">
+<p class="topic-title">Goals</p>
+<ol class="arabic">
+<li><p>Flexibility.</p>
+<p>A component that can be used in a variety of ways
+tends to have more potential users,
+some of whom may aid the project (e.g., via bug reports and development time).</p>
+</li>
+<li><p>Portability.</p>
+<p>A component that can be used on more platforms tends to have more potential users.</p>
+</li>
+<li><p>Modularity.</p>
+<p>A component that is modular
+(e.g., with clearly-defined sub-components and
+perhaps support for a “plug-in” architecture)
+is more flexible, as well as being easier to review for correctness.</p>
+</li>
+<li><p>Use of Open Standards.</p>
+<p>Where possible, avoid depending on interfaces
+that are controlled by a single vendor.</p>
+</li>
+<li><p>Reuse and collaborate with existing OTD (Open Technology Development)
+projects.</p>
+<p>A project should focus on building new software,
+not re-implementing OTD projects that already exist. […]</p>
+</li>
+<li><p>Avoid non-OTD dependencies.</p>
+<p>Depend only on widely-used OTD platforms, libraries, and development tools.
+If a component depends on a non-OTD component,
+and that component then needs to be changed,
+it may be difficult to make the change or have that change incorporated.
+Similarly, it may be difficult to get support
+for unusual libraries and development tools.
+[…] If a proprietary component must be depended on,
+isolate it through plug-ins or an interface defined by an open standard.
+[…]</p>
+</li>
+</ol>
+<p>Where there are alternative approaches, a simple analysis of alternatives
+should be performed, and discussed among the project
+so that key issues or alternatives are not overlooked.</p>
+<p>Source: <a class="reference internal" href="#swlh11" id="id3"><span>[SWLH11]</span></a></p>
+</div>
+<div class="section" id="process">
+<h2>Process<a class="headerlink" href="#process" title="Permalink to this headline">¶</a></h2>
+<p>The selection process follows the common GCS process:</p>
+<div class="topic">
+<p class="topic-title">General COTS Selection Process</p>
+<ol class="arabic simple">
+<li><p>Define the evaluation criteria based on
+stakeholders’ requirements and constraints.</p></li>
+<li><p>Search for COTS products.</p></li>
+<li><p>Filter the search results based on a set of ‘must-have’ requirements
+[<em>“apply constraints”</em>].
+This results in defining a
+short list of most promising COTS candidates
+which are to be evaluated in more detail.</p></li>
+<li><p>Evaluate COTS candidates on the short list [<em>“apply factors”</em>]</p></li>
+<li><p>Analyse the evaluation data […]
+and select the COTS product that has the
+best fitness with the criteria. […]</p></li>
+</ol>
+<p>After Step 5, the selected COTS product is usually
+customised (a.k.a. tailored) as needed in order to reduce
+the mismatches it has with the requirements.
+A COTS product can be customised in different ways, such as
+using add-ons, adjusting parameters, etc.</p>
+<p>Source: <a class="reference internal" href="#more07" id="id4"><span>[MoRE07]</span></a></p>
+</div>
+<p>For each type of selected components, the rationale for the adopted criteria
+and a brief analysis of alternatives are presented in the respective sections.</p>
+<p>The candidate set of components is trimmed and ranked
+using the following strategies:</p>
+<div class="topic" id="sw-selection-strategies-ref">
+<p class="topic-title">Strategies to evaluate COTS products</p>
+<ol class="arabic">
+<li><p><em>Keystone identification</em>,
+which starts by identifying a key requirement
+(e.g. vendor location or type of technology),
+and then searching for products that satisfy this keystone requirement.
+This allows quick elimination of a large number of products
+that do not satisfy the key requirement.</p></li>
+<li><p><em>Progressive filtering</em>,
+which starts with a large number of COTS,
+and then progressively defines discriminating criteria
+through successive iterations of product evaluation cycles,
+where in each cycle ‘less fit’ products are eliminated.</p>
+<p>This strategy requires running steps 1 to 4 in the GCS process iteratively
+until a small number of most promising COTS products is identified
+from which one or more can be selected for integration into the system.</p>
+</li>
+<li><p><em>Puzzle assembly</em>,
+which assumes that a COTS-based system
+requires fitting various components together like pieces of a puzzle.
+This implies that a product that ‘fits’ in isolation
+might not be acceptable when combined with other products.
+Therefore, this strategy suggests
+considering the requirements of each product
+while simultaneously remembering
+the requirements of other products in the puzzle.</p></li>
+</ol>
+<p>Source: <a class="reference internal" href="#more07" id="id5"><span>[MoRE07]</span></a></p>
+</div>
+</div>
+<div class="section" id="constraints">
+<span id="sw-constraints-ref"></span><h2>Constraints<a class="headerlink" href="#constraints" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="major-constraints">
+<h3>Major constraints<a class="headerlink" href="#major-constraints" title="Permalink to this headline">¶</a></h3>
+<p>The <em>keystone identification</em> strategy requires the definition of constraints.
+A constraint serves to limit the alternatives under consideration <a class="reference internal" href="#east99" id="id6"><span>[East99]</span></a>.
+Three major constraints are identified:</p>
+<p><strong>Licence type</strong></p>
+<blockquote>
+<div><p>Licence compatibility is a non-functional project requirement:
+the objective is to facilitate
+the sharing, reuse and future improvement
+of the solution to be developed,
+and, if required, of any existing components it may incorporate.</p>
+<p>Following the principle of early determination of distribution policy <a class="reference internal" href="#trco10" id="id7"><span>[TrCo10]</span></a>,
+the software solution to be developed
+should be distributed under an
+<a class="reference external" href="http://opensource.org/licenses">OSI-approved Open Source licence</a>,
+namely the European Union Public Licence v.1.1 <a class="reference internal" href="#euplv1-1" id="id8"><span>[EUPLv1.1]</span></a>.</p>
+<p>With regard to some of the COTS components,
+EUPLv1.1 compatibility is also a <em>puzzle assembly</em> constraint:
+EUPLv1.1 is a <a class="reference external" href="http://en.wikipedia.org/wiki/Copyleft">copyleft licence</a>
+and all the <a class="reference external" href="https://webgate.ec.europa.eu/fpfis/mwikis/sdmx/index.php">Open Source Software for SDMX developed by EuroStat</a>
+is distributed under the EUPLv1.1 licence.</p>
+<p>Two alternatives are possible:</p>
+<ol class="arabic simple">
+<li><p>To evaluate only COTS software
+under OSI-approved Open Source licences
+that are <a class="reference external" href="http://joinup.ec.europa.eu/software/page/eupl/eupl-compatible-open-source-licences">EUPL-compatible licence</a>
+(either directly
+or through a FOSS exception list established by the licensor).</p></li>
+<li><p>To evaluate also COTS software
+under OSI-approved Open Source licences
+with which the EUPLv1.1 is compatible with
+(either directly or through the EUPLv1.1 exception list).</p></li>
+</ol>
+<p>Most licences allow static linking with EUPLv1.1
+(combining components through compilation,
+copying them into the target application
+and producing a merged object file that is a stand-alone executable),
+but GNU licences (LGPL, GPL) typically do not allow dynamic linking
+(using components at the time the application is loaded or executed)
+or incorporation of source code.
+Since a majority of open-source components is under
+copyleft GNU licences, the (also copyleft) EUPLv1.1
+includes an exception list or downstream compatibility list,
+that allows mergers between EUPLed code and:</p>
+<ul class="simple">
+<li><p>General Public License (GPL) v.2</p></li>
+<li><p>Open Software License (OSL) v.2.1, v.3.0</p></li>
+<li><p>Common Public License (CPL) v.1.0</p></li>
+<li><p>Eclipse Public License (EPL) v.1.0</p></li>
+<li><p>Cecill v.2.0</p></li>
+</ul>
+<p>From COTS selection purposes, the above listed copyleft licences
+are considered EUPL-compatible (in really, it is the EUPLv1.1 licence
+that is compatible with them).</p>
+<p>The final licence for distribution purposes
+must be confirmed in the end of the project,
+based of the type of components and their use in the system.</p>
+</div></blockquote>
+<p><strong>Portability</strong></p>
+<blockquote>
+<div><p>Cross-platform compatibility is a non-functional project requirement:
+again, the objective is to facilitate the adoption
+by different organizations with distinct IT infrastructures.
+The portability requirement is also a good ICT procurement practice
+that reduces the risk of <a class="reference external" href="http://cordis.europa.eu/fp7/ict/ssai/docs/study-action23/d3-guidelines-finaldraft2012-03-22.pdf">vendor lock-in</a>
+and facilitates the reuse of the components by different systems.</p>
+<p>Only COTS components that are available for and supported
+on common proprietary and open source operating systems
+are taken under consideration.
+The platforms’ selection procedure is described in the
+<a class="reference internal" href="OperatingSystems.html#sw-operating-systems-ref"><span class="std std-ref">Operating Systems</span></a> section.</p>
+</div></blockquote>
+<p><strong>Acquisition Cost</strong></p>
+<blockquote>
+<div><p>Only software with zero cost of licence acquisition is included:
+the project’s budget contemplates infrastructure costs
+(i.e. for application hosting)
+and software development/customization but it
+does not allow for licence acquisition/maintenance costs.</p>
+</div></blockquote>
+<p>As a result of the application of these constraints,
+the candidate sets are strictly based on FOSS (Free and Open Source Software)
+while guaranteeing compatibility with
+dominant proprietary and open source operating systems.</p>
+</div>
+<div class="section" id="maturity-and-sustainability">
+<h3>Maturity and Sustainability<a class="headerlink" href="#maturity-and-sustainability" title="Permalink to this headline">¶</a></h3>
+<p>In practice,
+the acquisition cost constraint does not influence the set of alternatives,
+because adequate components are either freely available,
+or have a ‘community edition’ which is free
+and an ‘enterprise edition’ with paid support services.</p>
+<p>Indirectly, this situation derives from the application
+of a second set of constraints
+related to the maturity and sustainability of each of the FOSS components.
+Two evaluation models are combined:</p>
+<ul class="simple">
+<li><p>the Software Sustainability Maturity Model (SSMM) <a class="reference internal" href="#gard13" id="id9"><span>[Gard13]</span></a></p></li>
+<li><p>the Qualification and Selection of Open Source (QSOS) maturity criteria <a class="reference internal" href="#atos13" id="id10"><span>[Atos13]</span></a></p></li>
+</ul>
+<p>Basically:</p>
+<ul class="simple">
+<li><p>no COTS component with an SSMM level below 4 is considered acceptable;</p></li>
+<li><p>and the following QSOS maturity criteria scores are set as constraints:</p></li>
+</ul>
+<div class="topic">
+<p class="topic-title">QSOS maturity criteria and minimum scores selected as constraints</p>
+<p>Legacy : Project’s history and heritage</p>
+<ul class="simple">
+<li><p>Age : { 0 : Less than three months }</p></li>
+<li><p>Popularity : { 0 : Very few identified users }</p></li>
+</ul>
+<p>Activity : Activity inside and around the project</p>
+<ul class="simple">
+<li><p>Contributing community : { 0 : No real community nor activity (forum, mailing lists…) }</p></li>
+<li><p>Activity on bugs : { 0 : Low reactivity in forums and mailing lists, or no mention about bugfixes in release notes }</p></li>
+<li><p>Activity on features : { 0 : Few or no new features }</p></li>
+<li><p>Activity on releases/versions : { 0 : Very low activity on the production or development versions (alpha, beta) }</p></li>
+</ul>
+<p>Industrialisation : Industrialisation of the project</p>
+<ul class="simple">
+<li><p>Services : { Existing service offerings (support, training, audit…) = 0 : No service offering identified }</p></li>
+<li><p>Documentation : { 1 : Documentation exists but is partly obsolete or restricted to one language or to few details }</p></li>
+<li><p>Source code modiﬁcation : { 0 : No convenient way to propose source code modiﬁcations }</p></li>
+</ul>
+</div>
+<p>Activity on releases/versions is evaluated based on each project’s website:
+only projects under active development are considered
+(at least one minor stable release in the past 12 months),
+only projects with stable releases are considered.</p>
+<p>Activity on bugs and features is evaluated either directly
+(through the project’s version release notes, bug tracker or source forge statistics)
+or indirectly, through FOSS statistics gathering sites (mainly <a class="reference external" href="http://www.ohloh.net/">ohloh</a>).</p>
+<p>Contributing community activity is evaluated
+for the end-user and developer communities.
+End-user activity is evaluated directly
+(through the project’s forum, mailing lists, etc.)
+and indirectly, through community-based Q&amp;A sites
+(mainly <a class="reference external" href="http://stackoverflow.com/">stackoverflow</a> and sibling sites).
+Developer activity is also evaluated through source forge statistics
+(number of contributing developers, number of commits).</p>
+<p>Documentation is evaluated directly at the project’s website.
+Only projects with publicly available documentation are considered.
+User documentation must include at least
+the hardware and software requirements,
+installation procedure and software configuration and operation.
+Developer documentation must include at least
+source code documentation. This constraint is also a basic requirement
+to allow the <em>progressive filtering</em> and functional evaluation
+of the candidate set.</p>
+</div>
+<div class="section" id="open-standards">
+<h3>Open Standards<a class="headerlink" href="#open-standards" title="Permalink to this headline">¶</a></h3>
+<p>The selection of COTS on the basis of its implementation
+of open standards is a basic technical interoperability requirement.</p>
+<p>The Open Standards listed in the recent
+Portuguese National Regulation on Digital Interoperability <a class="reference internal" href="#rnid12" id="id11"><span>[RNID12]</span></a>
+are adopted where applicable,
+if more stringent requirements are not defined
+by European Union legislation (see <a class="reference internal" href="#inspire" id="id12"><span>[INSPIRE]</span></a>)
+or required by the project’s functional needs.</p>
+<div class="sidebar">
+<p class="sidebar-title">Important request:</p>
+<p>If more stringent requirements on open standards
+exist in Cyprus, Bulgaria or other interested MS,
+please send us the applicable documentation.</p>
+</div>
+<p>In Portugal, compliance with the Open Standards listed in the
+Portuguese National Regulation on Digital Interoperability
+is also a legal requirement for the public administration systems development
+and ICT procurement.</p>
+<p>In practice, the open standards constraint
+did not (significantly) influence the set of alternatives,
+because FOSS components typically implement the relevant open standards.
+However, the level of support for the applicable open standards
+is a factor in the ranking and selection of alternatives.</p>
+<div class="admonition-todo admonition" id="id13">
+<p class="admonition-title">Todo</p>
+<p>RNID open standards</p>
+<p>Include list of RNID open standards
+and its application as selection criteria of each type of component.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="factors">
+<h1>Factors<a class="headerlink" href="#factors" title="Permalink to this headline">¶</a></h1>
+<p>A factor is a criteria that enhances or detracts from the suitability
+of a specific alternative for the activity under consideration <a class="reference internal" href="#east99" id="id14"><span>[East99]</span></a>.
+Functional requirements vary with the type of component:
+the rationale for the adopted criteria and
+a brief analysis of alternatives is presented in each respective section.</p>
+<p>Functional criteria have precedence over non-functional criteria.
+However, there is an obvious correlation
+between the maturity and sustainability score of a given COTS component
+and its functionality, flexibility, modularity and integration capabilities.</p>
+<p>Furthermore, non-functional criteria related to the maturity and sustainability
+of FOSS projects - based on the SSMM and the QSOS model -
+can be applied when a ‘best’ choice does not emerge
+from the application of functional criteria.</p>
+<p>The following nine criteria are commonly used in FOSS evaluation <a class="reference internal" href="#berg05" id="id15"><span>[Berg05]</span></a>:
+licence type, documentation, release activity, longevity, community, support,
+security, integration and functionality.
+A short description on the application of these criteria
+on the selection process is given below:</p>
+<ul>
+<li><p>Licence</p>
+<p>Licence type is one of the constraints used to limit the set of alternatives.</p>
+<p>Licence compatibility with EUPLv1.1 is defined
+as allowing the distribution of the larger work under the EUPLv1.1
+either through
+incorporation of source code, static linking or dynamic linking.
+Licence type can thus be used as a factor to rank alternatives,
+by preferring licences that allow code incorporation
+over those that only allow static linking, and the latter over the ones
+that only allow dynamic linking.
+<em>Ceteris paribus</em>, this factor can allow a decision between tied ranking
+alternatives.</p>
+</li>
+<li><p>Documentation</p>
+<p>Documentation availability is a constraint.
+Documentation quality is a factor to decide between similar alternatives
+(e.g. the availability of on-line tutorials and other training material,
+or the existence of clear <a class="reference external" href="http://www.python.org/dev/peps/pep-0008/">coding style guidelines</a> for developers),
+as it clearly facilitates software use and adoption.</p>
+</li>
+<li><p>Release Activity</p>
+<p>Release activity is a constraint when
+applied to exclude inactive projects or immature projects.
+Release activity is also factor to assess the maturity of similar alternatives:
+a planned release schedule and a public feature roadmap is valued
+(as is evidence that such compromises are kept).</p>
+</li>
+<li><p>Longevity</p>
+<p>Project longevity is used as an indirect indicator
+of each project’s stability and chance of survival.
+This criterion is only (qualitatively) evaluated in conjunction with
+release activity and community activity.</p>
+</li>
+<li><p>Community</p>
+<p>Activity inside and around the project is evaluated in terms of
+visibility (i.e. ease of access to project website,
+binaries and source code, documentation, discussion lists or fora, etc.)
+and activity of the developer community
+(using indicators available at <a class="reference external" href="http://www.ohloh.net/">ohloh</a>,
+such as number of contributors, number of commits, etc.)
+and user community involvement,
+using indirect indicators such number of related papers
+in <a class="reference external" href="http://scholar.google.com">Google scholar</a> (adoption by the academic community),
+relative number of searches recorded in <a class="reference external" href="http://www.google.com/trends">Google trends</a>
+(end-user interest) and number of Q&amp;A recorded in <a class="reference external" href="http://stackoverflow.com/">StackOverflow</a> sites.</p>
+</li>
+<li><p>Support</p>
+<ul class="simple">
+<li><p>Active user and developer lists.</p></li>
+<li><p>Active public bug tracker.</p></li>
+<li><p>Paid support options available.</p></li>
+<li><p>SaaS providers available</p></li>
+</ul>
+</li>
+<li><p>Security</p>
+<ul class="simple">
+<li><p>Evidence of Security Backporting.</p></li>
+<li><p>Existence of Enterprise (a.k.a. Long Term Support) Versions.</p></li>
+<li><p>Evidence of bug severity classification in public bug tracker.</p></li>
+</ul>
+</li>
+<li><p>Integration</p>
+<ul class="simple">
+<li><p>Modularity</p></li>
+<li><p>Open Standards</p></li>
+<li><p>Collaboration with other products (e.g. reuse of standard libraries).</p></li>
+<li><p>Clear identification of software requirements (dependencies),
+which must also comply with the evaluation criteria.</p></li>
+</ul>
+</li>
+<li><p>Functionality</p>
+<p>The functionality sub-criteria depend on the component being evaluated.
+Functional requirements will be listed in each specific section.</p>
+</li>
+</ul>
+<p>Simply put, the three generic ‘no non-sense’ criteria used in the UK
+<a class="reference external" href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/78964/Open_Source_Options_v2_0.pdf">Open Source Software Options for Government</a> list
+allow the identification of a manageable set of candidates
+(tipically with least than 5 COTS components)
+to which to analysis of alternatives is applied.</p>
+<div class="topic">
+<p class="topic-title">Informal maturity and deployability criteria</p>
+<ol class="arabic simple">
+<li><p>Scale: “If something is working, processing, or being used millions of times per day, perhaps used by airlines to process critical transactions across the globe, that is large-scale. That should give you some confidence that it will work at that scale.”</p></li>
+<li><p>Criticality: “If we can find examples of software being used in critical functions, like healthcare — when a patient’s health depends on it — or if it’s used in real-world operations by crime agencies, or in high-security environments, then we can say that this software can be made suitable for critical systems.”</p></li>
+<li><p>Longevity: “If a package has been working successfully for twenty, thirty years, then it can be added to the list, because then it’s not new and unknown. If it has been in operation for many years, we know the risks.”</p></li>
+</ol>
+<p>Source: <a class="reference external" href="http://joinup.ec.europa.eu/software/studies/lists-open-source-alternatives-proprietary-software-packages">Tariq Rashid</a>, IT Strategy &amp; Reform, UK Government Cabinet Office</p>
+</div>
+</div>
+<div class="section" id="total-cost-of-ownership">
+<h1>Total Cost of Ownership<a class="headerlink" href="#total-cost-of-ownership" title="Permalink to this headline">¶</a></h1>
+<p>A financial estimate of the total cost of ownership (TCO)
+is beyond the scope of the software evaluation and selection exercise.</p>
+<p>Due to the project’s budgetary constraints,
+license acquisition cost is a binary constraint, not a factor;
+hardware and infrastruture requirements are similar,
+regardless of the specific COTS component;
+and operational costs, such as support and maintenance,
+are not readily quantifiable for an R&amp;D project
+with a variable number and type of potential adopters:
+nevertheless, the selection process does try and minimise the solution’s TCO,
+through the application of the maturity and deployability criteria.</p>
+<p>The selection of COTS, either proprietary or FOSS,
+is similar in that it must cover a project’s functional requirements.
+However, the total cost of a given solution is distributed differently.</p>
+<p>The licence acquisition cost should be proportional to the provided functionality:
+thus, in non-free COTS software the least expensive version
+that provides the necessary and sufficient functionality is generally chosen.
+(The same principle applies to commercial services,
+such as technical support and maintenance services,
+in either FOSS or proprietary solutions).</p>
+<p>Given that a budget ceiling on software licence acquisition always exists,
+the affordable solution may not be the most expansible one
+(e.g. to support development beyond a particular project’s time frame).</p>
+<p>When selecting FOSS solutions,
+the need to reduce long-term costs,
+such as staff training or technology migration,
+justifies the choice of components that provide more flexibility
+even when they may look ‘over-sized’
+in terms of the features or the complexity strictly required for a given project.</p>
+</div>
+<div class="section" id="additional-references">
+<h1>Additional References<a class="headerlink" href="#additional-references" title="Permalink to this headline">¶</a></h1>
+<div class="topic">
+<p class="topic-title">European Interoperability Framework recommendations on Open Standards</p>
+<p><strong>Recommendation 22</strong></p>
+<p>When establishing European public services,
+public administrations should prefer open specifications,
+taking due account of the coverage of functional needs,
+maturity and market support.</p>
+<p>[…]The level of openness of a formalised specification
+is an important element in determining the possibility
+of sharing and reusing software components
+implementing that specification. […]
+If the openness principle is applied in full:</p>
+<ul class="simple">
+<li><p>All stakeholders have the same possibility of contributing
+to the development of the specification
+and public review is part of the decision-making process;</p></li>
+<li><p>The specification is available for everybody to study;</p></li>
+<li><p>Intellectual property rights related to the specification
+are licensed on FRAND terms [Fair, reasonable and non discriminatory]
+or on a royalty-free basis in a way that allows implementation
+in both proprietary and open source software.</p></li>
+</ul>
+<p><strong>Recommendation 21.</strong></p>
+<p>Public administrations should use a structured, transparent and
+objective approach to assessing and selecting formalised specifications.
+[…]</p>
+<p><strong>Definitions</strong></p>
+<p>Formalised Specifications :
+Formalised specifications are either standards pursuant to EU Directive 98/34
+or specifications established by ICT industry fora or consortia</p>
+<p>Standard :
+As defined in European legislation (Article 1, paragraph 6, of Directive 98/34/EC),
+a standard is a technical specification approved by a recognised standardisation
+body for repeated or continuous application, with which compliance is not
+compulsory and which is one of the following:</p>
+<ul class="simple">
+<li><p>international standard: a standard adopted by an international standardisation
+organisation and made available to the public,</p></li>
+<li><p>European standard: a standard adopted by a European standardisation body and
+made available to the public,</p></li>
+<li><p>national standard: a standard adopted by a national standardisation body and
+made available to the public.</p></li>
+</ul>
+<p>Standards developing organisation :
+A chartered organisation tasked with producing standards and specifications,
+according to specific, strictly defined requirements, procedures and rules.
+Standards developing organisations include:</p>
+<ul class="simple">
+<li><p>recognised standardisation bodies such as international standardisation
+committees such as the International Organisation for Standardisation (ISO), the
+three European Standard Organisations: the European Committee for
+Standardisation (CEN), the European Committee for Electrotechnical
+Standardisation (CENELEC) or the European Telecommunications Standards
+Institute (ETSI);</p></li>
+<li><p>fora and consortia initiatives for standardisation such as the Organisation for the
+Advancement of Structured Information Standards (OASIS), the World Wide Web
+Consortium (W3C) or the Internet Engineering Task Force (IETF).</p></li>
+</ul>
+<p>Source: <a class="reference internal" href="#eifv2-0" id="id16"><span>[EIFv2.0]</span></a></p>
+</div>
+<div class="topic" id="qsos-criteria-ref">
+<p class="topic-title">QSOS maturity criteria and default scores</p>
+<p>Legacy : Project’s history and heritage</p>
+<ul class="simple">
+<li><p>Age : {
+0 : Less than three months;
+1 : Between three months and three years;
+2 : More than three years }</p></li>
+<li><p>History : {
+0 : The software has many problems which can be prohibitive;
+1 : No major crisis, or unknow history;
+2 : Good past experience in crisis management }</p></li>
+<li><p>Core team : {
+0 : Very few identiﬁed core developers;
+1 : Few active core developers;
+2 : Important and identiﬁed core development team }</p></li>
+<li><p>Popularity : {
+0 : Very few identiﬁed users;
+1 : Usage can be detected;
+2 : Many known users and references }</p></li>
+</ul>
+<p>Activity : Activity inside and around the project</p>
+<ul class="simple">
+<li><p>Contributing community : {
+0 : No real community nor activity (forum, mailing lists…);
+1 : Community with signiﬁcant activity;
+2 : Strong community with vivid activity in forums, with many contributors and supporters }</p></li>
+<li><p>Activity on bugs : {
+0 : Low reactivity in forums and mailing lists, or no mention about bugﬁxes in release notes;
+1 : Existing activity but without any clearly deﬁned process or with long resolution times;
+2 : Strong reactivity based on roles and task assignments }</p></li>
+<li><p>Activity on features : {
+0 : Few or no new features;
+1 : Product’s evolution is led by a dedicated team or by users, but without a clearly stated process;
+2 : Feature request process is industrialized, an associated roadmap is available }</p></li>
+<li><p>Activity on releases/versions : {
+0 : Very low activity on the production or development versions (alpha, beta);
+1 : Activity on production or development versions (alpha, beta) with frequent minor corrective versions;
+2 : Important activity with frequent corrective versions and planned major versions linked with the roadmap }</p></li>
+</ul>
+<p>Governance : Project’s strategy</p>
+<ul class="simple">
+<li><p>Copyright owners : {
+0 : Rights are being held by a few individuals or commercial entities;
+1 : Rights are uniformly held by many individuals;
+2 : Rights are held by a legal entity or a foundation that the community trust (ex: FSF, Apache, ObjectWeb) }</p></li>
+<li><p>Roadmap : {
+0 : No roadmap is published;
+1 : Roadmap without planning;
+2 : Versioned roadmap with planning and delay measurements }</p></li>
+<li><p>Project management : {
+0 : No clear and apparent project management;
+1 : Project managed by an individual or a single commercial entity;
+2 : Strong independance of the core team, rights held by a recognized entity }</p></li>
+<li><p>Distribution mode : {
+0 : Dual distribution with a commercial version along with a functionally limited free one;
+1 : Subparts are only available under proprietary license (core, plugins…);
+2 : Completely open and free distribution }</p></li>
+</ul>
+<p>Industrialization : Industrialization of the project</p>
+<ul class="simple">
+<li><p>Services : Existing service offerings (support, training, audit…) {
+0 : No service offering identiﬁed;
+1 : Limited service offering (geographically, to a single language, to a single provider or without warranty);
+2 : Rich ecosystem of services provided by multiple providers, with guaranteed results }</p></li>
+<li><p>Documentation : {
+0 : No user documentation;
+1 : Documentation exists but is partly obsolete or restricted to one language or to few details;
+2 : Documentation up to date, translated and possibly adapted to several target readers (enduser, sysadmin, manager…) }</p></li>
+<li><p>Quality assurance process : {
+0 : No QA process identiﬁed;
+1 : Existing QA processes, but they are not formalized or equiped;
+2 : QA process based on standard tools and methodologies }</p></li>
+<li><p>Source code modiﬁcation : {
+0 : No convenient way to propose source code modiﬁcations;
+1 : Tools are provided to access and modify the code (eg SCM, forge… ) but are not really used by core team to develop the product;
+2 : The contributing process is well deﬁned,exposed and respected, it is based on clearly deﬁned roles }</p></li>
+</ul>
+<p>Source: <a class="reference internal" href="#atos13" id="id17"><span>[Atos13]</span></a></p>
+</div>
+<hr class="docutils" />
+<p class="rubric">References</p>
+<dl class="citation">
+<dt class="label" id="berg05"><span class="brackets"><a class="fn-backref" href="#id15">Berg05</a></span></dt>
+<dd><p>van den Berg, Karin (2005). Finding Open options. An Open Source software evaluation model with a case study on Course Management Systems. Unpublished Master’s thesis, Tilburg University, The Netherlands.</p>
+</dd>
+<dt class="label" id="eifv2-0"><span class="brackets"><a class="fn-backref" href="#id16">EIFv2.0</a></span></dt>
+<dd><p>EIF European Interoperability Framework for pan-European eGovernment Services, Version 2.0. URL: <a class="reference external" href="http://ec.europa.eu/isa/documents/isa_annex_ii_eif_en.pdf">http://ec.europa.eu/isa/documents/isa_annex_ii_eif_en.pdf</a></p>
+</dd>
+<dt class="label" id="east99"><span class="brackets">East99</span><span class="fn-backref">(<a href="#id6">1</a>,<a href="#id14">2</a>)</span></dt>
+<dd><p>Eastman, J. R. (1999). Multi-criteria evaluation and GIS. Geographical information systems. 1 :493-502.</p>
+</dd>
+<dt class="label" id="hosg09"><span class="brackets"><a class="fn-backref" href="#id1">HOSG09</a></span></dt>
+<dd><p>Hauge, O.; Osterlie, T.; Sorensen, C. F.; Gerea, M. (2009). An empirical study on selection of Open Source Software-Preliminary results. In Emerging Trends in Free/Libre/Open Source Software Research and Development, 2009. FLOSS’09. ICSE Workshop on (pp. 42-47). IEEE. URL: <a class="reference external" href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5071359&amp;tag=1">http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5071359&amp;tag=1</a></p>
+</dd>
+<dt class="label" id="inspire"><span class="brackets"><a class="fn-backref" href="#id12">INSPIRE</a></span></dt>
+<dd><p>Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE). URL: <a class="reference external" href="http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:32007L0002:EN:NOT">http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:32007L0002:EN:NOT</a></p>
+</dd>
+<dt class="label" id="more07"><span class="brackets">MoRE07</span><span class="fn-backref">(<a href="#id4">1</a>,<a href="#id5">2</a>)</span></dt>
+<dd><p>Mohamed, A.; Ruhe, G.; Eberlein, A. (2007). COTS selection: past, present, and future. In Engineering of Computer-Based Systems, 2007. ECBS’07. 14th Annual IEEE International Conference and Workshops on the (pp. 103-114). IEEE. URL: <a class="reference external" href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4148924">http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=4148924</a></p>
+</dd>
+<dt class="label" id="rnid12"><span class="brackets"><a class="fn-backref" href="#id11">RNID12</a></span></dt>
+<dd><p>Regulamento Nacional de Interoperabilidade Digital URL: <a class="reference external" href="http://dre.pt/pdf1sdip/2012/11/21600/0646006465.pdf">http://dre.pt/pdf1sdip/2012/11/21600/0646006465.pdf</a></p>
+</dd>
+<dt class="label" id="swlh11"><span class="brackets"><a class="fn-backref" href="#id3">SWLH11</a></span></dt>
+<dd><p>Scott, J.; Wheeler, D.A.; Lucas, M.; Herz, J. C. (2011). Open Technology Development (OTD): Lessons Learned &amp; Best Practices for Military Software. Sponsored by the Assistant Secretary of Defense (Networks &amp; Information Integration) (NII) / DoD Chief Information Officer (CIO) and the Under Secretary of Defense for Acquisition, Technology, and Logistics (AT&amp;L). Version 1.0. URL: <a class="reference external" href="http://dodcio.defense.gov/Portals/0/Documents/FOSS/OTD-lessons-learned-military-signed.pdf">http://dodcio.defense.gov/Portals/0/Documents/FOSS/OTD-lessons-learned-military-signed.pdf</a></p>
+</dd>
+<dt class="label" id="trco10"><span class="brackets"><a class="fn-backref" href="#id7">TrCo10</a></span></dt>
+<dd><p>Triaille &amp; Coppens (2010) - JRC Open Source Software Guidelines. Joint Reasearch Center of the European Commission URL: <a class="reference external" href="https://joinup.ec.europa.eu/sites/default/files/OSS-guidelines-v-DIGIT-2.pdf">https://joinup.ec.europa.eu/sites/default/files/OSS-guidelines-v-DIGIT-2.pdf</a></p>
+</dd>
+<dt class="label" id="atos13"><span class="brackets">Atos13</span><span class="fn-backref">(<a href="#id10">1</a>,<a href="#id17">2</a>)</span></dt>
+<dd><p>Atos (2013) - Qualification and Selection of Open Source software (QSOS). Version 2.0. 2013-01-19. Appendix A: QSOS Maturity Criteria. URL: <a class="reference external" href="http://backend.qsos.org/download/qsos-2.0_en.pdf">http://backend.qsos.org/download/qsos-2.0_en.pdf</a></p>
+</dd>
+<dt class="label" id="gard13"><span class="brackets"><a class="fn-backref" href="#id9">Gard13</a></span></dt>
+<dd><p>Gardler, Ross (2013) - Software Sustainability Maturity Model (SSMM). OSS Watch. Joint Information Systems Committee. URL: <a class="reference external" href="http://www.oss-watch.ac.uk/resources/ssmm">http://www.oss-watch.ac.uk/resources/ssmm</a></p>
+</dd>
+<dt class="label" id="foge09"><span class="brackets"><a class="fn-backref" href="#id2">Foge09</a></span></dt>
+<dd><p>Fogel, Karl (2009) - Producing Open Source Software: How to Run a Successful Free Software Project. URL: <a class="reference external" href="http://producingoss.com/">http://producingoss.com/</a></p>
+</dd>
+<dt class="label" id="euplv1-1"><span class="brackets"><a class="fn-backref" href="#id8">EUPLv1.1</a></span></dt>
+<dd><p>European Union Public Licence URL: <a class="reference external" href="https://joinup.ec.europa.eu/software/page/eupl/licence-eupl">https://joinup.ec.europa.eu/software/page/eupl/licence-eupl</a></p>
+</dd>
+</dl>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ProjectManagementInfrastructure.html" class="btn btn-neutral float-right" title="Project Management Infrastructure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Overview.html" class="btn btn-neutral float-left" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, the Nile team | CC BY-SA 3.0 | Exceptions apply! See the sources and metadata for each doc.
+      <span class="lastupdated">
+        Last updated on May 19, 2020.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

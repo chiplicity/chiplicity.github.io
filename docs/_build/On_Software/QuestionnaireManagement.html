@@ -1,0 +1,687 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Questionnaire Management System &mdash; Wiser 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Dynamic charts on web browser usage statistics" href="WebBrowsers_DynamicCharts.html" />
+    <link rel="prev" title="Issue Tracking System" href="IssueTrackingSystem.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Wiser
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Using_Forum/index.html">Using Forum or Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Sphinx/index.html">Using the technical documentation generator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Git/index.html">Using the version control system</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Commercial-Off-the-Shelf Software Selection Process</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html">Software selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#factors">Factors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#total-cost-of-ownership">Total Cost of Ownership</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#additional-references">Additional References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProjectManagementInfrastructure.html">Project Management Infrastructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VersionControlSystem.html">Version Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DocumentationGenerator.html">Documentation Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IssueTrackingSystem.html">Issue Tracking System</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Questionnaire Management System</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-model-basics">Data model basics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fields">Fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rules">Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#checking">Checking</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#blocks">Blocks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#field-tags">Field tags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#field-types">Field types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#type-section">TYPE section</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#languages">Languages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#enhancing-texts">Enhancing texts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#routing-rules">Routing rules</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#rationale">Rationale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#analysis-of-alternatives">Analysis of alternatives</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="WebBrowsers_DynamicCharts.html">Dynamic charts on web browser usage statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebMapping_ToolList.html">OSGEO list of webmapping tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html">Web Server and Servlet COntainer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html#rationale">Rationale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html#analysis-of-alternatives">Analysis of alternatives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OperatingSystems.html">Operating Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DatabaseManagementSystem.html">Database Management System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Z_RNIDOpenStandards.html">Open Standards in the Portuguese National Regulation on Digital Interoperability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeodataServer.html">Geospatial Data Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebMapping.html">Web Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebBrowsers.html">Web Browser</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Notebook/index.html">Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_TaskMan/index.html">Using the issue tracking system</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Wiser</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Commercial-Off-the-Shelf Software Selection Process</a> &raquo;</li>
+        
+      <li>Questionnaire Management System</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/On_Software/QuestionnaireManagement.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="questionnaire-management-system">
+<span id="sw-questionnaire-ref"></span><h1>Questionnaire Management System<a class="headerlink" href="#questionnaire-management-system" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>Questionnaire management systems</p>
+<p>A review of the functionality available
+in Blaise 4.5, the Survey Processing System developed by Statistics Netherlands,
+was made in order to try and guarantee that
+the fundamental requirements where duly identified.</p>
+</div>
+<div class="section" id="data-model-basics">
+<h2>Data model basics<a class="headerlink" href="#data-model-basics" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt>Field definition</dt><dd><p>A field definition includes a field name and a field type that defines valid values.
+Usually it will have question text. It can have a description to document the field,
+a field tag, and special attributes.</p>
+</dd>
+<dt>Rules</dt><dd><p>There are four types of rules: routing instructions, edit checks (hard and soft),
+computations, and layout instructions.</p>
+<ul>
+<li><p>Routing instructions describe the data entry order of the fields and the
+conditions under which they will be eligible.</p>
+<p>For computer-assisted interviewing,
+the route specifies the order and conditions in which the fields are asked.</p>
+</li>
+<li><p>Edit checks determine
+whether a specified statement is true for the values of the fields involved.
+If it is false, the instruction will generate an error.
+What will be done with the error depends on the application at hand.
+Two kinds of edits are supported.
+The CHECK instruction defines a hard error,
+something that must be fixed before the form can be considered clean.
+The SIGNAL instruction defines a soft error, which is a possible problem.
+It can be suppressed or the values of the involved fields may be changed.
+A CHECK is the default.</p></li>
+<li><p>Computations determine proper routes to process fields,
+carry out complex checks, or derive values.</p></li>
+<li><p>Layout instructions determine the placement of data entry fields displayed in
+the Data Entry Program.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="fields">
+<h3>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h3>
+<p>A field is the basic element of the data set in Blaise.
+Fields can have specific types of definitions.
+Examples of definition types include strings, numbers, or dates.
+You can create your own user-defined types of fields.</p>
+<p>You specify fields in the FIELDS section:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DATAMODEL</span> <span class="n">Commute1</span> <span class="s2">&quot;The National Commuter Survey, first example.&quot;</span>
+<span class="n">FIELDS</span>
+    <span class="n">Name</span> <span class="s2">&quot;What is your name?&quot;</span> <span class="p">:</span> <span class="n">STRING</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span>
+    <span class="n">Town</span> <span class="s2">&quot;In which town do you live?&quot;</span> <span class="p">:</span> <span class="n">STRING</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span>
+    <span class="n">Gender</span> <span class="s2">&quot;Are you male or female?&quot;</span> <span class="p">:</span>
+      <span class="p">(</span><span class="n">Male</span><span class="p">,</span> <span class="n">Female</span><span class="p">)</span>
+    <span class="n">MarStat</span> <span class="s2">&quot;What is your marital status?&quot;</span> <span class="p">:</span>
+      <span class="p">(</span><span class="n">NevMarr</span> <span class="s2">&quot;Never married&quot;</span><span class="p">,</span>
+      <span class="n">Married</span> <span class="s2">&quot;Married&quot;</span><span class="p">,</span>
+      <span class="n">Divorced</span> <span class="s2">&quot;Divorced&quot;</span><span class="p">,</span>
+      <span class="n">Widowed</span> <span class="s2">&quot;Widowed&quot;</span><span class="p">)</span>
+    <span class="n">Children</span> <span class="s2">&quot;How many children have you given birth to?&quot;</span> <span class="p">:</span> <span class="mf">0.</span><span class="o">.</span><span class="mi">10</span>
+    <span class="n">Age</span> <span class="s2">&quot;What is your age?&quot;</span> <span class="p">:</span> <span class="mf">0.</span><span class="o">.</span><span class="mi">120</span>
+</pre></div>
+</div>
+<p>In its most simple form, each field definition consists of an identifying name and a specification of the valid values.
+A longer text between double quotes will usually be inserted between the name and the value definition.
+This text may serve to state a question, as description, or to document the field.</p>
+<p>The example above shows string, numeric and enumerated data variables.</p>
+</div>
+<div class="section" id="rules">
+<h3>Rules<a class="headerlink" href="#rules" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DATAMODEL</span> <span class="n">Commute1</span> <span class="s2">&quot;The National Commuter Survey, first example.&quot;</span>
+<span class="n">FIELDS</span>
+   <span class="o">&lt;--</span><span class="n">see</span> <span class="n">example</span> <span class="n">above</span><span class="o">--&gt;</span>
+<span class="n">RULES</span>
+   <span class="n">Name</span>
+   <span class="n">Town</span>
+   <span class="n">Gender</span>
+   <span class="n">MarStat</span>
+   <span class="n">Age</span>
+</pre></div>
+</div>
+<p>The five fields will be processed in this order.
+Field names can also be asked, subject to a condition:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">IF</span> <span class="p">(</span><span class="n">Gender</span> <span class="o">=</span> <span class="n">Female</span><span class="p">)</span> <span class="n">AND</span> <span class="p">(</span><span class="n">Age</span> <span class="o">&gt;</span> <span class="mi">12</span><span class="p">)</span> <span class="n">THEN</span>
+   <span class="n">Children</span>
+<span class="n">ENDIF</span>
+</pre></div>
+</div>
+<p>This means that the field Children will only be processed
+if the field Gender has the value Female and Age is greater than 12.</p>
+</div>
+<div class="section" id="checking">
+<h3>Checking<a class="headerlink" href="#checking" title="Permalink to this headline">¶</a></h3>
+<p>Checks are conditions that have to be satisfied.
+You can state the check in terms of what the correct relationship between fields should be:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MarStat</span> <span class="o">=</span> <span class="n">NevMarr</span> <span class="s2">&quot;he/she is too young to be married!&quot;</span>
+</pre></div>
+</div>
+<p>The specification instructs the system to check
+whether the field MarStat has the value NevMarr.
+If not, then the edit is invoked.
+You can attach text between double quotes to a condition.
+Such a text will be used as an error message if the condition is not satisfied.</p>
+<p>Checks can be subject to conditions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">IF</span> <span class="p">(</span><span class="n">Age</span> <span class="o">&lt;</span> <span class="mi">15</span><span class="p">)</span>
+   <span class="s2">&quot;If age of respondent is less than 15&quot;</span> <span class="n">THEN</span>
+   <span class="n">MarStat</span> <span class="o">=</span> <span class="n">NevMarr</span>
+   <span class="s2">&quot;then he/she is too young to be married!&quot;</span>
+<span class="n">ENDIF</span>
+</pre></div>
+</div>
+<p>The check MarStat = NevMarrwill only be carried out
+if the field Age has a value less than 15.
+The application will reject entries in which people younger than 15 years are married.</p>
+</div>
+<div class="section" id="blocks">
+<h3>Blocks<a class="headerlink" href="#blocks" title="Permalink to this headline">¶</a></h3>
+<p>The following specification contains two block definitions:
+the block BPerson and the block BWork:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DATAMODEL</span> <span class="n">Commute2</span> <span class="s2">&quot;The National Commuter Survey, example 2.&quot;</span>
+   <span class="n">BLOCK</span> <span class="n">BPerson</span> <span class="s2">&quot;Demographic data of respondent&quot;</span>
+      <span class="n">FIELDS</span>
+         <span class="o">&lt;--</span> <span class="n">see</span> <span class="n">example</span> <span class="n">above</span> <span class="o">--&gt;</span>
+      <span class="n">RULES</span>
+         <span class="o">&lt;--</span> <span class="n">see</span> <span class="n">example</span> <span class="n">above</span> <span class="o">--&gt;</span>
+   <span class="n">ENDBLOCK</span>
+
+   <span class="n">BLOCK</span> <span class="n">BWork</span> <span class="s2">&quot;Data about work and commuting&quot;</span>
+      <span class="n">FIELDS</span>
+         <span class="n">Working</span> <span class="s2">&quot;Do you have a paid job?&quot;</span> <span class="p">:</span> <span class="p">(</span><span class="n">Yes</span><span class="p">,</span> <span class="n">No</span><span class="p">)</span>
+         <span class="n">Descrip</span> <span class="s2">&quot;Short description of your job&quot;</span> <span class="p">:</span> <span class="n">STRING</span><span class="p">[</span><span class="mi">40</span><span class="p">]</span>
+         <span class="n">Distance</span> <span class="s2">&quot;What is the distance to your work (in km)?&quot;</span> <span class="p">:</span> <span class="mf">0.</span><span class="o">.</span><span class="mi">300</span>
+         <span class="n">Travel</span> <span class="s2">&quot;How do you travel to your work?&quot;</span> <span class="p">:</span> <span class="n">SET</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">OF</span>
+            <span class="p">(</span><span class="n">NoTravel</span> <span class="s2">&quot;Do not travel, work at home&quot;</span><span class="p">,</span>
+            <span class="n">PubTrans</span> <span class="s2">&quot;Public bus, tram or metro&quot;</span><span class="p">,</span>
+            <span class="n">Train</span> <span class="s2">&quot;Train&quot;</span><span class="p">,</span>
+            <span class="n">Car</span> <span class="s2">&quot;Car or motor cycle&quot;</span><span class="p">,</span>
+            <span class="n">Bicycle</span> <span class="s2">&quot;Bicycle&quot;</span><span class="p">,</span>
+            <span class="n">Walk</span> <span class="s2">&quot;Walk&quot;</span><span class="p">,</span>
+            <span class="n">Other</span> <span class="s2">&quot;Other means of transportation&quot;</span><span class="p">)</span>
+         <span class="n">Commuter</span> <span class="s2">&quot;Are you a commuter?&quot;</span> <span class="p">:</span> <span class="p">(</span><span class="n">Yes</span><span class="p">,</span> <span class="n">No</span><span class="p">)</span>
+   <span class="n">RULES</span>
+      <span class="n">Working</span>
+      <span class="n">IF</span> <span class="n">Working</span> <span class="o">=</span> <span class="n">Yes</span> <span class="n">THEN</span>
+         <span class="n">Descrip</span> <span class="n">Distance</span> <span class="n">Travel</span>
+      <span class="n">ENDIF</span>
+
+      <span class="n">IF</span> <span class="p">(</span><span class="n">Working</span> <span class="o">=</span> <span class="n">Yes</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">Distance</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span> <span class="n">THEN</span>
+         <span class="n">Commuter</span> <span class="o">:=</span> <span class="n">Yes</span>
+      <span class="n">ELSE</span>
+         <span class="n">Commuter</span> <span class="o">:=</span> <span class="n">No</span>
+      <span class="n">ENDIF</span>
+   <span class="n">ENDBLOCK</span>
+
+   <span class="n">FIELDS</span>
+      <span class="n">Person</span> <span class="p">:</span> <span class="n">BPerson</span>
+      <span class="n">Work</span> <span class="p">:</span> <span class="n">BWork</span><span class="p">;</span>
+   <span class="n">RULES</span>
+      <span class="n">Person</span>
+      <span class="n">Work</span>
+<span class="n">ENDMODEL</span>
+</pre></div>
+</div>
+<p>A block is like a sub-data model with fields and rules.
+A block is a special kind of field type. You define a field with the block name as field type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FIELDS</span>
+   <span class="n">Person</span><span class="p">:</span> <span class="n">BPerson</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="field-tags">
+<h3>Field tags<a class="headerlink" href="#field-tags" title="Permalink to this headline">¶</a></h3>
+<p>Questions on paper questionnaires are often identified using numbers.
+A field tag is specified between parentheses after the field name and before the first text:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FieldName</span> <span class="p">(</span><span class="n">FieldTag</span><span class="p">)</span> <span class="s2">&quot;Text&quot;</span> <span class="o">/</span> <span class="s2">&quot;Description&quot;</span> <span class="p">:</span> <span class="n">FieldType</span>
+</pre></div>
+</div>
+<p>A field tag may consist of letters and digits,
+although usually only digits will be used (to represent question numbers).
+The following example illustrates the use of field tags:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Working</span> <span class="p">(</span><span class="mi">101</span><span class="p">)</span> <span class="s2">&quot;Do you have a paid job?&quot;</span> <span class="p">:</span> <span class="p">(</span><span class="n">Yes</span><span class="p">,</span> <span class="n">No</span><span class="p">)</span>
+<span class="n">Descrip</span> <span class="p">(</span><span class="mi">102</span><span class="p">)</span> <span class="s2">&quot;What is your job description&quot;</span> <span class="p">:</span> <span class="n">STRING</span><span class="p">[</span><span class="mi">40</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="field-types">
+<h3>Field types<a class="headerlink" href="#field-types" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="string-type">
+<h4>String type<a class="headerlink" href="#string-type" title="Permalink to this headline">¶</a></h4>
+<p>A string field accepts any text as value,
+provided the length of the text does not exceed the specified maximum length.
+An example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Name</span> <span class="s2">&quot;What is your name? &quot;</span> <span class="p">:</span> <span class="n">STRING</span><span class="p">[</span><span class="mi">30</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>You can test the contents of, or make an assignment to,
+a string field using single quote marks:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">IF</span> <span class="n">SectionName</span> <span class="o">=</span> <span class="s1">&#39;Household&#39;</span> <span class="n">THEN</span>
+   <span class="n">Label1</span> <span class="o">:=</span> <span class="s1">&#39;Household Roster&#39;</span>
+<span class="n">ENDIF</span>
+</pre></div>
+</div>
+<p>It is common to test or assign values between string fields:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">IF</span> <span class="n">Name1</span> <span class="o">&lt;&gt;</span> <span class="n">Name2</span> <span class="n">THEN</span>
+   <span class="n">Name1</span> <span class="o">:=</span> <span class="n">Name2</span>
+<span class="n">ENDIF</span>
+</pre></div>
+</div>
+<p>To test for an empty string you can use either the word EMPTY or two single quote
+marks with no space between them:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">IF</span> <span class="n">Name</span> <span class="o">=</span> <span class="n">EMPTY</span> <span class="n">THEN</span><span class="o">...</span>
+<span class="n">IF</span> <span class="n">Name</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="n">THEN</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="open-type">
+<h4>OPEN type<a class="headerlink" href="#open-type" title="Permalink to this headline">¶</a></h4>
+<p>For long, open-ended text responses of variable length you can use the OPEN type.
+OPEN type fields are useful when the interviewer must record verbatim answers
+from respondents.</p>
+</div>
+<div class="section" id="integer-type">
+<h4>Integer type<a class="headerlink" href="#integer-type" title="Permalink to this headline">¶</a></h4>
+<p>Integer fields can be defined in several ways:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Age1</span> <span class="s2">&quot;What is your age?&quot;</span> <span class="s2">&quot;Age of respondent&quot;</span> <span class="p">:</span> <span class="mf">0.</span><span class="o">.</span><span class="mi">120</span>
+<span class="n">Age2</span> <span class="s2">&quot;What is your age?&quot;</span> <span class="s2">&quot;Age of respondent&quot;</span> <span class="p">:</span> <span class="n">INTEGER</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="decimal-or-real-type">
+<h4>Decimal or real type<a class="headerlink" href="#decimal-or-real-type" title="Permalink to this headline">¶</a></h4>
+<p>To define a field that accepts decimal numbers,
+you can use the following type declarations:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ticket1</span> <span class="s2">&quot;How much did you pay for your train ticket?&quot;</span> <span class="p">:</span> <span class="mf">0.00</span><span class="o">..</span><span class="mf">10.00</span>
+<span class="n">Ticket2</span> <span class="s2">&quot;How much did you pay for your train ticket?&quot;</span> <span class="p">:</span> <span class="n">REAL</span><span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">Ticket3</span> <span class="s2">&quot;How much did you pay for your train ticket?&quot;</span> <span class="p">:</span> <span class="n">REAL</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="enumerated-type-or-precode">
+<h4>Enumerated type or precode<a class="headerlink" href="#enumerated-type-or-precode" title="Permalink to this headline">¶</a></h4>
+<p>An enumerated field can take as a value one of the items in a list of items.
+The item is known as a category identifier. A simple example is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Gender</span> <span class="s2">&quot;What is your gender?&quot;</span> <span class="p">:</span> <span class="p">(</span><span class="n">Male</span><span class="p">,</span> <span class="n">Female</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="set-type">
+<h4>Set type<a class="headerlink" href="#set-type" title="Permalink to this headline">¶</a></h4>
+<p>To allow a respondent to choose more than one item from a list of answers,
+use a SET field. A SET field may also be known as a multiple precode or code-all-that-apply.
+Consider the following example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Travel</span> <span class="s2">&quot;How do you travel to your work?&quot;</span> <span class="p">:</span> <span class="n">SET</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">OF</span>
+   <span class="p">(</span><span class="n">NoTravel</span> <span class="s2">&quot;Do not travel, work at home&quot;</span><span class="p">,</span>
+   <span class="n">PubTrans</span> <span class="s2">&quot;Public bus, tram or metro&quot;</span><span class="p">,</span>
+   <span class="n">Train</span> <span class="s2">&quot;Train&quot;</span><span class="p">,</span>
+   <span class="n">Car</span> <span class="s2">&quot;Car or motor cycle&quot;</span><span class="p">,</span>
+   <span class="n">Bicycle</span> <span class="s2">&quot;Bicycle&quot;</span><span class="p">,</span>
+   <span class="n">Walk</span> <span class="s2">&quot;Walk&quot;</span><span class="p">,</span>
+   <span class="n">Other</span> <span class="s2">&quot;Other means of transport&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The format is the same as that of an enumerated field
+with the addition of the reserved words SET [3] OF.
+This indicates that, at most, three different category values can be selected.
+By specifying SET OF without a number between brackets,
+you allow all items to be picked from the list.</p>
+</div>
+<div class="section" id="stored-values-of-enumerated-and-set-fields">
+<h4>Stored values of enumerated and set fields<a class="headerlink" href="#stored-values-of-enumerated-and-set-fields" title="Permalink to this headline">¶</a></h4>
+<p>The values in enumerated fields and SET fields are stored as code numbers.
+The first item in the list is assigned code 1, the second gets code 2, and so on.
+You can specify your own code numbers to overrule this coding scheme.
+You do that by adding numbers in parentheses between category names and category texts.
+Consider the following example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Travel</span> <span class="s2">&quot;How do you travel to your work?&quot;</span> <span class="p">:</span> <span class="n">SET</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">OF</span>
+   <span class="p">(</span><span class="n">NoTravel</span> <span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="s2">&quot;Do not travel, work at home&quot;</span>
+   <span class="n">PubTrans</span> <span class="s2">&quot;Public bus, tram or metro&quot;</span><span class="p">,</span>
+   <span class="n">Train</span> <span class="s2">&quot;Train&quot;</span><span class="p">,</span>
+   <span class="n">Car</span> <span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="s2">&quot;Car or motorcycle&quot;</span><span class="p">,</span>
+   <span class="n">Bicycle</span> <span class="s2">&quot;Bicycle&quot;</span><span class="p">,</span>
+   <span class="n">Walk</span> <span class="s2">&quot;Walk&quot;</span><span class="p">,</span>
+   <span class="n">Other</span> <span class="p">(</span><span class="mi">9</span><span class="p">)</span> <span class="s2">&quot;Other means of transport&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This means that NoTravel is coded as 0.
+Subsequent values are coded in ascending order until a new code is encountered.
+Here PubTrans is coded as 1 and Train as 2.
+The codes of the other values are 4 for Car, 5 for Bicycle, 6 for Walk, and 9 for Other.</p>
+</div>
+<div class="section" id="date-and-time-type">
+<h4>Date and time type<a class="headerlink" href="#date-and-time-type" title="Permalink to this headline">¶</a></h4>
+<p>A date field is a special field type that only accepts dates as values. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Birth</span> <span class="s2">&quot;What is your date of birth?&quot;</span> <span class="p">:</span> <span class="n">DATETYPE</span>
+<span class="n">TimeTravel</span> <span class="s2">&quot;At what time do you start work?&quot;</span> <span class="p">:</span> <span class="n">TIMETYPE</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="classification-type">
+<h4>Classification type<a class="headerlink" href="#classification-type" title="Permalink to this headline">¶</a></h4>
+<p>To perform hierarchical coding, a classification type is needed.</p>
+</div>
+<div class="section" id="arrayed-fields">
+<h4>Arrayed fields<a class="headerlink" href="#arrayed-fields" title="Permalink to this headline">¶</a></h4>
+<p>An arrayed field defines a series of fields of the same type.</p>
+</div>
+</div>
+<div class="section" id="type-section">
+<h3>TYPE section<a class="headerlink" href="#type-section" title="Permalink to this headline">¶</a></h3>
+<p>With the TYPE section,
+you can define reusable type definitions (or just types),
+then use them in later sections:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TYPE</span>
+   <span class="n">TTravel</span> <span class="o">=</span> <span class="n">SET</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">OF</span>
+         <span class="p">(</span><span class="n">NoTravel</span> <span class="s2">&quot;Do not travel, work at home&quot;</span><span class="p">,</span>
+         <span class="n">PubTrans</span> <span class="s2">&quot;Public bus, tram or metro&quot;</span><span class="p">,</span>
+         <span class="n">Train</span> <span class="s2">&quot;Train&quot;</span><span class="p">,</span>
+          <span class="n">Car</span> <span class="s2">&quot;Car or motor cycle&quot;</span><span class="p">,</span>
+         <span class="n">Bicycle</span> <span class="s2">&quot;Bicycle&quot;</span><span class="p">,</span>
+         <span class="n">Walk</span> <span class="s2">&quot;Walk&quot;</span><span class="p">,</span>
+         <span class="n">Other</span> <span class="s2">&quot;Other means of transport&quot;</span><span class="p">)</span>
+<span class="n">FIELDS</span>
+   <span class="n">TravelNow</span> <span class="s2">&quot;How do you travel to your work at the moment?&quot;</span> <span class="p">:</span> <span class="n">TTravel</span>
+   <span class="n">TravelThen</span> <span class="s2">&quot;How did you travel to your work one year ago?&quot;</span> <span class="p">:</span> <span class="n">TTravel</span>
+<span class="n">RULES</span>
+   <span class="n">TravelNow</span>
+   <span class="n">TravelThen</span>
+</pre></div>
+</div>
+<p>A Block may be considered a FieldType.</p>
+<div class="section" id="type-libraries">
+<h4>Type libraries<a class="headerlink" href="#type-libraries" title="Permalink to this headline">¶</a></h4>
+<p>Survey organisations will find it profitable
+to standardise the types that are used in two or more surveys.
+This will make programming quicker and make it easier to compare survey results.
+Interviewers and data editors will also appreciate the common standards between surveys.
+Types can be shared by many applications in two different ways.</p>
+<p>They can be incorporated with an INCLUDE statement or they can be stored in a pre-compiled type library.</p>
+<p>The type library is prepared just like a data model except that the first key word is
+LIBRARY. A very simple type library:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LIBRARY</span> <span class="n">MyLib</span>
+<span class="n">TYPE</span>
+   <span class="n">TYesNo</span> <span class="o">=</span> <span class="p">(</span><span class="n">Yes</span><span class="p">,</span> <span class="n">No</span><span class="p">)</span>
+   <span class="n">TMarStat</span> <span class="o">=</span> <span class="p">(</span><span class="n">Single</span><span class="p">,</span> <span class="n">Married</span><span class="p">,</span> <span class="n">Divorced</span><span class="p">)</span>
+<span class="n">ENDLIBRARY</span>
+</pre></div>
+</div>
+<p>To use the type library from a data model, name the type library in a LIBRARIES
+section. Then, for any field in the data model, refer to any type in the usual
+manner. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DATAMODEL</span> <span class="n">UsesLib</span>
+<span class="n">LIBRARIES</span> <span class="n">MyLib</span>
+<span class="n">FIELDS</span>
+   <span class="n">WillYou</span> <span class="p">:</span> <span class="n">TYesNo</span>
+   <span class="n">Married</span> <span class="p">:</span> <span class="n">TMarStat</span>
+<span class="n">ENDMODEL</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="languages">
+<h3>Languages<a class="headerlink" href="#languages" title="Permalink to this headline">¶</a></h3>
+<p>Blaise supports the use of different languages.
+This is particularly important if you want to interview people speaking different languages.
+During interviewing, the interviewer can change to a different language with a function key.
+This requires you to specify the question texts in all languages you might intend to use.
+The format for a field definition for two languages is as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FieldName</span>   <span class="s2">&quot;Text1&quot;</span> <span class="s2">&quot;Text2&quot;</span> <span class="o">/</span>
+            <span class="s2">&quot;Description1&quot;</span> <span class="s2">&quot;Description2&quot;</span> <span class="p">:</span> <span class="n">FieldType</span>
+</pre></div>
+</div>
+<p>You specify the question texts (Text1 and Text2) in different languages, and
+specify the descriptions after the slash in the same order.
+Here is a concrete example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Name</span>  <span class="s2">&quot;What is your name?&quot;</span> <span class="s2">&quot;Wat is uw naam?&quot;</span> <span class="o">/</span>
+      <span class="s2">&quot;Name of respondent&quot;</span> <span class="s2">&quot;Naam van de respondent&quot;</span> <span class="p">:</span> <span class="n">STRING</span><span class="p">[</span><span class="mi">30</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="enhancing-texts">
+<h3>Enhancing texts<a class="headerlink" href="#enhancing-texts" title="Permalink to this headline">¶</a></h3>
+<p>Hard spacing and line breaking, font, font size, colour, bold, and underline.
+Variable text fills.
+Auxiliary fields (screen labels, etc.)</p>
+</div>
+<div class="section" id="routing-rules">
+<h3>Routing rules<a class="headerlink" href="#routing-rules" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="route-field-methods">
+<h4>Route field methods<a class="headerlink" href="#route-field-methods" title="Permalink to this headline">¶</a></h4>
+<p>Blaise has four methods: CLASSIFY, ASK, SHOW and KEEP. ASK is the default.</p>
+<dl class="simple">
+<dt>CLASSIFY</dt><dd><p>The CLASSIFY routing method puts a classification type field on the route,
+to show and edit it.</p>
+</dd>
+<dt>ASK</dt><dd><p>The method ASK shows the field on the screen so the user can enter a value.</p>
+</dd>
+<dt>SHOW</dt><dd><p>The method SHOW shows the field and its value on the screen.
+In the FormPane (page), the user will not be able to land on it
+and will not have the opportunity to change the value.
+You typically SHOW a field to give information to the user, as with a label in the page.
+It is possible to use the mouse to land on a show field,
+but you can not change its value.</p>
+</dd>
+<dt>KEEP</dt><dd><p>The method KEEP means that the field is not shown on the screen.
+The user will not be aware that this field exists.
+The value of the field will be stored in the Blaise data file
+if the field is defined in the FIELDS section,
+but the KEEP is considered to be at the end of the RULES section.</p>
+</dd>
+</dl>
+<p>If you SHOW or KEEP a field, its value must be computed.
+If a field is computed but otherwise not mentioned in the RULES,
+the KEEP method will automatically be applied at the point of computation.</p>
+</div>
+<div class="section" id="preventing-return-to-some-questions">
+<h4>Preventing return to some questions<a class="headerlink" href="#preventing-return-to-some-questions" title="Permalink to this headline">¶</a></h4>
+<p>You can use the KEEP method to prevent users from returning to some questions
+after they have been answered. This is called a wall. This might be done for
+reasons of confidentiality.</p>
+</div>
+</div>
+</div>
+<div class="section" id="rationale">
+<h2>Rationale<a class="headerlink" href="#rationale" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="analysis-of-alternatives">
+<h2>Analysis of alternatives<a class="headerlink" href="#analysis-of-alternatives" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="WebBrowsers_DynamicCharts.html" class="btn btn-neutral float-right" title="Dynamic charts on web browser usage statistics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="IssueTrackingSystem.html" class="btn btn-neutral float-left" title="Issue Tracking System" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, the Nile team | CC BY-SA 3.0 | Exceptions apply! See the sources and metadata for each doc.
+      <span class="lastupdated">
+        Last updated on May 19, 2020.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

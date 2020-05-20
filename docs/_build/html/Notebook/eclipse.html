@@ -1,0 +1,667 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Eclipse &mdash; Wiser 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Using GIST" href="mylyn.html" />
+    <link rel="prev" title="Installing Python on Windows" href="InstallingPythonOnWindows.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Wiser
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Forum/index.html">Using Forum or Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Sphinx/index.html">Using the technical documentation generator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Git/index.html">Using the version control system</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Notebook</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#introduction">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#references">References</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="InstallingPythonOnWindows.html">Installing Python on Windows</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Eclipse</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#mylyn">Mylyn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#git-integration">Git integration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#svn-integration">SVN integration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#plantuml">PlantUML</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#papyrus">Papyrus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#python-ide">Python IDE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rest-editor">ReST Editor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hunspell4eclipse">Hunspell4Eclipse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#statet-for-r">StatET for R</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#toad-extension-for-eclipse-1-9-0-community-edition">Toad Extension for Eclipse 1.9.0 Community Edition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#eclipse-how-to">Eclipse: how to…</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mylyn.html">Using GIST</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_TaskMan/index.html">Using the issue tracking system</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Wiser</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Notebook</a> &raquo;</li>
+        
+      <li>Eclipse</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Notebook/eclipse.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="eclipse">
+<h1>Eclipse<a class="headerlink" href="#eclipse" title="Permalink to this headline">¶</a></h1>
+<blockquote class="epigraph">
+<div><p>The Eclipse Platform is a generic foundation for an IDE
+That is, the platform is an IDE without any particular programming language in mind.
+You can create generic projects, edit files in a generic text editor,
+and share the projects and files with a version control system.
+The platform is essentially a glorified version of a file-system browser.</p>
+<p>[from <a class="reference external" href="http://www.ohloh.net/p/eclipse">http://www.ohloh.net/p/eclipse</a>]</p>
+</div></blockquote>
+<p>The current version is Eclipse 4.3 Kepler.</p>
+<p>The basic platform is indeed “a glorified version of a file-system browser”.
+All functionality is provided through plug-ins.</p>
+<p>In Eclipse Kepler, the following two plug-ins are already incorporated
+in the base product (installation is no longer required):</p>
+<ul class="simple">
+<li><p>Mylyn, the task-focused interface for Eclipse;</p></li>
+<li><p>Egit, the Eclipse Team provider for the Git version control system.</p></li>
+</ul>
+<p>Numerous other plug-ins are available.
+In some cases, packages are provided
+that bundle together a number of useful plug-ins
+for a specific purpose.</p>
+<p>For example, the Eclipse Java EE IDE for Web Developers
+also includes the Web Tool Platform
+(that will be required for XSD and XML creation and validation, CSS editing, etc.).
+It is the selected option.</p>
+<p>The StatET <a class="reference external" href="http://www.walware.de/goto/statet">http://www.walware.de/goto/statet</a></p>
+<p>Other plug-ins may be required, and are described below…</p>
+<div class="section" id="mylyn">
+<h2>Mylyn<a class="headerlink" href="#mylyn" title="Permalink to this headline">¶</a></h2>
+<p>Mylyn (<a class="reference external" href="http://www.eclipse.org/mylyn/">http://www.eclipse.org/mylyn/</a>).</p>
+<div class="section" id="install-mylyn-connectors">
+<h3>Install Mylyn Connectors<a class="headerlink" href="#install-mylyn-connectors" title="Permalink to this headline">¶</a></h3>
+<p>Mylyn can use a local <strong>task</strong> repository or a remote one.</p>
+<p>If the remote task repository is associated with an issue tracking system,
+a ‘connector’ is required.
+By default, a Bugzilla connector is included with Mylyn (and Eclipse).</p>
+<p>A long list of different connectors is available
+at <a class="reference external" href="http://wiki.eclipse.org/Mylyn/Extensions">http://wiki.eclipse.org/Mylyn/Extensions</a>.
+It includes connectors for Trac and Redmine, GitHub and Bitbucket, etc…</p>
+<p>Connectors can be installed in different ways:</p>
+<ol class="arabic">
+<li><p>Some (stable) connectors are available through the Mylyn Task List window:</p>
+<ul class="simple">
+<li><p>Add repository &gt; Install more connectors…</p></li>
+</ul>
+<p>For example, the Trac connector is available in this list.</p>
+</li>
+<li><p>Other connectors (alpha versions, etc) can be installed using
+the standard plug-in install procedure inside Eclipse:</p>
+<ul class="simple">
+<li><p>Goto Help &gt; Install new software…</p></li>
+<li><p>Providing the link to the update site
+(available in the connector description in the Mylyn/Extensions wiki page).</p></li>
+</ul>
+<p>This is the case for:</p>
+<ul class="simple">
+<li><p>The Bitbucket Mylyn Connector, which is alpha status
+and is available at <a class="reference external" href="http://www.mylynbitbucketconnector.xpg.com.br/update">http://www.mylynbitbucketconnector.xpg.com.br/update</a></p></li>
+<li><p>The GitHub Connector (egit-github), also in alpha status
+and available at <a class="reference external" href="http://download.eclipse.org/egit/github/updates-nightly">http://download.eclipse.org/egit/github/updates-nightly</a></p></li>
+</ul>
+</li>
+</ol>
+<p>Specifically for my projects, two connectors are required:</p>
+<ul class="simple">
+<li><p>The Trac connector</p></li>
+<li><p>The Bitbucket connector
+(currently 2013.10.21 not working properly due to an identified but not yet fixed bug)</p></li>
+</ul>
+</div>
+<div class="section" id="how-to">
+<h3>How to…<a class="headerlink" href="#how-to" title="Permalink to this headline">¶</a></h3>
+<p>A basic tutorial on Mylyn is available at: <a class="reference external" href="http://www.vogella.com/articles/Mylyn/article.html">http://www.vogella.com/articles/Mylyn/article.html</a>.</p>
+<p>A generic introduction is available at: <a class="reference external" href="http://www.youtube.com/watch?v=bSYVpjom4pU">http://www.youtube.com/watch?v=bSYVpjom4pU</a></p>
+<div class="section" id="use-tags-in-code-comments-to-generate-tasks">
+<h4>Use tags in code comments to generate tasks<a class="headerlink" href="#use-tags-in-code-comments-to-generate-tasks" title="Permalink to this headline">¶</a></h4>
+<p>Tags in source code comments can be used to generate tasks.
+The following Window &gt; Preferences can be enabled:</p>
+<ul>
+<li><p>General &gt; Structured Text Editors &gt; Task Tags</p>
+<p>Enable searching for Task Tags</p>
+</li>
+<li><p>Java &gt; Compiler &gt; Task Tags</p></li>
+<li><p>JavaScript &gt; Validator &gt; Task Tags</p></li>
+<li><p>PyDev &gt; Task Tags</p></li>
+<li><p>StatET &gt; Task Tags</p></li>
+</ul>
+<blockquote class="epigraph">
+<div><p>The Tasks view includes a helpful customization for Java developers.
+When a Java project is built, the parser automatically scans for Java task tags in your code comments.
+You can configure the task tag names and their priorities using the Java &gt; Task Tags preferences.
+Three tags are provided by default (FIXME, TODO, and XXX), and we added a STORY tag to support our agile development process.</p>
+<p>Eclipse Distilled, by David Carlson</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="workarounds">
+<h3>Workarounds<a class="headerlink" href="#workarounds" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="if-the-task-list-disappears">
+<h4>If the task list disappears…<a class="headerlink" href="#if-the-task-list-disappears" title="Permalink to this headline">¶</a></h4>
+<p>The workaround is:</p>
+<ol class="arabic simple">
+<li><p>Goto the drop-down menu in the Task List pane
+(or right-click to see the contextual menu).</p></li>
+<li><p>Select Restore tasks from history…</p></li>
+<li><p>Select either a zip file (if you’ve exported the task list before)
+or an adequate snapshot.</p></li>
+</ol>
+<p>Tasks can be exported from the Task list pane (right-click to see the contextual menu)
+using the Import and Export… &gt; Export option.</p>
+<p>This apparently can occur when updating and restarting Eclipse
+(see <a class="reference external" href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=403467">https://bugs.eclipse.org/bugs/show_bug.cgi?id=403467</a>).</p>
+</div>
+</div>
+</div>
+<div class="section" id="git-integration">
+<h2>Git integration<a class="headerlink" href="#git-integration" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>How to<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="import-the-content-of-an-existing-git-repository">
+<h4>Import the content of an existing git repository<a class="headerlink" href="#import-the-content-of-an-existing-git-repository" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li><p>Open the Git Repository Exploring perspective</p></li>
+<li><p>If the repository isn’t already listed, then
+Add a repository (using the drop-down menu)</p></li>
+<li><p>Select the repository in the list, right-click and select
+Import projects…</p></li>
+<li><p>Choose Import as a general project… and follow the wizard.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="section" id="svn-integration">
+<h2>SVN integration<a class="headerlink" href="#svn-integration" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference external" href="http://www.eclipse.org/subversive/">http://www.eclipse.org/subversive/</a></p>
+</div>
+<div class="section" id="plantuml">
+<h2>PlantUML<a class="headerlink" href="#plantuml" title="Permalink to this headline">¶</a></h2>
+<p>PlantUML is a component that allows to quickly write :</p>
+<ul class="simple">
+<li><p>sequence diagram,</p></li>
+<li><p>use case diagram,</p></li>
+<li><p>class diagram,</p></li>
+<li><p>activity diagram,</p></li>
+<li><p>component diagram,</p></li>
+<li><p>state diagram</p></li>
+<li><p>object diagram</p></li>
+</ul>
+<p>Diagrams are defined using a simple and intuitive language.
+The documentation is available here:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">sourceforge</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">projects</span><span class="o">/</span><span class="n">plantuml</span><span class="o">/</span><span class="n">files</span><span class="o">/</span><span class="n">PlantUML</span><span class="o">%</span><span class="mi">20</span><span class="n">Language</span><span class="o">%</span><span class="mi">20</span><span class="n">Reference</span><span class="o">%</span><span class="mi">20</span><span class="n">Guide</span><span class="o">.</span><span class="n">pdf</span><span class="o">/</span><span class="n">download</span>
+</pre></div>
+</div>
+<p>Images can be generated in PNG or SVG format.</p>
+<p>The Eclipse plug-in is described here:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">plantuml</span><span class="o">.</span><span class="n">sourceforge</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">eclipse</span><span class="o">.</span><span class="n">html</span>
+</pre></div>
+</div>
+<div class="section" id="install">
+<h3>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h3>
+<p>It is not clear if the PlantUML plug-in works with the Eclipse Kepler version (4.3).</p>
+<p>The update site for Eclipse Juno (4.2) is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">plantuml</span><span class="o">.</span><span class="n">sourceforge</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">updatesitejuno</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>Let’s try it. It’s working!</p>
+<p>Note that the Graphviz software must be installed.</p>
+</div>
+<div class="section" id="id2">
+<h3>How to…<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p>Goto Window &gt; Show View &gt; Other &gt; PlantUML to open a visualisation tab.</p></li>
+<li><p>Insert the following text into a document (or inside a multiline code comment):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>@startuml
+
+   user -&gt; (use PlantUML)
+
+   note left of user
+      Hello!
+   end note
+
+@enduml
+</pre></div>
+</div>
+</li>
+<li><p>The diagram will be displayed the the PlantUML visualisation pane,
+where it can be exported to a graphic file.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="papyrus">
+<h2>Papyrus<a class="headerlink" href="#papyrus" title="Permalink to this headline">¶</a></h2>
+<p>Papyrus is graphical editing tool for UML2 as defined by OMG.</p>
+<p>It can be used as a simple plug-in or as a part of the Eclipse Modelling Tools package.
+It provides a graphical editor for the Eclipse UML2 project.</p>
+<blockquote class="epigraph">
+<div><p>UML2 is an EMF-based implementation of the Unified Modeling Language (UML) 2.x OMG metamodel for the Eclipse platform.</p>
+<p>The objectives of the UML2 component are:
+*  to provide a usable implementation of the UML metamodel to support the development of modeling tools
+*  a common XMI schema to facilitate interchange of semantic models
+*  test cases as a means of validating the specification
+*  validation rules as a means of defining and enforcing levels of compliance</p>
+<p>Although MDT/UML2 provides the metamodel, it does not provide UML modelling tools themselves.
+One implementation is Papyrus. An older, no longer supported implementation is UML2Tools (<a class="reference external" href="http://wiki.eclipse.org/MDT-UML2Tools">http://wiki.eclipse.org/MDT-UML2Tools</a>).</p>
+<p>[<a class="reference external" href="http://wiki.eclipse.org/MDT-UML2Tools">http://wiki.eclipse.org/MDT-UML2Tools</a>]</p>
+</div></blockquote>
+<div class="section" id="id3">
+<h3>Install<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p>Start Eclipse</p></li>
+<li><p>Goto Help &gt; Install New Software</p></li>
+<li><p>Press Add… to add a new resource and specify a name and the URL
+(the link below is for the Eclipse Kepler version):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">NAME</span><span class="p">:</span> <span class="n">Papyrus</span>
+<span class="n">URL</span><span class="p">:</span>  <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">eclipse</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">modeling</span><span class="o">/</span><span class="n">mdt</span><span class="o">/</span><span class="n">papyrus</span><span class="o">/</span><span class="n">updates</span><span class="o">/</span><span class="n">releases</span><span class="o">/</span><span class="n">kepler</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="id4">
+<h3>How to<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Tutorial on the Eclipse Modelling Framework (not on Papyrus, but it will be useful later on):
+<a class="reference external" href="http://www.vogella.com/articles/EclipseEMF/article.html">http://www.vogella.com/articles/EclipseEMF/article.html</a></p>
+</div>
+</div>
+<div class="section" id="python-ide">
+<h2>Python IDE<a class="headerlink" href="#python-ide" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="http://pydev.org/">PyDev</a> is a Python IDE for Eclipse,
+which may be used in Python, Jython and IronPython development.</p>
+<div class="section" id="id5">
+<h3>Install<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>Python 2.7 is assumed to be installed.</p>
+<ol class="arabic">
+<li><p>Start Eclipse</p></li>
+<li><p>Goto Help &gt; Install New Software</p></li>
+<li><p>Press Add… to add a new resource and specify a name and the URL:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">NAME</span><span class="p">:</span> <span class="n">PyDevEnv</span>
+<span class="n">URL</span><span class="p">:</span>  <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">pydev</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">updates</span>
+</pre></div>
+</div>
+</li>
+<li><p>Select PyDev and PyDev Mylyn Integration from the list and press Next.</p></li>
+<li><p>Acept the licence terms when the download ends.</p></li>
+<li><p>Restart Eclipse.</p></li>
+</ol>
+</div>
+<div class="section" id="configure">
+<h3>Configure<a class="headerlink" href="#configure" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Goto Window &gt; Preferences &gt; PyDev &gt; Editor  &gt; Interpreter Python</p></li>
+<li><p>Eclipse can configure the options automatically (press Auto Config)
+or the location of the Python interpreter can be specified.
+(in Linux, usually that would be /usr/bin/python)</p></li>
+<li><p>Press OK to finish the configuration.</p></li>
+</ol>
+</div>
+<div class="section" id="start-new-project">
+<h3>Start new project<a class="headerlink" href="#start-new-project" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Goto File &gt; New &gt; Project and select ‘Pydev project’</p></li>
+<li><p>Create a new file (goto File &gt; New &gt; File) HelloWorld.py</p></li>
+<li><p>Add the code</p></li>
+<li><p>Press Run or <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">F11</span></code></p></li>
+</ol>
+<p>Python projects will be associated with a “Python perspective”,
+i.e. a customised layout of windows and GUI elements.</p>
+<p>References:
+<a class="reference external" href="http://www.linoob.com/2011/09/starting-with-python-on-eclipse-in-ubuntu/">1</a> ;
+<a class="reference external" href="http://blog.moonflare.com/2011/11/23/installing-eclipse-with-pydev-for-python-development-in-ubuntu/">2</a> .</p>
+</div>
+<div class="section" id="id6">
+<h3>How to…<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>A generic tutorial covering all the above steps is available at: <a class="reference external" href="http://www.vogella.com/articles/Python/article.html">http://www.vogella.com/articles/Python/article.html</a></p>
+</div>
+</div>
+<div class="section" id="rest-editor">
+<h2>ReST Editor<a class="headerlink" href="#rest-editor" title="Permalink to this headline">¶</a></h2>
+<p>ReST Editor is an Eclipse plug-in providing support to edit reStructuredText files</p>
+<p>reStructuredText is a markup language that can be transformed in various output formats
+with tools like the Sphinx documentation generator, rst2pdf, rst2beamer, …</p>
+<p>More information here : <a class="reference external" href="http://resteditor.sourceforge.net/">http://resteditor.sourceforge.net/</a></p>
+<div class="section" id="id7">
+<h3>Install<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>This plug-in can be installed through the Eclipse Marketplace (Help &gt; Eclipse Marketplace…)
+or through the standard plug-in installation:</p>
+<ol class="arabic simple">
+<li><p>Goto Help &gt; Install new software…</p></li>
+<li><p>Add the project update site: <a class="reference external" href="http://resteditor.sourceforge.net/eclipse">http://resteditor.sourceforge.net/eclipse</a></p></li>
+<li><p>Select the ReST Editor plug-in</p></li>
+</ol>
+</div>
+<div class="section" id="id8">
+<h3>Configure<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>The plug-in is configured under Window &gt; Preferences &gt; ReST Editor.</p>
+<p>The following options are important:</p>
+<ul class="simple">
+<li><p>The preferred section markers order, that will be used to automatically correct any improper sequence: #*=-^”</p></li>
+<li><p>The tab length (3) and the option to insert spaces instead of tabs.</p></li>
+<li><p>The spell checking options (see <a class="reference internal" href="#hunspell4eclipse-ref"><span class="std std-ref">Hunspell4Eclipse</span></a>).</p></li>
+</ul>
+</div>
+<div class="section" id="start-a-new-sphinx-project">
+<h3>Start a new Sphinx project<a class="headerlink" href="#start-a-new-sphinx-project" title="Permalink to this headline">¶</a></h3>
+<p>The ReST Editor plug-in can be used to create a new Sphinx project:</p>
+<ol class="arabic simple">
+<li><p>Goto File &gt; New &gt; Project &gt; ReST Editor &gt; Sphinx project</p></li>
+<li><p>Follow the wizard’s instructions…</p></li>
+</ol>
+<p>If Sphinx is installed, then ReST documents can be built from within Eclipse (using the make.bat or the makefile).</p>
+</div>
+</div>
+<div class="section" id="hunspell4eclipse">
+<span id="hunspell4eclipse-ref"></span><h2>Hunspell4Eclipse<a class="headerlink" href="#hunspell4eclipse" title="Permalink to this headline">¶</a></h2>
+<p>Hunspell4Eclipse is a plug-in that integrates Hunspell into Eclipse’s Spell Checking Service.
+It is useful if Eclipse is used as for general purpose document editing.</p>
+<div class="section" id="id9">
+<h3>Install<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p>This plug-in can be installed through the Eclipse Marketplace (Help &gt; Eclipse Marketplace…)
+or through the standard plug-in installation procedure.</p>
+</div>
+<div class="section" id="id10">
+<h3>Configure<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p>No dictionaries are included. The plug-in uses Hunspell or Myspell dictionaries.
+These are also used by LibreOffice,
+and are available in the extensions directory
+(for example, “C:Program Files (x86)LibreOffice 4.0shareextensions”).</p>
+<p>Preferences per workspace can be configured in:
+1. Preferences - General - Editors &gt; TextEditors &gt; Spelling</p>
+<ol class="arabic simple">
+<li><p>Select Hunspell4Eclipse</p></li>
+<li><p>Browse… and select a dictionary(.dic) file</p></li>
+</ol>
+<p>Useful links:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://code.google.com/p/hunspell4eclipse/">https://code.google.com/p/hunspell4eclipse/</a></p></li>
+<li><p><a class="reference external" href="https://wiki.mozilla.org/L10n:Dictionaries">https://wiki.mozilla.org/L10n:Dictionaries</a></p></li>
+</ul>
+</div>
+<div class="section" id="build-a-sphinx-project">
+<h3>Build a Sphinx project<a class="headerlink" href="#build-a-sphinx-project" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Right-click on the make.bat file and goto Run as &gt; Run Configurations…</p></li>
+<li><p>Select the option <code class="docutils literal notranslate"><span class="pre">Sphinx</span> <span class="pre">(via</span> <span class="pre">make</span> <span class="pre">file)</span></code></p></li>
+<li><p>Create a new configuration:
+*  Specify the working directory, for example <code class="docutils literal notranslate"><span class="pre">${project_loc}/docs</span></code>
+*  Specify the type of Sphinx output, for example <code class="docutils literal notranslate"><span class="pre">html</span></code></p></li>
+</ul>
+<p>The new configuration will be accessible through the button bar
+(in the Run button drop-down options).</p>
+<p>The console pane will show the Sphinx output.</p>
+</div>
+</div>
+<div class="section" id="statet-for-r">
+<h2>StatET for R<a class="headerlink" href="#statet-for-r" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id11">
+<h3>Install<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<p>Dependencies (for the stable version StatET 3.3 in Eclipse 4.3):</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Java</p></td>
+<td><p>6 or higher</p></td>
+</tr>
+<tr class="row-even"><td><p>GNU R</p></td>
+<td><p>2.13 to 3.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>R package RJ</p></td>
+<td><p>1.1</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition-for-windows-users admonition">
+<p class="admonition-title">For Windows users</p>
+<p>The path where R is installed should not contain spaces.
+For example, install in “C:ProgramsR” but not in “C:Programs FilesR”.</p>
+<p>Otherwise, strange things are likely to happen, such as packages not getting installed properly…</p>
+</div>
+<p>To install the R Packages of RJ 1.1 (StatET 3.0-3.3), use the following command in a common R Term console:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">install</span><span class="o">.</span><span class="n">packages</span><span class="p">(</span><span class="n">c</span><span class="p">(</span><span class="s2">&quot;rj&quot;</span><span class="p">,</span> <span class="s2">&quot;rj.gd&quot;</span><span class="p">),</span> <span class="n">repos</span><span class="o">=</span><span class="s2">&quot;http://download.walware.de/rj-1.1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In Eclipse, use the standard plug-in installation procedure:</p>
+<ol class="arabic">
+<li><p>Goto Help &gt; Install New Software</p></li>
+<li><p>Press Add… to add a new resource and specify a name and the URL:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">NAME</span><span class="p">:</span> <span class="n">StatET</span>
+<span class="n">URL</span><span class="p">:</span>  <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">walware</span><span class="o">.</span><span class="n">de</span><span class="o">/</span><span class="n">eclipse</span><span class="o">-</span><span class="mf">4.3</span>
+</pre></div>
+</div>
+</li>
+<li><p>For most users it is recommend to select only StatET (and Add-ons/Utilities, if desired),
+but no Libraries; the dependencies are resolved automatically.</p></li>
+</ol>
+</div>
+<div class="section" id="tutorials">
+<h3>Tutorials<a class="headerlink" href="#tutorials" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://lukemiller.org/index.php/2010/04/eclipse-and-statet-a-nice-working-environment-for-r/">Eclipse and StatET – a working environment for R</a></p></li>
+<li><p><a class="reference external" href="http://www.splusbook.com/RIntro/R_Eclipse_StatET.pdf">A guide to Eclipse and the R plug-in StatET</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="toad-extension-for-eclipse-1-9-0-community-edition">
+<h2>Toad Extension for Eclipse 1.9.0 Community Edition<a class="headerlink" href="#toad-extension-for-eclipse-1-9-0-community-edition" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="eclipse-how-to">
+<h2>Eclipse: how to…<a class="headerlink" href="#eclipse-how-to" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="change-the-encoding-to-utf-8">
+<h3>Change the encoding to UTF-8<a class="headerlink" href="#change-the-encoding-to-utf-8" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>For a specific project: File &gt; Properties &gt; Text file encoding</p></li>
+<li><p>Goto Window &gt; Preferences &gt; General &gt; Content types
+and change the <cite>Default encoding</cite> for each type.</p></li>
+<li><p>Goto Window &gt; Preferences &gt; General &gt; Workspaces &gt; Text file encoding</p></li>
+</ul>
+</div>
+<div class="section" id="show-a-print-margin">
+<h3>Show a print margin<a class="headerlink" href="#show-a-print-margin" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Goto Window &gt; Preferences &gt; General &gt; Editors &gt; Text Editors &gt; Show print margin (80)</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="mylyn.html" class="btn btn-neutral float-right" title="Using GIST" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="InstallingPythonOnWindows.html" class="btn btn-neutral float-left" title="Installing Python on Windows" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, the Nile team | CC BY-SA 3.0 | Exceptions apply! See the sources and metadata for each doc.
+      <span class="lastupdated">
+        Last updated on May 19, 2020.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

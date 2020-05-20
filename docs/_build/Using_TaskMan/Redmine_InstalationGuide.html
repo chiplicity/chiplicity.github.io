@@ -1,0 +1,361 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Redmine instalation &mdash; Wiser 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Using the issue tracking system" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Wiser
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Forum/index.html">Using Forum or Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Sphinx/index.html">Using the technical documentation generator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Git/index.html">Using the version control system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../On_Software/index.html">Commercial-Off-the-Shelf Software Selection Process</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Notebook/index.html">Notebook</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Using the issue tracking system</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#introduction">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#references">References</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Redmine instalation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#preamble">Preamble</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deployment">Deployment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#backups">Backups</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#repositories">Repositories</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Wiser</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Using the issue tracking system</a> &raquo;</li>
+        
+      <li>Redmine instalation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Using_TaskMan/Redmine_InstalationGuide.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="redmine-instalation">
+<h1>Redmine instalation<a class="headerlink" href="#redmine-instalation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="preamble">
+<h2>Preamble<a class="headerlink" href="#preamble" title="Permalink to this headline">¶</a></h2>
+<p>Presently, the <a class="reference external" href="http://bitnami.com/stack/redmine">BitNami Redmine Stack</a> virtual machine (VM) is being used.
+The following notes thus apply to the deployment of this VM using <a class="reference external" href="https://www.virtualbox.org/">Oracle VirtualBox</a>,
+and not specifically to a <a class="reference external" href="http://www.redmine.org/projects/redmine/wiki/RedmineInstall">Redmine step-by-step installation</a> &lt;<a class="reference external" href="http://www.redmine.org/projects/redmine/wiki/RedmineInstall">http://www.redmine.org/projects/redmine/wiki/RedmineInstall</a>&gt;`_.</p>
+<p>The notes below are applicable to a test environment (e.g. in a personal computer)
+and are not necessarily adequate or recommended
+for deployment in a production environment.</p>
+<p>Note also that the Bitnami Redmine Stack ships with <a class="reference external" href="http://www.mysql.com/">MySql</a> as a database back-end.</p>
+<p>Detailed information can be found at <a class="reference external" href="http://wiki.bitnami.com/Applications/BitNami_Redmine">http://wiki.bitnami.com/Applications/BitNami_Redmine</a>.</p>
+</div>
+<div class="section" id="deployment">
+<h2>Deployment<a class="headerlink" href="#deployment" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Update <a class="reference external" href="https://www.virtualbox.org/">Oracle VirtualBox</a> if necessary.
+Install the most recent <a class="reference external" href="https://www.virtualbox.org/wiki/Downloads">VirtualBox Extension Pack</a>.</p></li>
+<li><p>Download the VM from <a class="reference external" href="http://bitnami.com/stack/limesurvey">http://bitnami.com/stack/limesurvey</a>.
+Unzip…</p></li>
+<li><p>Create a new VirtualBox VM</p>
+<ul class="simple">
+<li><p>Guest OS: Ubuntu 64-bit</p></li>
+<li><p>RAM: at least 512 MB RAM</p></li>
+<li><p>Storage: select the VMDK file</p></li>
+<li><p>Network: Enable NAT</p></li>
+</ul>
+<p>After everything is configured,
+the network adapter will be changed to Bridged Adaptor
+(had some problems with the Bridged Adaptor over WiFi, hence this choice).</p>
+<p>NAT can also be used if the Guest is to be accessed only from the Host.
+Port forwarding was setup as depicted below:</p>
+</li>
+</ol>
+<img alt="../_images/OracleVMVirtualBoxManager_PortForwarding.png" src="../_images/OracleVMVirtualBoxManager_PortForwarding.png" />
+<ol class="arabic">
+<li><p>Start the VM.
+Prepare to install the Virtual Box Guest Additions
+(Devices –&gt; Install Guest Additions)</p></li>
+<li><p>The default Linux login is <code class="docutils literal notranslate"><span class="pre">bitnami/bitnami</span></code>.
+In real life, the default users and passwords should be changed.</p></li>
+<li><p>Enable root:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$  sudo passwd root
+</pre></div>
+</div>
+<p>In real life, the <code class="docutils literal notranslate"><span class="pre">root</span></code> password should <strong>not</strong> be enabled.
+(Instead of entering as root, use <code class="docutils literal notranslate"><span class="pre">sudo</span></code> instead).</p>
+</li>
+<li><p>Change keyboard layout if required:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$  sudo apt-get update
+$  sudo apt-get install console-data
+$  sudo dpkg-reconfigure keyboard-configuration
+$  sudo dpkg-reconfigure console-setup
+</pre></div>
+</div>
+<p>If later reconfiguration is required:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$  sudo dpkg-reconfigure console-data
+</pre></div>
+</div>
+</li>
+<li><p>Install the VirtualBox Guest Additions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$  sudo mount /dev/cdrom /mnt
+$  cd /mnt
+$  sudo ./VBoxLinuxAdditions.run
+$  sudo reboot
+</pre></div>
+</div>
+<p>If the build fails, check the log file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ nano /var/log/vboxadd-install.log
+</pre></div>
+</div>
+<p>(Note that there is always be a fail message for windows system
+if no graphic interface is installed in the server):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$  sudo apt-get update
+$  sudo apt-get install dkms              #if required
+$  sudo apt-get install build-essential   #if required
+$  sudo apt-get linux-headers-generic     # and/or
+$  sudo apt-get linux-headers-3.2.0-53-virtual # for example, if such is the version required...
+</pre></div>
+</div>
+</li>
+<li><p>How to access the BitNami Virtual Appliance?</p></li>
+</ol>
+<p>If the network as been set to NAT and port forwarding has been configured as specified above,
+then the application can be accessed at <a class="reference external" href="http://localhost:8080/redmine">http://localhost:8080/redmine</a> .</p>
+<p>The default application login information is <code class="docutils literal notranslate"><span class="pre">user/bitnami</span></code></p>
+<p>Further information is available here: <a class="reference external" href="http://bitnami.com/faq/virtual_machines">http://bitnami.com/faq/virtual_machines</a></p>
+</div>
+<div class="section" id="backups">
+<h2>Backups<a class="headerlink" href="#backups" title="Permalink to this headline">¶</a></h2>
+<p>Redmine backups should include:</p>
+<ul class="simple">
+<li><p>data (stored in your redmine database)</p></li>
+<li><p>attachments (stored in the files directory of your Redmine install)</p></li>
+</ul>
+<p>Here is a simple shell script that can be used for daily backups (assuming you’re using a mysql database):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span># Database
+/usr/bin/mysqldump -u &lt;username&gt; -p&lt;password&gt; &lt;redmine_database&gt; | gzip &gt; /path/to/backup/db/redmine_`date +%y_%m_%d`.gz
+
+# Attachments
+rsync -a /path/to/redmine/files /path/to/backup/files
+</pre></div>
+</div>
+</div>
+<div class="section" id="repositories">
+<h2>Repositories<a class="headerlink" href="#repositories" title="Permalink to this headline">¶</a></h2>
+<p>The Bitnami Redmine Stack already includes Git.</p>
+<p>Access to a local git repository can be configured by the project’s manager
+at the project settings tab.</p>
+<img alt="../_images/Redmine_RepositoryTab.png" src="../_images/Redmine_RepositoryTab.png" />
+<img alt="../_images/Redmine_GitRepo.png" src="../_images/Redmine_GitRepo.png" />
+<p>Note that the repository should be local and bare.
+For example, to clone from a remote repository, use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="o">--</span><span class="n">bare</span> <span class="n">git</span><span class="p">:</span><span class="o">//</span><span class="n">yourgitserver</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">project</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>and add full path to the repository in Projects &gt; Settings &gt; Repositories
+e.g. <code class="docutils literal notranslate"><span class="pre">/var/repositories/project.git</span></code>.</p>
+<p>Permissions on the repository folder for the redmine user:group should be are 775.</p>
+<p>To update the bare repository with changes from its remote working origin do:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">fetch</span> <span class="o">-</span><span class="n">q</span> <span class="n">origin</span> <span class="n">master</span><span class="p">:</span><span class="n">master</span>
+</pre></div>
+</div>
+<p>or push the changes into the bare repository:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">--</span><span class="nb">all</span> <span class="o">&lt;</span><span class="n">url</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">bare</span><span class="o">-</span><span class="n">repo</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See</p>
+<p><a class="reference external" href="http://www.redmine.org/boards/2/topics/34226?r=35533">http://www.redmine.org/boards/2/topics/34226?r=35533</a>
+<a class="reference external" href="http://www.saintsjd.com/2011/01/what-is-a-bare-git-repository/">http://www.saintsjd.com/2011/01/what-is-a-bare-git-repository/</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Using the issue tracking system" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, the Nile team | CC BY-SA 3.0 | Exceptions apply! See the sources and metadata for each doc.
+      <span class="lastupdated">
+        Last updated on May 19, 2020.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

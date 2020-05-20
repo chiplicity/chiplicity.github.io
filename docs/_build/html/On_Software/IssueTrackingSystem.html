@@ -1,0 +1,519 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Issue Tracking System &mdash; Wiser 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Questionnaire Management System" href="QuestionnaireManagement.html" />
+    <link rel="prev" title="Documentation Generator" href="DocumentationGenerator.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Wiser
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Using_Forum/index.html">Using Forum or Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Sphinx/index.html">Using the technical documentation generator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Git/index.html">Using the version control system</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Commercial-Off-the-Shelf Software Selection Process</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html">Software selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#factors">Factors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#total-cost-of-ownership">Total Cost of Ownership</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#additional-references">Additional References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProjectManagementInfrastructure.html">Project Management Infrastructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VersionControlSystem.html">Version Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DocumentationGenerator.html">Documentation Generator</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Issue Tracking System</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rationale">Rationale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#analysis-of-alternatives">Analysis of alternatives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#real-world-use">Real-world use</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="QuestionnaireManagement.html">Questionnaire Management System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebBrowsers_DynamicCharts.html">Dynamic charts on web browser usage statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebMapping_ToolList.html">OSGEO list of webmapping tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html">Web Server and Servlet COntainer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html#rationale">Rationale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html#analysis-of-alternatives">Analysis of alternatives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OperatingSystems.html">Operating Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DatabaseManagementSystem.html">Database Management System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Z_RNIDOpenStandards.html">Open Standards in the Portuguese National Regulation on Digital Interoperability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeodataServer.html">Geospatial Data Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebMapping.html">Web Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebBrowsers.html">Web Browser</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Notebook/index.html">Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_TaskMan/index.html">Using the issue tracking system</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Wiser</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Commercial-Off-the-Shelf Software Selection Process</a> &raquo;</li>
+        
+      <li>Issue Tracking System</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/On_Software/IssueTrackingSystem.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="issue-tracking-system">
+<span id="sw-issuetracking-ref"></span><h1>Issue Tracking System<a class="headerlink" href="#issue-tracking-system" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Important note</p>
+<p>This document refers to the outcome of the preliminary software selection process.</p>
+<p>Following the procurement process,
+and based upon the preference expressed by the infrastructure provider
+and accepted by the development contractor,
+a decision was reached to use <a class="reference external" href="http://www.redmine.org/">Redmine</a> instead of <a class="reference external" href="http://trac.edgewall.org/">Trac</a>.</p>
+</div>
+<p>The project management and issue tracking system proposed for this project
+is <a class="reference external" href="http://trac.edgewall.org/">Trac</a>.</p>
+<p>Alternatives such as <a class="reference external" href="http://www.redmine.org/">Redmine</a> or <a class="reference external" href="http://www.bugzilla.org/">Bugzilla</a> can be adopted,
+if required or preferred by the infrastructure provider
+or already in use by the development contractor.</p>
+<p>Online issue tracking systems,
+namely those associated with sourcecode hosting sites
+such as <a class="reference external" href="https://github.com/">github</a>, <a class="reference external" href="https://bitbucket.org">bitbucket</a> or <a class="reference external" href="http://sourceforge.net/">sourceforge</a>
+are an easily deployable and inexpensive alternative.</p>
+</div>
+<div class="section" id="rationale">
+<h2>Rationale<a class="headerlink" href="#rationale" title="Permalink to this headline">¶</a></h2>
+<p>(See overview in <a class="reference internal" href="ProjectManagementInfrastructure.html#sw-technical-infrastructure-ref"><span class="std std-ref">Project Management Infrastructure</span></a> )</p>
+<p>Generically, an ‘issue’ is any task that must be accomplished
+within a given time frame, has a responsible party/user
+and a predefined or an <em>ad-hoc</em> workflow.
+‘Issues’ can be software feature requests, bug reports, etc.,
+but can also be RFC (Request for Comments) on existing documents,
+meeting agendas, etc..</p>
+<p>The issue tracking system is the software product
+responsible for maintaining a list of (prioritised) open issues
+and dispatching them to the responsible parties based
+on the selected workflow.</p>
+<p>Some issue tracking systems have features similar to project management applications
+and can be used for generic project management, in addition to their main role
+in supporting the software development process and interactions with end-users.</p>
+<p>If the product is to be used also as the project’s initial website
+and project management tool, then two complementary features are useful:</p>
+<ul class="simple">
+<li><p>a wiki to allow non-technical (authorised) users
+to add, modify or delete the online content,
+using a <a class="reference external" href="http://en.wikipedia.org/wiki/Lightweight_markup_language">lightweight markup language</a>.</p></li>
+<li><p>a forum (message board) to centralise and archive project-related messages
+and discussions (a customised type of ‘issue’ can be used for this purpose).</p></li>
+</ul>
+<p>Besides the generic <a class="reference internal" href="SoftwareSelection.html#sw-constraints-ref"><span class="std std-ref">COTS selection constraints</span></a>,
+two integration requirements apply:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://git-scm.com/">Git</a> <strong>must</strong> be one of the supported version control system,
+as most tickets/issues will likely refer to or affect documentation
+and source code</p></li>
+<li><p><a class="reference external" href="http://www.postgresql.org/">PostgreSQL</a> <strong>should</strong> be one of the supported database back-ends:
+this is not a functional requirement,
+but consolidates the software portfolio
+and allows the reuse of limited DBA and infrastructure resources
+(should in-house hosting be adopted).</p></li>
+</ul>
+<p>A <a class="reference internal" href="SoftwareSelection.html#sw-selection-strategies-ref"><span class="std std-ref">puzzle assembly strategy</span></a>
+is also applied to the software dependencies of each product:
+if it requires a software component that is also required by another component,
+then a smaller software portfolio can be defined
+(requiring less training, less administration skills, etc.
+and reducing the TCO).</p>
+<p>Other features are discussed in the next section.</p>
+</div>
+<div class="section" id="analysis-of-alternatives">
+<h2>Analysis of alternatives<a class="headerlink" href="#analysis-of-alternatives" title="Permalink to this headline">¶</a></h2>
+<p>The following table contains a comparison of 4 issue tracking products
+compatible with the established <a class="reference internal" href="SoftwareSelection.html#sw-constraints-ref"><span class="std std-ref">COTS selection constraints</span></a>:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.bugzilla.org/">Bugzilla</a></p></li>
+<li><p><a class="reference external" href="http://www.redmine.org/">Redmine</a></p></li>
+<li><p><a class="reference external" href="http://bestpractical.com/rt/">Request Tracker</a></p></li>
+<li><p>and <a class="reference external" href="http://trac.edgewall.org/">Trac</a></p></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/IssueTracking.png" id="sw-issuetracking-table-ref"><img alt="Comparison of issue tracking software" id="sw-issuetracking-table-ref" src="../_images/IssueTracking.png" style="width: 80%;" /></a>
+<div class="topic">
+<p class="topic-title">Table legend</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Feature</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Implementation language</p></td>
+<td><p>Indicates the programming language used for product implementation,
+which has implications of the product’s software dependencies.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cloud services</p></td>
+<td><p>Indicates if cloud-based service providers are available,
+that would allow the product to be used
+as <a class="reference external" href="http://csrc.nist.gov/publications/nistpubs/800-145/SP800-145.pdf">SaaS</a> (Software as as Service).</p></td>
+</tr>
+<tr class="row-even"><td><p>Database:</p></td>
+<td><p>Lists supported FOSS database back-ends
+(other proprietary DBMS such as Oracle are also supported)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Revision control system</p></td>
+<td><p>Lists the supported version control systems.</p></td>
+</tr>
+<tr class="row-even"><td><p>Authentication methods</p></td>
+<td><p>Basic form-based authentication will be required for external users
+(the various project partners, the development contractor);
+LDAP for internal users.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Input methods</p></td>
+<td><p>Interactive web-based is required for end-users;
+e-mail can be useful for the technical team;
+Mylyn integration can be useful if the development team
+uses the Eclipse IDE (e.g. for Java development)
+or simply if the Eclipse Platform
+is used for project and task management by team members.</p></td>
+</tr>
+<tr class="row-even"><td><p>Notification methods</p></td>
+<td><p>E-mail based notification is required,
+other options may be nice-to-have.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Basic features</p></td>
+<td><p>Unicode support, the possibility to add/customise fields,
+and full-text searches are basic requirements
+(that were mainly used exclude software options
+from the candidate set).</p></td>
+</tr>
+<tr class="row-even"><td><p>Multiple projects</p></td>
+<td><p>Support for multiple projects is not required for the project,
+but allows the reuse of the same platform at organisation level.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Wiki</p></td>
+<td><p>Collaborative editing of project pages is not required
+for issue tracking, but may be a convenient feature,
+specially for non-technical documentation (and end-users).</p></td>
+</tr>
+<tr class="row-even"><td><p>Forum / blog</p></td>
+<td><p>Again, this feature is not required for issue tracking,
+but can provide a convenient platform for team members and end-users.
+The forum should be monitored by technical elements,
+in order to identify potential issues/bugs
+that should raise a formal issue tracking workflow.
+Similarly, a blog can be used to provide
+end-users with (non-technical) feedback
+on new features, bugs resolved, etc.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="rubric">Evaluation</p>
+<p>The functional evaluation is not conclusive:
+except for <a class="reference external" href="http://bestpractical.com/rt/">RT</a>, the alternatives meet the established criteria.
+<a class="footnote-reference brackets" href="#bugzilla-demo" id="id1">1</a> <a class="footnote-reference brackets" href="#redmine-demo" id="id2">2</a> <a class="footnote-reference brackets" href="#trac-demo" id="id3">3</a></p>
+<p>All products require the following components:</p>
+<ul class="simple">
+<li><p>Database back-end: either <a class="reference external" href="http://www.postgresql.org/">PostgreSQL</a> or <a class="reference external" href="http://www.mysql.com/">MySQL</a>
+(<a class="reference external" href="http://www.sqlite.org/">SQLite</a> can only be used for very small projects, due to concurrency limitations).</p></li>
+<li><p>Apache HTTP Server (or equivalent): only <a class="reference external" href="http://trac.edgewall.org/">Trac</a> is shipped with a built-in
+web server.</p></li>
+<li><p>A <a class="reference external" href="http://shearer.org/MTA_Comparison">Mail Transfer Agent</a> (such as <a class="reference external" href="http://www.exim.org/">Exim</a> or <a class="reference external" href="http://www.postfix.org/">Postfix</a>)
+or simply access to an e-mail account on an <a class="reference external" href="http://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol">SMTP</a> server
+(to send email notifications).</p></li>
+</ul>
+<p>Additional dependencies are related to each product implementation language:</p>
+<ul class="simple">
+<li><p>Bugzilla requires <a class="reference external" href="http://www.perl.org/">Perl</a> and various Perl modules.</p></li>
+<li><p>Trac requires <a class="reference external" href="http://www.python.org/">Python</a> and several Python modules.</p></li>
+<li><p>Redmine runs on <a class="reference external" href="http://rubyonrails.org/">Ruby on Rails</a> and requires various Rails modules.</p></li>
+</ul>
+<p>From a software portfolio point-of-view, Trac might be preferable since
+<a class="reference external" href="http://sphinx-doc.org/">Sphinx</a>, the selected <a class="reference internal" href="DocumentationGenerator.html#sw-documentiongenerators-ref"><span class="std std-ref">documentation generator</span></a>
+is also a Python application with similar dependencies
+(as is <a class="reference external" href="https://github.com/rtfd/readthedocs.org">ReadTheDocs</a> that can be used to automate
+a server-side documentation build process).</p>
+<p>The three candidate have different wiki capabilities:</p>
+<ul class="simple">
+<li><p>Bugzilla has a <a class="reference external" href="http://www.mediawiki.org/wiki/MediaWiki">MediaWiki</a> add-on available.
+<a class="reference external" href="http://www.mediawiki.org/wiki/MediaWiki">MediaWiki</a> (used by <a class="reference external" href="http://www.wikipedia.org">Wikipedia</a>) requires
+a web server such as the <a class="reference external" href="http://httpd.apache.org/">Apache HTTP server</a>, PHP 5.3.2+,
+and a database back-end such as <a class="reference external" href="http://www.postgresql.org/">PostgreSQL</a>.
+<a class="reference external" href="http://en.wikipedia.org/wiki/MediaWiki#Markup">Wiki Markup</a> is used as a markup language:
+<a class="reference external" href="http://en.wikipedia.org/wiki/ReStructuredText">reStructuredText</a> is not currently supported.
+Basically, wiki support for Bugzilla
+would require an addition component (PHP)
+and wouldn’t allow the use of the same markup language
+in all the project´s documents and pages.</p></li>
+<li><p>Trac provides wiki functionality with support for two markup languages:
+<a class="reference external" href="http://trac.edgewall.org/wiki/WikiFormatting">WikiFormatting</a> or <a class="reference external" href="http://en.wikipedia.org/wiki/ReStructuredText">reStructuredText</a>
+(the latter requires two additional Python modules: <a class="reference external" href="http://docutils.sourceforge.net/">docutils</a> and <a class="reference external" href="http://pygments.org/">pygments</a>).</p></li>
+<li><p>Redmine also provides wiki functionality, using <a class="reference external" href="http://en.wikipedia.org/wiki/Textile_(markup_language)">Textile</a>.
+Support for <a class="reference external" href="http://en.wikipedia.org/wiki/ReStructuredText">reStructuredText</a> is only partial, through a plug-in,
+that requires the installation of <a class="reference external" href="http://www.python.org/">Python</a> + <a class="reference external" href="http://docutils.sourceforge.net/">docutils</a> or <a class="reference external" href="http://johnmacfarlane.net/pandoc/">pandoc</a>.</p></li>
+</ul>
+<p>Again, from an integration (with the documentation generator) and software
+portfolio point-of-view, Trac is preferable.</p>
+<p><a class="reference external" href="http://trac.edgewall.org/">Trac</a> does not support multiple projects,
+which can be a limitation at organisational level
+(e.g. the same platform/installation might be needed for distinct subprojects).
+An unsupported community contributed plug-in (<a class="reference external" href="http://trac-hacks.org/wiki/SimpleMultiProjectPlugin">SimpleMultiProject</a>) exists
+that extends the basic fields and reports available in Trac
+by including a “project” category with associated milestones.</p>
+</div>
+<div class="section" id="real-world-use">
+<h2>Real-world use<a class="headerlink" href="#real-world-use" title="Permalink to this headline">¶</a></h2>
+<p>Basic information on developer community activity
+is available through the following <a class="reference external" href="http://www.ohloh.net/p/compare?project_0=Bugzilla&amp;project_1=Redmine&amp;project_2=Trac">Ohloh indicators on issue tracking systems</a>.</p>
+<p>The following table is analogous to
+<a class="reference internal" href="VersionControlSystem.html#sw-vcs-adoption-table-ref"><span class="std std-ref">version control system adoption table</span></a>
+and identifies the issue tracking system used by the
+different open-source COTS evaluated for this project.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/IssueTracking_Adoption.png" id="sw-issue-tracking-adoption-table-ref"><img alt="Comparison of issue tracking system adoption by software projects" id="sw-issue-tracking-adoption-table-ref" src="../_images/IssueTracking_Adoption.png" style="width: 80%;" /></a>
+<p>FOSS development projects provide most of the available real-world use examples
+listed at each project’s web site.</p>
+<p>The <a class="reference external" href="http://www.bugzilla.org/installation-list/">Bugzilla users community</a> is notoriously large and
+includes high-profile projects such as the
+<a class="reference external" href="http://bugzilla.kernel.org/">Linux Kernel</a>,
+<a class="reference external" href="http://www.mozilla.org/">Mozilla</a>, <a class="reference external" href="http://www.eclipse.org">Eclipse</a> and the <a class="reference external" href="http://www.apache.org/">Apache Software Foundation</a> projects.</p>
+<p>The <a class="reference external" href="http://www.redmine.org/projects/redmine/wiki/WeAreUsingRedmine">Redmine users community</a> is much smaller than either Bugzilla’s or Trac’s,
+although <a class="reference external" href="http://www.google.com/trends/explore?q=Bugzilla%2C+Trac%2C+Redmine#cat=0-5&amp;q=Bugzilla%2C%20Trac%2C%20Redmine%2C%20Request%20Tracker&amp;date=1%2F2010%2037m&amp;cmpt=q">Google trends on issue tracking systems</a>
+show an increasing level of end-user interest in the past years.
+The <a class="reference external" href="http://stackoverflow.com/">stackoverflow</a> Q&amp;A site shows a similar trend.</p>
+<p>The <a class="reference external" href="http://trac.edgewall.org/wiki/TracUsers">Trac users community</a>  includes well-known projects such as
+<a class="reference external" href="http://wordpress.com/">WordPress</a>, <a class="reference external" href="http://plone.org/">Plone</a>, <a class="reference external" href="https://www.djangoproject.com/">Django</a>, <a class="reference external" href="http://jquery.com/">JQuery</a> or <a class="reference external" href="https://www.transifex.com/">Transifex</a>.
+Trac is also used by most <a class="reference external" href="http://www.osgeo.org/">OSGEO</a> and other FOSS GIS projects -
+such as <a class="reference external" href="http://trac.osgeo.org/proj/">Proj</a>,  <a class="reference external" href="http://www.gdal.org/">GDAL</a>, <a class="reference external" href="http://postgis.net/">PostGIS</a>, <a class="reference external" href="http://grass.osgeo.org/">GRASS</a>, <a class="reference external" href="http://www.openlayers.org/">OpenLayers</a>, <a class="reference external" href="http://josm.openstreetmap.de/">JOSM</a> or <a class="reference external" href="http://www.openstreetmap.org/">OpenStreetMap</a>.
+Trac is also the <a class="reference external" href="http://sourceforge.net/p/forge/documentation/Tracker%20-%20Classic/">sourceforge classic tracker</a>
+(the current sourceforge 2.0 version runs on the <a class="reference external" href="http://sourceforge.net/p/allura/wiki/Allura%20Wiki/">Allura</a> platform).</p>
+<p>An additional source of information on software adoption
+is available at <a class="reference external" href="https://launchpad.net/bugs/bugtrackers">https://launchpad.net/bugs/bugtrackers</a>.
+As of June 2013, Trac was the most common issue tracker,
+used by 400 out of about 1700 listed projects.</p>
+<p class="rubric">Conclusions</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.bugzilla.org/">Bugzilla</a> is best used as a dedicated bug tracking system
+and would require additional components (e.g. <a class="reference external" href="http://www.mediawiki.org/wiki/MediaWiki">MediaWiki</a>)
+to support a generic project site.</p></li>
+<li><p><a class="reference external" href="http://www.redmine.org/">Redmine</a> has a versatile and user-friendly interface,
+for administration and end-users.
+It has an increasing and active community, which is nevertheless
+much smaller than the user and developer communities of
+either Bugzilla or Trac.</p></li>
+<li><p>All things considered (features, integration, community size and activity),
+<a class="reference external" href="http://trac.edgewall.org/">Trac</a> is an equilibrated option.</p></li>
+<li><p>It should be noticed that many projects currently
+use online issue tracking services managed by service providers (SaaS),
+instead of maintaining an in-house issue tracking platform.</p></li>
+<li><p>Similarly, most <a class="reference external" href="https://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities">sourcecode hosting services</a>
+(e.g. <a class="reference external" href="https://github.com/">Github</a>, <a class="reference external" href="https://bitbucket.org">Bitbucket</a> ou <a class="reference external" href="http://sourceforge.net/">sourceforge</a>)
+provide issue tracking facilities.</p></li>
+</ul>
+<p class="rubric">Footnotes</p>
+<dl class="footnote brackets">
+<dt class="label" id="bugzilla-demo"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>The <a class="reference external" href="http://landfill.bugzilla.org/">http://landfill.bugzilla.org/</a> site can be explored for demonstration purposes.</p>
+</dd>
+<dt class="label" id="redmine-demo"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>The <a class="reference external" href="http://www.redmine.org/">http://www.redmine.org/</a> site is, itself, powered by Redmine.
+The <a class="reference external" href="http://demo.redmine.org/">http://demo.redmine.org/</a> site can be explored for demonstration purposes.</p>
+</dd>
+<dt class="label" id="trac-demo"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>Demonstration sites for various Trac versions are
+available at <a class="reference external" href="http://trac.edgewall.org/wiki/SandBox">http://trac.edgewall.org/wiki/SandBox</a>.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="QuestionnaireManagement.html" class="btn btn-neutral float-right" title="Questionnaire Management System" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="DocumentationGenerator.html" class="btn btn-neutral float-left" title="Documentation Generator" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, the Nile team | CC BY-SA 3.0 | Exceptions apply! See the sources and metadata for each doc.
+      <span class="lastupdated">
+        Last updated on May 19, 2020.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,452 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Showing source code examples in Sphinx &mdash; Wiser 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Creating diagrams in Sphinx" href="UsingGraphicsAndDiagramsInSphinx.html" />
+    <link rel="prev" title="Publishing the documents online" href="PublishingTheDocsOnline.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Wiser
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Using_Forum/index.html">Using Forum or Projects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Using the technical documentation generator</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#introduction">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#references">References</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="About_Sphinx.html">About Sphinx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OnReStructuredText.html">Sphinx’s reStructuredText primer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ToolsForReStructuredText.html">Tools for reStructuredText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PublishingTheDocsOnline.html">Publishing the documents online</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Showing source code examples in Sphinx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UsingGraphicsAndDiagramsInSphinx.html">Creating diagrams in Sphinx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UsingBibTeXCitationsInSphinx.html">Managing bibliographic citations in Sphinx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UsingMathEquationsInSphinx.html">Creating equations in Sphinx</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Git/index.html">Using the version control system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../On_Software/index.html">Commercial-Off-the-Shelf Software Selection Process</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Notebook/index.html">Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_TaskMan/index.html">Using the issue tracking system</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Wiser</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Using the technical documentation generator</a> &raquo;</li>
+        
+      <li>Showing source code examples in Sphinx</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Using_Sphinx/ShowingCodeExamplesInSphinx.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="showing-source-code-examples-in-sphinx">
+<h1>Showing source code examples in Sphinx<a class="headerlink" href="#showing-source-code-examples-in-sphinx" title="Permalink to this headline">¶</a></h1>
+<p>Standard reST literal blocks are started by <code class="docutils literal notranslate"><span class="pre">::</span></code>
+at the end of the preceding paragraph and delimited by indentation.</p>
+<div class="section" id="highlight-directive">
+<h2>Highlight directive<a class="headerlink" href="#highlight-directive" title="Permalink to this headline">¶</a></h2>
+<p>The default highlighting language is Python:
+it can be be changed using the <code class="docutils literal notranslate"><span class="pre">highlight</span></code> directive
+within a document:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">highlight</span><span class="p">::</span> html
+
+The literal blocks are now highlighted as HTML, until a new directive is found.
+
+::
+   &lt;html&gt;&lt;head&gt;&lt;/head&gt;
+   &lt;body&gt;This is a text.&lt;/body&gt;
+   &lt;/html&gt;
+
+The following directive changes the hightlight language to SQL.
+
+<span class="p">..</span> <span class="ow">highlight</span><span class="p">::</span> sql
+
+::
+   SELECT * FROM mytable
+
+<span class="p">..</span> <span class="ow">highlight</span><span class="p">::</span> none
+
+From here on no highlighting will be done.
+
+::
+   SELECT * FROM mytable
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-block-directive">
+<h2>Code-block directive<a class="headerlink" href="#code-block-directive" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">code-block</span></code> directive can be used to declare the specific language
+to be used in a block, regardless of the highlighting language:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>The following is a SQL statement.
+
+<span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> sql
+   <span class="nc">:linenos:</span>
+
+   SELECT * FROM mytable
+</pre></div>
+</div>
+<p>Line numbers are useful for long blocks such as this one:</p>
+<div class="highlight-postgresql notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1">-- http://www.postgresonline.com/journal/index.php?/archives/97-SQL-Coding-Standards-To-Each-His-Own-Part-II.html</span>
+<span class="k">SELECT</span> <span class="n">persons</span><span class="mf">.</span><span class="n">id</span><span class="p">,</span> <span class="n">persons</span><span class="mf">.</span><span class="n">first_name</span><span class="p">,</span> <span class="n">persons</span><span class="mf">.</span><span class="n">last_name</span><span class="p">,</span> <span class="n">forums</span><span class="mf">.</span><span class="n">category</span><span class="p">,</span>
+   <span class="n">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span> <span class="n">posts</span><span class="mf">.</span><span class="n">id</span><span class="p">)</span> <span class="k">as</span> <span class="n">num_posts</span><span class="p">,</span>
+   <span class="k">COALESCE</span><span class="p">(</span><span class="n">MAX</span><span class="p">(</span><span class="k">comments</span><span class="mf">.</span><span class="n">rating</span><span class="p">),</span> <span class="mf">0</span><span class="p">)</span> <span class="k">AS</span> <span class="n">highest_rating</span><span class="p">,</span>
+   <span class="k">COALESCE</span><span class="p">(</span><span class="n">MIN</span><span class="p">(</span><span class="k">comments</span><span class="mf">.</span><span class="n">rating</span><span class="p">),</span> <span class="mf">0</span><span class="p">)</span> <span class="k">AS</span> <span class="n">lowest_rating</span>
+<span class="k">FROM</span> <span class="n">persons</span> <span class="k">JOIN</span> <span class="n">posts</span> <span class="k">ON</span> <span class="n">persons</span><span class="mf">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">posts</span><span class="mf">.</span><span class="n">author</span>
+   <span class="k">JOIN</span> <span class="n">forums</span> <span class="k">on</span> <span class="n">posts</span><span class="mf">.</span><span class="n">forum</span> <span class="o">=</span> <span class="n">forums</span><span class="mf">.</span><span class="n">id</span>
+   <span class="k">LEFT</span> <span class="k">OUTER</span> <span class="k">JOIN</span> <span class="k">comments</span> <span class="k">ON</span> <span class="n">posts</span><span class="mf">.</span><span class="n">id</span> <span class="o">=</span> <span class="k">comments</span><span class="mf">.</span><span class="n">post</span>
+<span class="k">WHERE</span> <span class="n">persons</span><span class="mf">.</span><span class="n">status</span> <span class="o">&gt;</span> <span class="mf">0</span>
+   <span class="k">AND</span> <span class="n">forums</span><span class="mf">.</span><span class="n">ratings</span> <span class="o">=</span> <span class="k">TRUE</span>
+   <span class="k">AND</span> <span class="k">comments</span><span class="mf">.</span><span class="n">post_date</span> <span class="o">&gt;</span> <span class="p">(</span> <span class="n">now</span><span class="p">()</span> <span class="o">-</span> <span class="nb">INTERVAL</span> <span class="s1">&#39;1 year&#39;</span><span class="p">)</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">persons</span><span class="mf">.</span><span class="n">id</span><span class="p">,</span> <span class="n">persons</span><span class="mf">.</span><span class="n">first_name</span><span class="p">,</span> <span class="n">persons</span><span class="mf">.</span><span class="n">last_name</span><span class="p">,</span> <span class="n">forums</span><span class="mf">.</span><span class="n">category</span>
+<span class="k">HAVING</span> <span class="n">count</span><span class="p">(</span><span class="k">DISTINCT</span> <span class="n">posts</span><span class="mf">.</span><span class="n">id</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mf">0</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="n">persons</span><span class="mf">.</span><span class="n">last_name</span><span class="p">,</span> <span class="n">persons</span><span class="mf">.</span><span class="n">first_name</span><span class="p">;</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="literalinclude-directive">
+<h2>Literalinclude directive<a class="headerlink" href="#literalinclude-directive" title="Permalink to this headline">¶</a></h2>
+<p>Another option is to include part of a given source code file, like this:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">literalinclude</span><span class="p">::</span> filename
+   <span class="nc">:linenos:</span>
+   <span class="nc">:language:</span>
+   <span class="nc">:lines:</span>
+   <span class="nc">:start-after:</span>
+   <span class="nc">:end-before:</span>
+   <span class="nc">:emphasize-lines:</span>
+</pre></div>
+</div>
+<p>Just below is a example:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">Literalinclude directive</span>
+<span class="gh">************************</span>
+
+Another option is to include part of a given source code file, like this::
+</pre></div>
+</div>
+<p>Instead of using line numbers (which can change), it is possible to
+use the options <code class="docutils literal notranslate"><span class="pre">:start-after</span></code> and <code class="docutils literal notranslate"><span class="pre">:end-before:</span></code>
+that search the included file for lines containing the specified text.
+For example:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">literalinclude</span><span class="p">::</span> ShowingCodeExamplesInSphinx.rst
+   <span class="nc">:language:</span> rst
+   <span class="nc">:start-after:</span> Instead of using
+   <span class="nc">:end-before:</span> For example
+</pre></div>
+</div>
+<p>produces this result:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>use the options <span class="s">``:start-after``</span> and <span class="s">``:end-before:``</span>
+that search the included file for lines containing the specified text.
+</pre></div>
+</div>
+</div>
+<div class="section" id="pygments-lexers">
+<h2>Pygments lexers<a class="headerlink" href="#pygments-lexers" title="Permalink to this headline">¶</a></h2>
+<p>Syntax highlighting is done by <a class="reference external" href="http://pygments.org/">Pygments</a> (if installed):
+any of the <a href="#id2"><span class="problematic" id="id3">`Pygments language lexers`_</span></a> can be used.</p>
+<p>The following table lists some useful lexers (in no particular order).</p>
+<table class="docutils align-default" id="pygments-lexers-ref">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Lexer</p></th>
+<th class="head"><p>Shortname</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Structured Query Language</p></td>
+<td><p>sql</p></td>
+</tr>
+<tr class="row-odd"><td><p>PostgreSQL dialect of SQL</p></td>
+<td><p>postgresql</p></td>
+</tr>
+<tr class="row-even"><td><p>PostgreSQL procedural language</p></td>
+<td><p>plpgsql</p></td>
+</tr>
+<tr class="row-odd"><td><p>PostgreSQL console sessions</p></td>
+<td><p>psql</p></td>
+</tr>
+<tr class="row-even"><td><p>ReStructured Text</p></td>
+<td><p>rst</p></td>
+</tr>
+<tr class="row-odd"><td><p>TeX and LaTeX</p></td>
+<td><p>latex</p></td>
+</tr>
+<tr class="row-even"><td><p>DOS/Windows batch file</p></td>
+<td><p>bat</p></td>
+</tr>
+<tr class="row-odd"><td><p>Windows PowerShell</p></td>
+<td><p>powershell</p></td>
+</tr>
+<tr class="row-even"><td><p>Bash shell scripts</p></td>
+<td><p>bash</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bash shell sessions</p></td>
+<td><p>console</p></td>
+</tr>
+<tr class="row-even"><td><p>Cascading Style Sheets</p></td>
+<td><p>css</p></td>
+</tr>
+<tr class="row-odd"><td><p>HTML 4 and XHTML 1</p></td>
+<td><p>html</p></td>
+</tr>
+<tr class="row-even"><td><p>XML</p></td>
+<td><p>xml</p></td>
+</tr>
+<tr class="row-odd"><td><p>XSLT</p></td>
+<td><p>xslt</p></td>
+</tr>
+<tr class="row-even"><td><p>XQuery</p></td>
+<td><p>xquery</p></td>
+</tr>
+<tr class="row-odd"><td><p>JavaScript</p></td>
+<td><p>javascript</p></td>
+</tr>
+<tr class="row-even"><td><p>JSON data structures</p></td>
+<td><p>json</p></td>
+</tr>
+<tr class="row-odd"><td><p>PHP source code</p></td>
+<td><p>php</p></td>
+</tr>
+<tr class="row-even"><td><p>PHP embedded in HTML</p></td>
+<td><p>html+php</p></td>
+</tr>
+<tr class="row-odd"><td><p>Python 2</p></td>
+<td><p>python</p></td>
+</tr>
+<tr class="row-even"><td><p>Python 2 tracebacks</p></td>
+<td><p>pytb</p></td>
+</tr>
+<tr class="row-odd"><td><p>Python console</p></td>
+<td><p>pycon</p></td>
+</tr>
+<tr class="row-even"><td><p>Java</p></td>
+<td><p>java</p></td>
+</tr>
+<tr class="row-odd"><td><p>Configuration file in the Java’s properties format</p></td>
+<td><p>jproperties</p></td>
+</tr>
+<tr class="row-even"><td><p>Configuration file in the Apache config file format</p></td>
+<td><p>apacheconf</p></td>
+</tr>
+<tr class="row-odd"><td><p>R source code (or S, or S-plus)</p></td>
+<td><p>r</p></td>
+</tr>
+<tr class="row-even"><td><p>R console</p></td>
+<td><p>rout</p></td>
+</tr>
+<tr class="row-odd"><td><p>Matlab</p></td>
+<td><p>matlab</p></td>
+</tr>
+<tr class="row-even"><td><p>Matlab sessions</p></td>
+<td><p>matlabsession</p></td>
+</tr>
+<tr class="row-odd"><td><p>NumPy</p></td>
+<td><p>numpy</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="UsingGraphicsAndDiagramsInSphinx.html" class="btn btn-neutral float-right" title="Creating diagrams in Sphinx" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="PublishingTheDocsOnline.html" class="btn btn-neutral float-left" title="Publishing the documents online" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, the Nile team | CC BY-SA 3.0 | Exceptions apply! See the sources and metadata for each doc.
+      <span class="lastupdated">
+        Last updated on May 19, 2020.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

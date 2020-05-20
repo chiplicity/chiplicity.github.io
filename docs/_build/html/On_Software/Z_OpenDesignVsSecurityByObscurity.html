@@ -1,0 +1,292 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Security risks &mdash; Wiser 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Wiser
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Forum/index.html">Using Forum or Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Sphinx/index.html">Using the technical documentation generator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Git/index.html">Using the version control system</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Notebook/index.html">Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_TaskMan/index.html">Using the issue tracking system</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Wiser</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Security risks</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/On_Software/Z_OpenDesignVsSecurityByObscurity.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="security-risks">
+<h1>Security risks<a class="headerlink" href="#security-risks" title="Permalink to this headline">¶</a></h1>
+<div class="topic">
+<p class="topic-title">Security risks</p>
+<p>Security issues are to be considered with more attention.
+If your software is well written, the publication of the source code
+should not facilitate security breaches (intrusion by hackers etc.)
+as the code should not contain passwords,
+nor sensitive or personal data as names or biometrics,
+or information on possible back door etc.
+At the contrary, the Open Source publication of the code
+should by the time reinforce software security
+by allowing a wider community to screen it for possible bugs.
+However, if a software is effectively used for critical applications
+and if the published source code contains serious security flaws,
+disclosing the code will generate real risks of hacking,
+at least in a first stage, before bug corrections.
+Therefore, depending on the sensitive character of the application
+and the nature of accessed data,
+a risk assessment is recommended prior to Open Source distribution.</p>
+<p>Source: <a class="reference external" href="https://joinup.ec.europa.eu/software/page/eupl/how-use-eupl">What are the risks of publishing software under the EUPL</a></p>
+</div>
+</div>
+<div class="section" id="open-design-vs-security-by-obscurity">
+<h1>Open design <em>vs</em> security by obscurity<a class="headerlink" href="#open-design-vs-security-by-obscurity" title="Permalink to this headline">¶</a></h1>
+<p>There is a common preoccupation
+that the use, reuse or development of open source software
+may promote security breaches.
+The alternative being not to disclose the source code,
+so that potential attackers would be unaware of vulnerabilities -
+the so-called ‘security by obscurity’.</p>
+<p>However, the latter is not applicable when a software system is meant
+to be deployed, managed and (possibly) further developed by different IT teams
+and so there no real control over whom will have access to it.</p>
+<p>Furthermore, a well-established software design principle
+establishes that software security should not rely (or presume)
+lack of knowledge from potential attackers.
+The security of a mechanism should not depend on the
+secrecy of its design or implementation
+but on the separation of the protection mechanisms
+(e.g. a cryptographic algorithm)
+from the protection keys (e.g. a cryptographic key or password).</p>
+<p>In conclusion:</p>
+<ul class="simple">
+<li><p>‘Security by obscurity’ can and should be applied to the data.</p></li>
+<li><p>‘Open design’ can and should be applied to the software.</p></li>
+</ul>
+<p>The following excerpts synthetize these views:</p>
+<div class="topic">
+<p class="topic-title">Open design</p>
+<p>The design should not be secret.</p>
+<p>The [security] mechanisms should not depend on the ignorance of potential attackers,
+but rather on the possession of specific, more easily protected, keys or passwords.</p>
+<p>This decoupling of protection mechanisms from protection keys
+permits the mechanisms to be examined by many reviewers
+without concern that the review may itself compromise the safeguards.</p>
+<p>In addition, any skeptical user may be allowed to convince himself
+that the system he is about to use is adequate for his purpose.</p>
+<p>Finally, it is simply not realistic to attempt to maintain secrecy
+for any system which receives wide distribution.</p>
+<p>Source: <a class="reference internal" href="#sasc75" id="id1"><span>[SaSc75]</span></a></p>
+</div>
+<div class="topic">
+<p class="topic-title">Can ‘security by obscurity’ be a basis for security?</p>
+<p>‘Security by Obscurity’ can work, but <strong>iff</strong>:</p>
+<ul class="simple">
+<li><p>Keeping secret actually improves security</p></li>
+<li><p>You can keep the critical information a secret</p></li>
+</ul>
+<p>For obscurity itself to give significant security:</p>
+<ul class="simple">
+<li><p>Keep source secret from all but a few people</p></li>
+<li><p>Never sell or reveal source to many</p></li>
+<li><p>Keep binary secret; never sell binary to outsiders</p></li>
+<li><p>Use software protection mechanisms</p></li>
+<li><p>Remove software binary before exporting system</p></li>
+<li><p>Do not allow inputs/outputs of program to be accessible by others
+(no Internet/web access)</p></li>
+</ul>
+<p>Source: <a class="reference internal" href="#whee12" id="id2"><span>[Whee12]</span></a></p>
+</div>
+<dl class="citation">
+<dt class="label" id="whee12"><span class="brackets"><a class="fn-backref" href="#id2">Whee12</a></span></dt>
+<dd><p>Wheeler, D. (2012). Open Source Software (OSS or FLOSS) and the U.S. Department of Defense (DoD). 2012-08-15. URL: <a class="reference external" href="http://www.dwheeler.com/essays/oss-dod-overview-2012-08-15.ppt">http://www.dwheeler.com/essays/oss-dod-overview-2012-08-15.ppt</a></p>
+</dd>
+<dt class="label" id="sasc75"><span class="brackets"><a class="fn-backref" href="#id1">SaSc75</a></span></dt>
+<dd><p>Saltzer, J. H.; Schroeder, M. D. (1975). The protection of information in computer systems. Proceedings of the IEEE. 63(9) :1278-1308 URL: <a class="reference external" href="http://www.acsac.org/secshelf/papers/protection_information.pdf">http://www.acsac.org/secshelf/papers/protection_information.pdf</a></p>
+</dd>
+</dl>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, the Nile team | CC BY-SA 3.0 | Exceptions apply! See the sources and metadata for each doc.
+      <span class="lastupdated">
+        Last updated on May 19, 2020.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

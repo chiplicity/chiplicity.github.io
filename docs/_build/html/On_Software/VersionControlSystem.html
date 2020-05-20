@@ -1,0 +1,441 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Version Control System &mdash; Wiser 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Documentation Generator" href="DocumentationGenerator.html" />
+    <link rel="prev" title="Project Management Infrastructure" href="ProjectManagementInfrastructure.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Wiser
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Using_Forum/index.html">Using Forum or Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Sphinx/index.html">Using the technical documentation generator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Git/index.html">Using the version control system</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Commercial-Off-the-Shelf Software Selection Process</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html">Software selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#factors">Factors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#total-cost-of-ownership">Total Cost of Ownership</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#additional-references">Additional References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProjectManagementInfrastructure.html">Project Management Infrastructure</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Version Control System</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rationale">Rationale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#analysis-of-alternatives">Analysis of alternatives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#real-world-use">Real-world use</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DocumentationGenerator.html">Documentation Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IssueTrackingSystem.html">Issue Tracking System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuestionnaireManagement.html">Questionnaire Management System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebBrowsers_DynamicCharts.html">Dynamic charts on web browser usage statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebMapping_ToolList.html">OSGEO list of webmapping tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html">Web Server and Servlet COntainer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html#rationale">Rationale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html#analysis-of-alternatives">Analysis of alternatives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OperatingSystems.html">Operating Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DatabaseManagementSystem.html">Database Management System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Z_RNIDOpenStandards.html">Open Standards in the Portuguese National Regulation on Digital Interoperability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeodataServer.html">Geospatial Data Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebMapping.html">Web Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebBrowsers.html">Web Browser</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Notebook/index.html">Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_TaskMan/index.html">Using the issue tracking system</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Wiser</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Commercial-Off-the-Shelf Software Selection Process</a> &raquo;</li>
+        
+      <li>Version Control System</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/On_Software/VersionControlSystem.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="version-control-system">
+<span id="sw-vcs-ref"></span><h1>Version Control System<a class="headerlink" href="#version-control-system" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>The selected version control system is <a class="reference external" href="http://git-scm.com/">Git</a>.</p>
+<p>Sourcecode hosting sites,
+such as <a class="reference external" href="https://github.com/">Github</a> or <a class="reference external" href="https://bitbucket.org">BitBucket</a>,
+provide an easily deployable and inexpensive alternative to in-house hosting.</p>
+</div>
+<div class="section" id="rationale">
+<h2>Rationale<a class="headerlink" href="#rationale" title="Permalink to this headline">¶</a></h2>
+<p>(See overview in <a class="reference internal" href="ProjectManagementInfrastructure.html#sw-technical-infrastructure-ref"><span class="std std-ref">Project Management Infrastructure</span></a> )</p>
+<p><a class="reference external" href="http://en.wikipedia.org/wiki/Revision_control">Version Control</a> or revision control
+is the management of of changes to documents,
+computer programs, large web sites, and other collections of information.
+The set of files under version control is kept in a <a class="reference internal" href="../Using_Git/OnVersionControl.html#term-repository"><span class="xref std std-term">repository</span></a>.</p>
+<p>The <em>Version Control System</em> (VCS) is the application responsible
+for keeping track of the successive versions of a repository.</p>
+<p>Without a repository under version control, project information
+quickly gets scattered and duplicated over file systems and e-mail attachments,
+rendering it inconsistent and unmanageable.
+If coupled with clear operating procedures, a VCS can vastly simplify
+the management of changes to project documentation and source code.</p>
+<p>In this project, a version control is required:</p>
+<ul class="simple">
+<li><p>to manage the technical documentation
+(requirements, analysis, design, code and API documentation);</p></li>
+<li><p>to manage the source code of the different components;</p></li>
+<li><p>to manage the end user documentation production and translation.</p></li>
+</ul>
+<p>Additional requirements are:</p>
+<ul class="simple">
+<li><p>The documentation and source code repository must be under the same VCS.</p></li>
+<li><p>The documentation and source code repository should be integrated with the
+project management / issue tracking system.</p></li>
+</ul>
+</div>
+<div class="section" id="analysis-of-alternatives">
+<h2>Analysis of alternatives<a class="headerlink" href="#analysis-of-alternatives" title="Permalink to this headline">¶</a></h2>
+<p>The following table contains a comparison of 4 version control products
+compatible with the established <a class="reference internal" href="SoftwareSelection.html#sw-constraints-ref"><span class="std std-ref">COTS selection constraints</span></a>:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://bazaar.canonical.com/en/">Bazaar</a></p></li>
+<li><p><a class="reference external" href="http://git-scm.com/">Git</a></p></li>
+<li><p><a class="reference external" href="http://mercurial.selenic.com/">Mercurial</a></p></li>
+<li><p>and <a class="reference external" href="http://subversion.apache.org/">Subversion</a></p></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<a class="reference internal image-reference" href="../_images/VersionControlSystems.png" id="sw-vcs-table-ref"><img alt="Comparison of version control software" id="sw-vcs-table-ref" src="../_images/VersionControlSystems.png" style="width: 80%;" /></a>
+<div class="topic">
+<p class="topic-title">Table legend</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Feature</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Repository model</p></td>
+<td><p>In a client–server model, users access a master repository via a client;
+typically, their local machines hold only a working copy of a project tree.
+Changes in one working copy must be committed to the master repository
+before they are propagated to other users.
+In a distributed model, repositories act as peers,
+and users typically have a local repository with version history available,
+in addition to their working copies.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Concurrency model</p></td>
+<td><p>Describes how changes to the working copies
+are managed to prevent simultaneous edits from causing nonsensical data
+in the repository. In a lock model, changes are disallowed until the user
+requests and receives an exclusive lock on the file from
+the master repository. In a merge model, users may freely edit files,
+but are informed of possible conflicts upon checking their changes into
+the repository, whereupon the version control system may merge changes
+on both sides, or let the user decide when conflicts arise.</p></td>
+</tr>
+<tr class="row-even"><td><p>Storage Method</p></td>
+<td><p>Describes the form in which files are stored in the repository.
+A snapshot indicates that a committed file(s)
+is stored in its entirety—usually compressed.
+A changeset, in this context, indicates that a committed file(s)
+is stored in the form of a difference between either the previous version or the next.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Scope of change</p></td>
+<td><p>Describes whether changes are recorded
+for individual files or for entire directory trees.</p></td>
+</tr>
+<tr class="row-even"><td><p>Revision IDs</p></td>
+<td><p>Are used internally to identify specific versions
+of files in the repository.
+Systems may use pseudo-random identifiers,
+content hashes of revisions, or filenames with sequential version numbers.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Network protocols</p></td>
+<td><p>Lists the (secure) protocols used for synchronisation of changes.</p></td>
+</tr>
+<tr class="row-even"><td><p>User interfaces</p></td>
+<td><p>Describes whether access to the repository is available
+using an internet browser, through 3rd-party issue tracking systems,
+or using command line (CLI)
+and 3rd-party graphical user interfaces
+(available for the Windows and Linux platforms)</p></td>
+</tr>
+<tr class="row-odd"><td><p>IDE integration</p></td>
+<td><p>Lists examples of tools that allow the integration of the VCS
+with two common integrated development environments (IDE):
+<a class="reference external" href="http://www.eclipse.org">Eclipse</a> and Microsoft <a class="reference external" href="http://www.microsoft.com/visualstudio/eng/2013-preview">Visual Studio</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Atomic commits</p></td>
+<td><p>Refers to a guarantee that all changes are made,
+or that no change at all will be made.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Merge tracking</p></td>
+<td><p>Describes whether a system remembers
+what changes have been merged between which branches
+and only merges the changes that are missing when merging one branch into another.</p></td>
+</tr>
+<tr class="row-even"><td><p>File renames</p></td>
+<td><p>Describes whether a system allows files
+to be renamed while retaining their version history.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Event hooks</p></td>
+<td><p>Indicates the capability to trigger commands
+before or after an action, such as a commit, takes place.</p></td>
+</tr>
+<tr class="row-even"><td><p>Signed revisions</p></td>
+<td><p>Refers to integrated digital signing of revisions,
+in a format such as OpenPGP.</p></td>
+</tr>
+<tr class="row-odd"><td><p>End of line conversions</p></td>
+<td><p>Describes whether a system can adapt
+the end of line characters for text files such that they match
+the end of line style for the operating system under which it is used.</p></td>
+</tr>
+<tr class="row-even"><td><p>Unicode filename support</p></td>
+<td><p>Indicates if the software has support
+for interoperation under file systems using different character encodings.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Source: <a class="reference external" href="http://en.wikipedia.org/wiki/Comparison_of_revision_control_software">version control software comparison</a> (adapted)</p>
+</div>
+<p class="rubric">Evaluation</p>
+<p>The major difference between the products is the centralised (<a class="reference external" href="http://subversion.apache.org/">Subversion</a>)
+or distributed (<a class="reference external" href="http://bazaar.canonical.com/en/">Bazaar</a>, <a class="reference external" href="http://git-scm.com/">Git</a>, <a class="reference external" href="http://mercurial.selenic.com/">Mercurial</a>) nature of the repository.
+Decentralised systems are relatively recent (after 2005),
+but have gained wide acceptance,
+as they allow a more flexible project organisation
+(e.g. collaboration within smaller teams that contribute to a larger project)
+and to not require that every user is connected to a single online repository
+(on the internet or corporate intranet).
+Decentralised systems can also support ‘centralised-like’ workflows,
+simply by defining which is the canonical (authoritative) repository,
+where the ‘official’ or approved versions are kept.</p>
+<p>Feature-wise, a clear “winner” does not emerge from the evaluation:</p>
+<ul class="simple">
+<li><p>Online hosting services exist for all the products
+(i.e. it is possible to store the repository on the web).</p></li>
+<li><p>All systems support secure network protocols such as SSL or HTTPS
+(besides various proprietary protocols).</p></li>
+<li><p>Various user interfaces are available: web interfaces
+(including integration with issue tracking systems such as Redmine or Trac),
+bash-like command line interfaces (CLI)
+and various native or 3rd-party graphical user interfaces (GUI).</p></li>
+<li><p>For software development purposes, all version control systems
+can be coupled to integrated development environments (IDE), using plug-ins.
+Examples are listed for two common multilanguage IDEs:
+<a class="reference external" href="http://www.eclipse.org">Eclipse</a> and Microsoft <a class="reference external" href="http://www.microsoft.com/visualstudio/eng/2013-preview">Visual Studio</a>.</p></li>
+<li><p>Major features are similar among products
+(though neither the commands nor the typical workflow are).</p></li>
+</ul>
+<p>The final selection is made by evaluating software adoption in real-world
+development projects.</p>
+</div>
+<div class="section" id="real-world-use">
+<h2>Real-world use<a class="headerlink" href="#real-world-use" title="Permalink to this headline">¶</a></h2>
+<p>Basic information on developer community activity
+is available through the following <a class="reference external" href="http://www.ohloh.net/p/compare?project_0=Git&amp;project_2=Apache+Subversion&amp;project_1=Mercurial">Ohloh indicators on version control systems</a>.</p>
+<p>Software adoption is evaluated using a simple criterion:</p>
+<ul class="simple">
+<li><p>Which is the version control system used
+by the different open-source COTS evaluated for this project?</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/VersionControlSystems_Adoption.png" id="sw-vcs-adoption-table-ref"><img alt="Comparison of VCS adoption by software projects" id="sw-vcs-adoption-table-ref" src="../_images/VersionControlSystems_Adoption.png" style="width: 80%;" /></a>
+<p>A similar generic trend is clear in the
+<a class="reference external" href="http://www.eclipse.org/org/press-release/20120608_eclipsesurvey2012.php">results of the Eclipse Community Survey 2012</a>.</p>
+<p class="rubric">Conclusion</p>
+<p>Based on the software adoption results,
+<a class="reference external" href="http://git-scm.com/">Git</a> is clearly the recommended version control system.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="DocumentationGenerator.html" class="btn btn-neutral float-right" title="Documentation Generator" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ProjectManagementInfrastructure.html" class="btn btn-neutral float-left" title="Project Management Infrastructure" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, the Nile team | CC BY-SA 3.0 | Exceptions apply! See the sources and metadata for each doc.
+      <span class="lastupdated">
+        Last updated on May 19, 2020.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

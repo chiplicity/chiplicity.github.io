@@ -1,0 +1,1074 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Creating diagrams in Sphinx &mdash; Wiser 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Managing bibliographic citations in Sphinx" href="UsingBibTeXCitationsInSphinx.html" />
+    <link rel="prev" title="Showing source code examples in Sphinx" href="ShowingCodeExamplesInSphinx.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Wiser
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Using_Forum/index.html">Using Forum or Projects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Using the technical documentation generator</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#introduction">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#references">References</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="About_Sphinx.html">About Sphinx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OnReStructuredText.html">Sphinx’s reStructuredText primer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ToolsForReStructuredText.html">Tools for reStructuredText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PublishingTheDocsOnline.html">Publishing the documents online</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ShowingCodeExamplesInSphinx.html">Showing source code examples in Sphinx</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Creating diagrams in Sphinx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UsingBibTeXCitationsInSphinx.html">Managing bibliographic citations in Sphinx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UsingMathEquationsInSphinx.html">Creating equations in Sphinx</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Git/index.html">Using the version control system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../On_Software/index.html">Commercial-Off-the-Shelf Software Selection Process</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Notebook/index.html">Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_TaskMan/index.html">Using the issue tracking system</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Wiser</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Using the technical documentation generator</a> &raquo;</li>
+        
+      <li>Creating diagrams in Sphinx</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Using_Sphinx/UsingGraphicsAndDiagramsInSphinx.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="creating-diagrams-in-sphinx">
+<span id="rst-diagrams-ref"></span><h1>Creating diagrams in Sphinx<a class="headerlink" href="#creating-diagrams-in-sphinx" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="using-graphviz">
+<h2>Using Graphviz<a class="headerlink" href="#using-graphviz" title="Permalink to this headline">¶</a></h2>
+<p>Besides using raster images (PNG, JPG, etc.),
+diagrams can be included with
+the <a href="#id15"><span class="problematic" id="id16">`sphinx.ext.graphviz`_</span></a> extension.</p>
+<p><a href="#id17"><span class="problematic" id="id18">Graphviz_</span></a> is an open source graph visualisation software.
+Graph visualisation is a way of representing structural information
+as diagrams of abstract graphs and networks.</p>
+<p>It must be installed before the extension can be used.</p>
+<p>Due to current (2013.10) compatibility issues with PlantUML,
+it may be preferable to install GraphViz 2.28 instead.</p>
+<div class="section" id="including-the-extension-in-the-project-configuration-file">
+<h3>Including the extension in the project configuration file<a class="headerlink" href="#including-the-extension-in-the-project-configuration-file" title="Permalink to this headline">¶</a></h3>
+<p>The Graphviz extension is included with Sphinx,
+but the extension must be enabled in the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>extensions = [&#39;sphinx.ext.graphviz&#39;]
+</pre></div>
+</div>
+<div class="admonition-changing-the-configuration-file admonition">
+<p class="admonition-title">Changing the configuration file</p>
+<p>Extensions local to a project should be put within the project’s directory structure.
+Set Python’s module search path, sys.path, accordingly so that Sphinx can find them.
+E.g., if your extension foo.py lies in the exts subdirectory of the project root,
+put into conf.py:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>import sys, os
+sys.path.append(os.path.abspath(&#39;exts&#39;))
+extensions = [&#39;foo&#39;]
+</pre></div>
+</div>
+<p>You can also install extensions anywhere else on sys.path, e.g. in the site-packages directory.</p>
+</div>
+</div>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>This code:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. graphviz::
+
+   digraph {
+      &quot;From&quot; -&gt; &quot;To&quot;;
+   }
+</pre></div>
+</div>
+<p>has this result:</p>
+digraph {
+   &quot;From&quot; -&gt; &quot;To&quot;;
+}<p>This code:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>.. graphviz::
+
+   digraph Flatland {
+   
+      a -&gt; b -&gt; c -&gt; g; 
+      a  [shape=polygon,sides=4]
+      b  [shape=polygon,sides=5]
+      c  [shape=polygon,sides=6]
+   
+      g [peripheries=3,color=yellow];
+      s [shape=invtriangle,peripheries=1,color=red,style=filled];
+      w  [shape=triangle,peripheries=1,color=blue,style=filled];
+      
+      }
+
+</pre></div>
+</div>
+<p>has this result:</p>
+digraph Flatland {
+
+   a -&gt; b -&gt; c -&gt; g;
+   a  [shape=polygon,sides=4]
+   b  [shape=polygon,sides=5]
+   c  [shape=polygon,sides=6]
+
+   g [peripheries=3,color=yellow];
+   s [shape=invtriangle,peripheries=1,color=red,style=filled];
+   w  [shape=triangle,peripheries=1,color=blue,style=filled];
+
+   }<p>Numerous examples are available online:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/DOT_(graph_description_language">https://en.wikipedia.org/wiki/DOT_(graph_description_language</a>)</p></li>
+<li><p><a class="reference external" href="http://www.graphviz.org/pdf/dotguide.pdf">http://www.graphviz.org/pdf/dotguide.pdf</a></p></li>
+<li><p><a class="reference external" href="http://graphs.grevian.org/example.html">http://graphs.grevian.org/example.html</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="using-plantuml">
+<h2>Using PlantUML<a class="headerlink" href="#using-plantuml" title="Permalink to this headline">¶</a></h2>
+<p>The <a href="#id19"><span class="problematic" id="id20">`Sphinx PlantUML extension`_</span></a> (in this case a contributed extension) allows
+Sphinx to embed UML diagrams by using PlantUML.</p>
+<p><a href="#id21"><span class="problematic" id="id22">PlantUML_</span></a> is a Java component that allows to quickly write simple UML diagrams:</p>
+<ul class="simple">
+<li><p>use case diagrams,</p></li>
+<li><p>class diagrams,</p></li>
+<li><p>activity diagrams,</p></li>
+<li><p>state diagrams,</p></li>
+<li><p>component diagrams,</p></li>
+<li><p>sequence diagrams,</p></li>
+<li><p>object diagram.</p></li>
+</ul>
+<p>Diagrams are defined using a simple and intuitive language.
+This can be used within many other tools.
+Images can be generated in PNG or SVG format.</p>
+<div class="section" id="installing-the-extension">
+<h3>Installing the extension<a class="headerlink" href="#installing-the-extension" title="Permalink to this headline">¶</a></h3>
+<p>The module is installed with the following command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>pip install sphinxcontrib-plantuml
+</pre></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>Including the extension in the project configuration file<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>The extension must be enabled in the <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>extensions = [&#39;sphinxcontrib.plantuml&#39;]
+</pre></div>
+</div>
+<p>The path to the PlantUML file may have to be specified
+(assuming that Java itself is already in the search path):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>plantuml = &#39;java -jar ../utils/plantum.jar&#39;
+</pre></div>
+</div>
+<p>PlantUML requires Graphviz and an environment variable may have to be defined,
+pointing to the <code class="docutils literal notranslate"><span class="pre">dot</span></code> executable. For example (in Linux or OS-X):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>setenv GRAPHVIZ_DOT /usr/local/bin/graphviz/dot
+export GRAPHVIZ_DOT
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For Ubuntu users</p>
+<p>Files with the .sh extension in the /etc/profile.d directory get executed
+whenever a bash login shell is entered (e.g. when logging in from the console or over ssh),
+as well as by the DisplayManager when the desktop session loads:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>/etc/profile.d/*.sh
+</pre></div>
+</div>
+<p>You can for instance create the file /etc/profile.d/myenvvars.sh and set variables like this:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>export GRAPHVIZ_DOT=/usr/bin/dot
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For Windows users</p>
+<p>Regardless of the existence of the GRAPHVIZ_DOT environment variable,
+the path to the Graphviz bin folder is apparently required
+to be in the PATH variable as well.</p>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>Examples<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>In the Sphinx reST documents,
+simply begin the PlantUML code with the <code class="docutils literal notranslate"><span class="pre">uml</span></code> directive.</p>
+<p class="plantuml">
+<img src="../_images/plantuml-590c1c7af9107ea85cfdbecaeeb68d94bc28681d.png" alt="&#64;startuml
+user -&gt; (use PlantUML)
+
+note left of user
+   Hello!
+end note
+&#64;enduml"/>
+</p>
+<p>This is the code for the example above:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">uml</span><span class="p">::</span> 
+   
+   @startuml
+   user -&gt; (use PlantUML)
+
+   note left of user
+      Hello!   
+   end note
+   @enduml
+</pre></div>
+</div>
+<p>Another example:</p>
+<p class="plantuml">
+<img src="../_images/plantuml-7cf5a1c714cc01e9687f6685e2a0dc84fd500069.png" alt="&#64;startuml
+Alice -&gt; Bob: Hi!
+Alice &lt;- Bob: How are you?
+&#64;enduml"/>
+</p>
+<p>This is the code for the example above:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">uml</span><span class="p">::</span>
+   
+   @startuml 
+   Alice -&gt; Bob: Hi!
+   Alice &lt;- Bob: How are you?
+   @enduml
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="class-diagram">
+<h2>Class diagram<a class="headerlink" href="#class-diagram" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="diagram">
+<h3>Diagram<a class="headerlink" href="#diagram" title="Permalink to this headline">¶</a></h3>
+<p>This is the diagram generated by the Sphinx PlantUML extension.</p>
+<p class="plantuml">
+<img src="../_images/plantuml-3bc34bdc37fcfef18756dd6161cb04b1835f845b.png" alt="&#64;startuml
+
+'style options
+skinparam monochrome true
+skinparam circledCharacterRadius 0
+skinparam circledCharacterFontSize 0
+skinparam classAttributeIconSize 0
+hide empty members
+
+Class01 &lt;|-- Class02
+Class03 *-- Class04
+Class05 o-- Class06
+Class07 .. Class08
+Class09 -- Class10
+
+&#64;enduml"/>
+</p>
+</div>
+<div class="section" id="code">
+<h3>Code<a class="headerlink" href="#code" title="Permalink to this headline">¶</a></h3>
+<p>This is the code for example above.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">uml</span><span class="p">::</span>
+
+      @startuml
+      
+      &#39;style options 
+      skinparam monochrome true
+      skinparam circledCharacterRadius 0
+      skinparam circledCharacterFontSize 0
+      skinparam classAttributeIconSize 0
+      hide empty members
+      
+      Class01 &lt;|-- Class02
+      Class03 *-- Class04
+      Class05 o-- Class06
+      Class07 .. Class08
+      Class09 -- Class10
+      
+      @enduml
+</pre></div>
+</div>
+<p>Note that in docutils / Sphinx, <code class="docutils literal notranslate"><span class="pre">&#64;startuml</span></code> and <code class="docutils literal notranslate"><span class="pre">&#64;enduml</span></code> could be omitted.
+However, it is useful to keep these lines: is necessary, PlantUML can be used
+(outside Sphinx) to generate the PNG image files with the diagrams directly
+from the text file; also, if editing the code in Eclipse, the PlantUML diagrams
+can be previewed without the necessity of building the documentation.</p>
+</div>
+<div class="section" id="image">
+<h3>Image<a class="headerlink" href="#image" title="Permalink to this headline">¶</a></h3>
+<p>The image was exported using the Eclipse PlantUML plug-in.
+It it static, but can be resized…</p>
+<a class="reference internal image-reference" href="../_images/classDiagram-Relations.png"><img alt="../_images/classDiagram-Relations.png" src="../_images/classDiagram-Relations.png" style="width: 30%;" /></a>
+</div>
+<div class="section" id="other-examples">
+<h3>Other examples<a class="headerlink" href="#other-examples" title="Permalink to this headline">¶</a></h3>
+<p class="plantuml">
+<img src="../_images/plantuml-1a0942fdb11fc6af16d376df0da97751feaa8aca.png" alt="&#64;startuml
+
+'style options
+skinparam monochrome true
+skinparam circledCharacterRadius 0
+skinparam circledCharacterFontSize 0
+skinparam classAttributeIconSize 0
+hide empty members
+
+class Car
+
+Driver - Car : drives &gt;
+Car *- Wheel : have 4 &gt;
+Car -- Person : &lt; owns
+
+&#64;enduml"/>
+</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">uml</span><span class="p">::</span>
+
+      @startuml
+      
+      &#39;style options 
+      skinparam monochrome true
+      skinparam circledCharacterRadius 0
+      skinparam circledCharacterFontSize 0
+      skinparam classAttributeIconSize 0
+      hide empty members
+      
+      class Car
+      
+      Driver - Car : drives &gt;
+      Car *- Wheel : have 4 &gt;
+      Car -- Person : &lt; owns
+      
+      @enduml
+</pre></div>
+</div>
+<p>To declare fields and methods, you can use the symbol “:” followed by the field’s or method’s name.
+The system checks for parenthesis to choose between methods and fields.</p>
+<p class="plantuml">
+<img src="../_images/plantuml-e4921e7f4461b6d202ddeb4405e9af4fe5249ea8.png" alt="&#64;startuml
+
+'style options
+skinparam monochrome true
+skinparam circledCharacterRadius 9
+skinparam circledCharacterFontSize 8
+skinparam classAttributeIconSize 0
+hide empty members
+
+abstract class AbstractClass {
+  - privateField
+  + publicField
+  # protectedField
+  ~ packagePrivateField
+  - privateMethod()
+  + publicMethod()
+  # protectedMethod()
+  ~ packagePrivateMethod()
+   }
+
+class Dummy {
+  {static} staticID
+  {abstract} void methods()
+   }
+
+class Flight {
+   flightNumber : Integer
+   departureTime : Date
+   }
+
+package &quot;Classic Collections&quot; {
+
+   abstract class AbstractList
+   abstract AbstractCollection
+   interface List
+   interface Collection
+
+   List &lt;|-- AbstractList
+   Collection &lt;|-- AbstractCollection
+
+   Collection &lt;|- List
+   AbstractCollection &lt;|- AbstractList
+   AbstractList &lt;|-- ArrayList
+
+   class ArrayList {
+     Object[] elementData
+     size()
+      }
+}
+
+enum TimeUnit {
+  DAYS
+  HOURS
+  MINUTES
+}
+
+
+class Student {
+  Name
+}
+Student &quot;0..*&quot; -- &quot;1..*&quot; Course
+(Student, Course) .. Enrollment
+
+class Enrollment {
+  drop()
+  cancel()
+}
+
+&#64;enduml"/>
+</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">uml</span><span class="p">::</span>
+
+      @startuml
+      
+      &#39;style options 
+      skinparam monochrome true
+      skinparam circledCharacterRadius 9
+      skinparam circledCharacterFontSize 8
+      skinparam classAttributeIconSize 0
+      hide empty members
+
+      abstract class AbstractClass {
+        <span class="m">-</span> privateField
+        <span class="m">+</span> publicField
+        # protectedField
+        ~ packagePrivateField
+        <span class="m">-</span> privateMethod()
+        <span class="m">+</span> publicMethod()
+        # protectedMethod()
+        ~ packagePrivateMethod()
+         }
+  
+      class Dummy {
+        {static} staticID
+        {abstract} void methods()
+         }
+      
+      class Flight {
+         flightNumber : Integer
+         departureTime : Date
+         }
+      
+      package &quot;Classic Collections&quot; {
+         
+         abstract class AbstractList
+         abstract AbstractCollection
+         interface List
+         interface Collection
+         
+         List &lt;|-- AbstractList
+         Collection &lt;|-- AbstractCollection
+         
+         Collection &lt;|- List
+         AbstractCollection &lt;|- AbstractList
+         AbstractList &lt;|-- ArrayList
+         
+         class ArrayList {
+           Object[] elementData
+           size()
+            } 
+      }
+      
+      enum TimeUnit {
+        DAYS
+        HOURS
+        MINUTES
+      }
+        
+
+      class Student {
+        Name
+      }
+      Student &quot;0..<span class="ge">*&quot; -- &quot;1..*</span>&quot; Course
+      (Student, Course) .. Enrollment
+      
+      class Enrollment {
+        drop()
+        cancel()
+      }
+
+      @enduml
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="use-case-diagram">
+<h2>Use case diagram<a class="headerlink" href="#use-case-diagram" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>Code<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="id4">
+<h3>Diagram<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>This is generated by the Sphinx PlantUML extension.</p>
+<p class="plantuml">
+<img src="../_images/plantuml-b836e8995217cf29ce0529baac5b993aa3b30d27.png" alt="&#64;startuml
+actor &quot;Main Database&quot; as DB &lt;&lt; Application &gt;&gt;
+
+note left of DB
+   This actor
+   has a &quot;name with spaces&quot;,
+   an alias
+   and a stereotype
+end note
+
+actor User &lt;&lt; Human &gt;&gt;
+actor SpecialisedUser
+actor Administrator
+
+User &lt;|--- SpecialisedUser
+User &lt;|--- Administrator
+
+usecase (Use the application) as (Use) &lt;&lt; Main &gt;&gt;
+usecase (Configure the application) as (Config)
+Use ..&gt; Config : &lt;&lt;includes&gt;&gt;
+
+User --&gt; Use
+DB --&gt; Use
+
+Administrator --&gt; Config
+
+note &quot;This note applies to\nboth actors.&quot; as MyNote
+MyNote .. Administrator
+MyNote .. SpecialisedUser
+
+'  this is a text comment and won't be displayed
+AnotherActor ---&gt; (AnotherUseCase)
+
+'  to increase the length of the edges, just add extras dashes, like this:
+ThirdActor ----&gt; (LowerCase)
+
+'  The direction of the edge can also be reversed, like this:
+(UpperCase) &lt;---- FourthActor
+
+&#64;enduml"/>
+</p>
+</div>
+<div class="section" id="id5">
+<h3>Code<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">uml</span><span class="p">::</span>
+
+   @startuml
+   actor &quot;Main Database&quot; as DB &lt;&lt; Application &gt;&gt;
+   
+   note left of DB
+      This actor 
+      has a &quot;name with spaces&quot;,
+      an alias
+      and a stereotype 
+   end note
+   
+   actor User &lt;&lt; Human &gt;&gt;
+   actor SpecialisedUser
+   actor Administrator
+   
+   User &lt;|--- SpecialisedUser
+   User &lt;|--- Administrator
+   
+   usecase (Use the application) as (Use) &lt;&lt; Main &gt;&gt;
+   usecase (Configure the application) as (Config)
+   Use ..&gt; Config : &lt;&lt;includes&gt;&gt;
+   
+   User --&gt; Use
+   DB --&gt; Use
+   
+   Administrator --&gt; Config 
+   
+   note &quot;This note applies to\nboth actors.&quot; as MyNote
+   MyNote .. Administrator
+   MyNote .. SpecialisedUser
+   
+   &#39;  this is a text comment and won&#39;t be displayed
+   AnotherActor ---&gt; (AnotherUseCase)
+   
+   &#39;  to increase the length of the edges, just add extras dashes, like this:
+   ThirdActor ----&gt; (LowerCase)
+   
+   &#39;  The direction of the edge can also be reversed, like this:
+   (UpperCase) &lt;---- FourthActor
+   
+   @enduml
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>Image<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>The image was exported using the Eclipse PlantUML plug-in.
+It it static, but can be resized…</p>
+<a class="reference internal image-reference" href="../_images/useCaseDiagram.png"><img alt="../_images/useCaseDiagram.png" src="../_images/useCaseDiagram.png" style="width: 30%;" /></a>
+</div>
+</div>
+<div class="section" id="activity-diagram-new-syntax">
+<h2>Activity diagram (new syntax)<a class="headerlink" href="#activity-diagram-new-syntax" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id7">
+<h3>Diagram<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p class="plantuml">
+<img src="../_images/plantuml-c933cc0f11ff6ae9054ec16b203f2cbfe07afb86.png" alt="&#64;startuml
+
+start
+
+:first activity;
+
+:second activity
+ with a multiline
+ and rather long description;
+
+:another activity;
+
+note right
+  After this activity,
+  are two 'if-then-else' examples.
+end note
+
+if (do optional activity?) then (yes)
+   :optional activity;
+else (no)
+
+   if (want to exit?) then (right now!)
+      stop
+   else (not really)
+
+   endif
+
+endif
+
+:third activity;
+
+note left
+  After this activity,
+  parallel activities will occur.
+end note
+
+fork
+   :Concurrent activity A;
+fork again
+   :Concurrent activity B1;
+   :Concurrent activity B2;
+fork again
+   :Concurrent activity C;
+   fork
+   :Nested C1;
+   fork again
+   :Nested C2;
+   end fork
+end fork
+
+repeat
+   :repetitive activity;
+repeat while (again?)
+
+while (continue?) is (yes, of course)
+  :first activity inside the while loop;
+  :second activity inside the while loop;
+endwhile (no)
+
+stop
+
+&#64;enduml"/>
+</p>
+</div>
+<div class="section" id="id8">
+<h3>Code<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>There are two syntaxes to create activity diagrams.
+The example utilises the new syntax (which is still incomplete).</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">uml</span><span class="p">::</span>
+
+   @startuml
+   
+   start
+   
+   :first activity;
+   
+   :second activity
+    with a multiline 
+    and rather long description;
+   
+   :another activity;
+   
+   note right
+     After this activity,
+     are two &#39;if-then-else&#39; examples. 
+   end note
+   
+   if (do optional activity?) then (yes)
+      :optional activity;
+   else (no)
+   
+      if (want to exit?) then (right now!)
+         stop
+      else (not really)
+      
+      endif
+   
+   endif   
+      
+   :third activity;
+   
+   note left
+     After this activity,
+     parallel activities will occur. 
+   end note
+   
+   fork
+      :Concurrent activity A;
+   fork again
+      :Concurrent activity B1;
+      :Concurrent activity B2;
+   fork again
+      :Concurrent activity C;
+      fork
+      :Nested C1;
+      fork again
+      :Nested C2;
+      end fork
+   end fork
+   
+   repeat 
+      :repetitive activity;
+   repeat while (again?)
+   
+   while (continue?) is (yes, of course)
+     :first activity inside the while loop;
+     :second activity inside the while loop;
+   endwhile (no)
+   
+   stop
+   
+   @enduml
+</pre></div>
+</div>
+</div>
+<div class="section" id="id9">
+<h3>Image<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p>The image was exported using the Eclipse PlantUML plug-in.
+It it static, but can be resized…</p>
+<a class="reference internal image-reference" href="../_images/activityDiagram.png"><img alt="../_images/activityDiagram.png" src="../_images/activityDiagram.png" style="width: 30%;" /></a>
+</div>
+</div>
+<div class="section" id="state-diagram">
+<h2>State diagram<a class="headerlink" href="#state-diagram" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id10">
+<h3>Diagram<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p>Generated by the Sphinx PlantUML extension.</p>
+<p class="plantuml">
+<img src="../_images/plantuml-105ac8485b74b6163ad16135c52e44299ceda171.png" alt="&#64;startuml
+
+[*] --&gt; MyState
+MyState --&gt; CompositeState
+MyState --&gt; AnotherCompositeState
+MyState --&gt; WrongState
+
+CompositeState --&gt; CompositeState : \ this is a loop
+AnotherCompositeState --&gt; [*]
+CompositeState --&gt; [*]
+
+MyState : this is a string
+MyState : this is another string
+
+state CompositeState {
+
+[*] --&gt; StateA : begin something
+StateA --&gt; StateB : from A to B
+StateB --&gt; StateA : from B back to A
+StateB --&gt; [*] : end it
+
+CompositeState : yet another string
+}
+
+state AnotherCompositeState {
+
+[*] --&gt; ConcurrentStateA
+ConcurrentStateA --&gt; ConcurrentStateA
+
+--
+
+[*] --&gt; ConcurrentStateB
+ConcurrentStateB --&gt; ConcurrentStateC
+ConcurrentStateC --&gt; ConcurrentStateB
+}
+
+note left of WrongState
+   This state
+   is a dead-end
+   and shouldn't
+   exist.
+end note
+
+&#64;enduml"/>
+</p>
+</div>
+<div class="section" id="id11">
+<h3>Code<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">uml</span><span class="p">::</span>
+
+   @startuml
+   
+   [*] --&gt; MyState
+   MyState --&gt; CompositeState
+   MyState --&gt; AnotherCompositeState
+   MyState --&gt; WrongState
+   
+   CompositeState --&gt; CompositeState : \ this is a loop   
+   AnotherCompositeState --&gt; [*]
+   CompositeState --&gt; [*]
+   
+   MyState : this is a string
+   MyState : this is another string
+   
+   state CompositeState {
+   
+   [*] --&gt; StateA : begin something
+   StateA --&gt; StateB : from A to B
+   StateB --&gt; StateA : from B back to A
+   StateB --&gt; [*] : end it
+
+   CompositeState : yet another string
+   }
+
+   state AnotherCompositeState {
+   
+   [*] --&gt; ConcurrentStateA    
+   ConcurrentStateA --&gt; ConcurrentStateA 
+   
+   --
+   
+   [*] --&gt; ConcurrentStateB
+   ConcurrentStateB --&gt; ConcurrentStateC
+   ConcurrentStateC --&gt; ConcurrentStateB
+   }
+      
+   note left of WrongState
+      This state 
+      is a dead-end
+      and shouldn&#39;t
+      exist.
+   end note
+   
+   @enduml
+</pre></div>
+</div>
+</div>
+<div class="section" id="id12">
+<h3>Image<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<p>The image was exported using the Eclipse PlantUML plug-in.
+It it static, but can be resized…</p>
+<a class="reference internal image-reference" href="../_images/stateDiagram.png"><img alt="../_images/stateDiagram.png" src="../_images/stateDiagram.png" style="width: 30%;" /></a>
+</div>
+</div>
+<div class="section" id="gui-mockups">
+<h2>GUI mockups<a class="headerlink" href="#gui-mockups" title="Permalink to this headline">¶</a></h2>
+<p>PlantUML can also be used for GUI mockups (see <a class="reference external" href="http://plantuml.sourceforge.net/salt.html">http://plantuml.sourceforge.net/salt.html</a>).</p>
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<p class="plantuml">
+<img src="../_images/plantuml-939bf694aa66f05e51dd5f4b63036e04b939d535.png" alt="&#64;startuml
+salt
+{
+  Just plain text
+  [This is my button]
+  ()  Unchecked radio
+  (X) Checked radio
+  []  Unchecked box
+  [X] Checked box
+  &quot;Enter text here   &quot;
+  ^This is a droplist^
+}
+&#64;enduml"/>
+</p>
+</div>
+<div class="section" id="id13">
+<h3>Code<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">uml</span><span class="p">::</span>
+
+   @startuml
+   salt
+   {
+     Just plain text
+     [This is my button]
+     ()  Unchecked radio
+     <span class="m">(X)</span> Checked radio
+     []  Unchecked box
+     [X] Checked box
+     &quot;Enter text here   &quot;
+     ^This is a droplist^
+   }
+   @enduml
+      
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="UsingBibTeXCitationsInSphinx.html" class="btn btn-neutral float-right" title="Managing bibliographic citations in Sphinx" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ShowingCodeExamplesInSphinx.html" class="btn btn-neutral float-left" title="Showing source code examples in Sphinx" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, the Nile team | CC BY-SA 3.0 | Exceptions apply! See the sources and metadata for each doc.
+      <span class="lastupdated">
+        Last updated on May 19, 2020.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,681 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Geospatial Data Server &mdash; Wiser 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Web Mapping" href="WebMapping.html" />
+    <link rel="prev" title="Open Standards in the Portuguese National Regulation on Digital Interoperability" href="Z_RNIDOpenStandards.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Wiser
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Using_Forum/index.html">Using Forum or Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Sphinx/index.html">Using the technical documentation generator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Git/index.html">Using the version control system</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Commercial-Off-the-Shelf Software Selection Process</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html">Software selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#factors">Factors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#total-cost-of-ownership">Total Cost of Ownership</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#additional-references">Additional References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProjectManagementInfrastructure.html">Project Management Infrastructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VersionControlSystem.html">Version Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DocumentationGenerator.html">Documentation Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IssueTrackingSystem.html">Issue Tracking System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuestionnaireManagement.html">Questionnaire Management System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebBrowsers_DynamicCharts.html">Dynamic charts on web browser usage statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebMapping_ToolList.html">OSGEO list of webmapping tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html">Web Server and Servlet COntainer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html#rationale">Rationale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html#analysis-of-alternatives">Analysis of alternatives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OperatingSystems.html">Operating Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DatabaseManagementSystem.html">Database Management System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Z_RNIDOpenStandards.html">Open Standards in the Portuguese National Regulation on Digital Interoperability</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Geospatial Data Server</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rationale">Rationale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#analysis-of-alternatives">Analysis of alternatives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#real-world-use">Real-world use</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#final-notes">Final notes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="WebMapping.html">Web Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebBrowsers.html">Web Browser</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Notebook/index.html">Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_TaskMan/index.html">Using the issue tracking system</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Wiser</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Commercial-Off-the-Shelf Software Selection Process</a> &raquo;</li>
+        
+      <li>Geospatial Data Server</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/On_Software/GeodataServer.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="geospatial-data-server">
+<span id="sw-geowebserver-ref"></span><h1>Geospatial Data Server<a class="headerlink" href="#geospatial-data-server" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>The selected geospatial data server is <a class="reference external" href="http://geoserver.org/">GeoServer</a> 2.3.2+</p>
+<p><strong>Iff</strong> required:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://geowebcache.org/">GeoWebCache</a> 1.3.0+ can be deployed as a standalone or integrated
+map tiles server.</p></li>
+<li><p><a class="reference external" href="http://geonetwork-opensource.org/">GeoNetwork</a> 2.10.0+ (which itself includes an integrated <a class="reference external" href="http://geoserver.org/">GeoServer</a> server),
+can be used a spatial data catalogue system.</p></li>
+</ul>
+</div>
+<div class="section" id="rationale">
+<h2>Rationale<a class="headerlink" href="#rationale" title="Permalink to this headline">¶</a></h2>
+<p>The purpose of the geodata server component is simply to provide
+a layer of standardised geowebservices between the database
+and the various possible client applications
+(GIS desktop clients, web mapping applications, other geodata servers, etc.).</p>
+<p>The geospatial data server must comply with the <a class="reference internal" href="SoftwareSelection.html#sw-constraints-ref"><span class="std std-ref">Constraints</span></a>
+set on licence compatibility, portability and acquisition cost.</p>
+<p>It must also be compatible with / supported on
+the software stack that was previously selected:</p>
+<ul class="simple">
+<li><p>Microsoft Windows, Ubuntu, CentOS (see <a class="reference internal" href="OperatingSystems.html#sw-operating-systems-ref"><span class="std std-ref">Operating Systems</span></a>)</p></li>
+<li><p>PostgreSQL + PostGIS (see <a class="reference internal" href="DatabaseManagementSystem.html#sw-database-ref"><span class="std std-ref">Database Management System</span></a>)</p></li>
+</ul>
+<p id="sw-ogc-webservices-ref">Compliance with Open Geospatial Consortium (<a class="reference external" href="http://live.osgeo.org/en/standards/standards.html">OGC</a>) WMS, WFS and WFS-T
+standards is a basic technical interoperability requisite.</p>
+<ul>
+<li><p>In Portugal, compliance with the
+OGC Web Feature Service (<a class="reference external" href="http://www.opengeospatial.org/standards/wfs">WFS</a>) Interface Standard and the
+OGC Web Map Service (<a class="reference external" href="http://www.opengeospatial.org/standards/wms">WMS</a>) Interface Standard
+is also a legal requisite established by the
+National Regulation on Digital Interoperability (Open Standards). <a class="reference internal" href="SoftwareSelection.html#rnid12" id="id1"><span>[RNID12]</span></a></p></li>
+<li><p>In the European Union, and under the provisions of the <a class="reference external" href="http://inspire.jrc.ec.europa.eu/">INSPIRE</a> Directive,
+Member States must share spatial datasets relevant for environmental policy
+(34 spatial data themes, that include <em>inter alia</em>
+geographical names, administrative units, addresses, and population and demography).</p>
+<p>Member States are also required to create web services
+for accessing these datasets, and these must be OGC-compliant services
+(see <a class="reference external" href="http://inspire.jrc.ec.europa.eu/index.cfm/pageid/47">INSPIRE Implementing Rules</a> for details)</p>
+</li>
+</ul>
+</div>
+<div class="section" id="analysis-of-alternatives">
+<h2>Analysis of alternatives<a class="headerlink" href="#analysis-of-alternatives" title="Permalink to this headline">¶</a></h2>
+<p>Again, progressive filtering was based on maturity and sustainability criteria.</p>
+<p>To simplify the triage of candidate solutions,
+only <a class="reference external" href="http://www.osgeo.org/content/foundation/about.html">OSGEO Foundation</a> projects where considered.
+The <a class="reference external" href="http://www.osgeo.org/incubator">OSGEO incubation process</a>
+is essentially a peer-reviewed evaluation
+inspired by the CMMI maturity levels <a class="reference internal" href="#cmmi10" id="id2"><span>[CMMI10]</span></a>:
+graduated projects comply with an adequate
+<a class="reference external" href="OSGEOgraduationcriteria">set of criteria</a>
+focused on maturity and sustainability aspects.</p>
+<p>The candidate set includes:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.deegree.org/">deegree</a> (
+initial release in <a class="reference external" href="http://deegree.org/About">2002</a>
+OSGEO graduated project in <a class="reference external" href="http://www.osgeo.org/node/1004">02.2010</a>
+), under a LGPLv2 licence.</p></li>
+<li><p><a class="reference external" href="http://geoserver.org/">GeoServer</a> (
+initial release in <a class="reference external" href="http://sourceforge.net/projects/geoserver/files/GeoServer/">2002</a>,
+OSGEO graduated project in <a class="reference external" href="http://www.osgeo.org/news/geoserver-graduation">03.2013</a>
+), under a GPLv2+ licence.</p></li>
+<li><p><a class="reference external" href="http://www.mapserver.org/">MapServer</a> (
+first release as FOSS in <a class="reference external" href="https://github.com/mapserver/mapserver/wiki/MapServerHistory">1999</a>,
+OSGEO graduated project in <a class="reference external" href="http://lists.osgeo.org/pipermail/announce/2008-December/000112.html">12.2008</a>
+), under a Mapserver licence. <a class="footnote-reference brackets" href="#mapserver-licence" id="id3">1</a></p></li>
+</ul>
+<p class="rubric">Non-functional considerations</p>
+<ol class="arabic">
+<li><p><a class="reference external" href="http://www.deegree.org/">deegree</a> and <a class="reference external" href="http://geoserver.org/">GeoServer</a> are written in Java,
+a factor that weights positively
+in the current selection procedure:
+given that EuroStat’s SDMX tools are available for the Java platform,
+a compatible software stack (e.g. the Java servlet container) can be used
+and a less disparate portfolio of software
+and software administration skills is required.
+The same applies to programming skills, should Java be adopted as the
+implementation language for any additional software components. <a class="footnote-reference brackets" href="#geotools" id="id4">2</a></p></li>
+<li><p>Similarly, an alternative solution based on <a class="reference external" href="http://www.mapserver.org/">MapServer</a> and <a class="reference external" href="http://mapserver.org/tinyows/">TinyOWS</a>
+can be deemed more adequate in projects where:</p>
+<ul class="simple">
+<li><p>a PHP web development framework is adopted;</p></li>
+<li><p>the PHP MapScript component
+is used/required for the developed of interactive mapping applications.</p></li>
+</ul>
+</li>
+<li><p>Currently, there is considerably less available documentation
+(notably 3rd parties tutorials, books, etc.) and service providers
+for <a class="reference external" href="http://www.deegree.org/">deegree</a> than for <a class="reference external" href="http://geoserver.org/">GeoServer</a> or <a class="reference external" href="http://www.mapserver.org/">MapServer</a>.
+A similar trend is observable by comparing the activity on the
+<a class="reference external" href="http://osgeo-org.1560.x6.nabble.com/OSGeo-Software-and-Data-Projects-f3741872.html">discussion lists</a>
+of the three products.</p>
+<p>Also, there are no publicly available comparative benchmarks of <a class="reference external" href="http://www.deegree.org/">deegree</a>
+against the other geodata server products.</p>
+</li>
+<li><p>Performance benchmarks <a class="footnote-reference brackets" href="#benchmarks" id="id5">3</a> of MapServer vs. GeoServer
+show superior throughput of MapServer
+when using FastCGI on Linux Operating Systems
+(MapServer results on Windows machines are erratic –
+specially when there is an higher number of concurrent requests –
+and, for some request types, throughtput is inferior to GeoServer’s
+when there are less than 4 concurrent clients). <a class="footnote-reference brackets" href="#mapnik-portability" id="id6">4</a>.</p></li>
+</ol>
+<p>As a result of this preliminary evaluation,
+<a class="reference external" href="http://www.deegree.org/">deegree</a> was considered a dominated solution in the candidate set.
+The evaluation is not based on the product’s intrinsic features and capabilities.
+It is merely the result of a lower score on QSOS maturity criteria and
+also a smaller user community and relative scarcity of real-world use cases
+(the notable exception being the choice of deegree to support the
+<a class="reference external" href="http://ted.europa.eu/udl?uri=TED:NOTICE:96422-2011:TEXT:EN:HTML">EU INSPIRE geoportal</a>).</p>
+<p class="rubric">Support for OGC W*S interfaces</p>
+<p>The basic type of geowebservices to be considered are:</p>
+<ul class="simple">
+<li><p>Web Map Services (see <a class="reference external" href="http://live.osgeo.org/en/standards/wms_overview.html">WMS overview</a>): allow the visual display of spatial data
+(without necessarily providing access to the features that comprise those data).</p></li>
+<li><p>Web Feature Services (see <a class="reference external" href="http://live.osgeo.org/en/standards/wfs_overview.html">WFS overview</a>): read-only vector spatial features (i.e. points, lines or polygons,
+typically with associated alphanumeric information);</p></li>
+<li><p>Transactional WFS (WFS-T): editable vector spatial features where
+editing permissions can be controlled through
+user authentication and authorisation (
+the mechanism of authorisation and the supported granularity of control
+varies in different products).</p></li>
+</ul>
+<p><a class="reference external" href="http://www.mapserver.org/">MapServer</a> does not support WFS-T,
+as stated in the current MapServer 6.2.1 documentation:</p>
+<blockquote class="epigraph">
+<div><p>This is just a basic WFS (read-only):
+transaction requests are not supported
+and probably never will given the nature of MapServer.
+GeoServer or TinyOWS is recommended for those needing WFS-T support.</p>
+<p>Source: <a class="reference external" href="http://mapserver.org/ogc/wfs_server.html">http://mapserver.org/ogc/wfs_server.html</a></p>
+</div></blockquote>
+<p><a class="reference external" href="http://mapserver.org/tinyows/">TinyOWS</a> is a WFS server that has recently been incorporated
+into the MapServer Suite, to address the lack of WFS-T services.
+Currently, PostGIS is the only spatial database back-end supported by TinyOWS.
+Such limitation is not relevant from this specific project but
+diminishes the reusability of the component
+(e.g. potential users may care to publish other geospatial data stored in
+common proprietary databases, such as Oracle Spatial and Graph or ESRI ArcSDE
+spatially-enabled databases).</p>
+<p>In <a class="reference external" href="http://geoserver.org/">Geoserver</a>, fine-grained access authorisation (e.g. for edit operations)
+can be delegated in and controlled by the database system <a class="footnote-reference brackets" href="#geoserver-auth-dbms" id="id7">5</a>,
+an option currently under discussion in the MapServer community <a class="footnote-reference brackets" href="#tinyows-auth-dbms" id="id8">6</a>.</p>
+<p>As stated before, <a class="reference external" href="http://www.deegree.org/">deegree</a> provides the required W*S interfaces,
+albeit directed towards a rather more technical user profile than GeoServer,
+due to the relative paucity of documentation and graphical user interfaces.</p>
+<p class="rubric">Conclusions</p>
+<p>The evaluation results are:</p>
+<ul class="simple">
+<li><p>MapServer+TinyOWS or deegree are adequate and sufficient
+solutions for the identified W*S requirements</p></li>
+<li><p>GeoServer is equally adequate, better documented (than deegree),
+easier to configure and publish services (than deegree or MapServer)
+and supports a larger number of database back-ends (than TinyOWS), namely
+PostGIS, H2, ArcSDE, DB2, MySQL, Oracle, Microsoft SQL Server and SQL Azure.</p></li>
+</ul>
+<p>The following excerpt provides an adequate overview of the 3 products:</p>
+<blockquote class="epigraph">
+<div><p>GeoServer, MapServer and Deegree are open-source map server products
+focusing on Internet mapping applications using OGC webGIS standards.
+These OGC interoperability standards such as WMS, WFS and WFS-T
+allow for the cross-platform exchange of geographic information
+over the Internet.
+Using these standards,
+map data stored in Oracle Spatial, PostGIS or ArcSDE databases
+can be accessed over the Internet with a standard web browser
+or GIS client software.
+With WMS, map data can be accessed and displayed as an image
+that can be overlaid with GIS data from other data sources
+to produce composite maps.
+With WFS, users can access the actual geographic features in vector format,
+while WFS-T allows for creation, deletion and updating of features.
+MapServer, GeoServer and Deegree are server-based “map engines”
+to display spatial data
+(maps, images or vector data depending on the OGC web service)
+over the Internet to users based on their requests. […]
+MapServer has proved to be a very mature and reliable product
+to distribute maps from GIS data sources over the Internet
+through the WMS, WCS and other OGC interoperability standards.
+GeoServer and Deegree are more recent projects built with Java technology.
+While comparable to MapServer in many ways,
+GeoServer and Deegree go further by supporting transactional WFS services,
+allowing users to insert, delete and modify geographical data
+at the source from remote locations through the Internet.</p>
+<p class="attribution">—Source: <a class="reference internal" href="#piep10" id="id9"><span>[Piep10]</span></a></p>
+</div></blockquote>
+</div>
+<div class="section" id="real-world-use">
+<h2>Real-world use<a class="headerlink" href="#real-world-use" title="Permalink to this headline">¶</a></h2>
+<p>The following table lists a sample of projects using GeoServer.</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 90%" />
+<col style="width: 10%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Organization, system or project</strong></p></td>
+<td><p><strong>References</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Instituto Geográfico Nacional (MCA), Spain</p></td>
+<td><p><a class="footnote-reference brackets" href="#es-nma" id="id10">9</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Gestione Integrata e Interoperativa dei Dati Ambientali (SDI), Italy</p></td>
+<td><p><a class="footnote-reference brackets" href="#it-giita1" id="id11">11</a> <a class="footnote-reference brackets" href="#it-giita2" id="id12">12</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Global Disaster Alert and Coordination System (SDI), UN &amp; EC-JRC</p></td>
+<td><p><a class="footnote-reference brackets" href="#jrc-disaster" id="id13">10</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Global Monitoring for Environment and Security, EC-JRC</p></td>
+<td><p><a class="footnote-reference brackets" href="#jrc-gmes" id="id14">8</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Paikkatietoikkuna (SDI), Finland</p></td>
+<td><p><a class="footnote-reference brackets" href="#fi-sdi" id="id15">13</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>UK Location Programme</p></td>
+<td><p><a class="footnote-reference brackets" href="#uk-location-geoserver" id="id16">7</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="final-notes">
+<h2>Final notes<a class="headerlink" href="#final-notes" title="Permalink to this headline">¶</a></h2>
+<p class="rubric">Note on support for map tile services</p>
+<p>Support for <a class="reference external" href="http://www.opengeospatial.org/standards/wmts">WMTS</a> services is not considered a <em>must-have</em> requirement
+for this project:  the spatial information can be stored as vector data
+in the database, and served using WMS or WFS services.
+It is not foreseable that a large number of concurrent requests will
+require a Map Tile server.
+Consumption of 3rd-party map tile services (e.g. Mapquest, Google Maps, etc.)
+will be required in the web mapping component, but it is unlikely that a
+WMTS server will be strictly necessary.
+If, for performance reasons, a map tile server becomes necessary,
+two simple options exist:</p>
+<ul class="simple">
+<li><p>Geoserver includes an integrated version of <a class="reference external" href="http://geowebcache.org/">GeoWebCache</a>,
+a tiling server that runs as a proxy between a map client and map server,
+caching (storing) tiles as they are requested,
+eliminating redundant request processing and reducing response time,</p></li>
+<li><p><a class="reference external" href="http://geowebcache.org/">GeoWebCache</a> (under a LGPL licence) can also be deployed
+as a standalone product to implement WMS-C, WMTS, TMS or Google Maps KML
+service interfaces (e.g. to expose some map services to the public through
+a different server).</p></li>
+</ul>
+<p class="rubric">Note on support for spatial catalogue services</p>
+<p>Support for <a class="reference external" href="http://www.opengeospatial.org/standards/cat">CSW</a> services is not considered a <em>must-have</em> requirement
+for this project, although metadata should stored for the various datasources.
+If a spatial data catalog is required, the obvious option is to use another
+Java application, <a class="reference external" href="http://geonetwork-opensource.org/">Geonetwork</a>, which was developed for, and is used by,
+various United Nations offices and programmes (<a class="reference external" href="http://www.fao.org/">FAO</a>, <a class="reference external" href="http://www.unocha.org">OCHA</a>, <a class="reference external" href="http://www.unep.org">UNEP</a> and  <a class="reference external" href="http://www.wfp.org/">WFP</a>).</p>
+<p class="rubric">Note on portability</p>
+<p>All required GIS components are avaliable for
+and supported on Linux distributions:</p>
+<ul class="simple">
+<li><p>Currently, the ‘Debian family’ has the most inclusive and up-to-date
+distribution of FOSS GIS applications and libraries.
+Repositories maintained by the <a class="reference external" href="http://wiki.debian.org/DebianGis">DebianGIS</a> project
+and the <a class="reference external" href="https://wiki.ubuntu.com/UbuntuGIS">UbuntuGIS</a> project
+(the latter does the repackaging for the Ubuntu distribution,
+and also includes some software packages that do not comply
+with the stricter <a class="reference external" href="http://www.debian.org/doc/debian-policy/">Debian Policy</a>).</p></li>
+<li><p>For the ‘Red Hat family’, RPM repositories are available
+via the <a class="reference external" href="http://elgis.argeo.org/">ELGIS</a> project and the <a class="reference external" href="http://fedoraproject.org/wiki/EPEL">EPEL</a> Fedora project
+(for packages that are not part of the
+standard Red Hat Enterprise Linux distribution).</p></li>
+</ul>
+<p class="rubric">Output formats</p>
+<p>The following excerpt lists output formats supported by GeoServer
+in response to W*S requests.
+As can be noticed, some of the output formats (GeoJSON, GML, KML, SVG)
+are also supported directly by <a class="reference external" href="http://postgis.net/">PostGIS</a>.
+However, the use of a web service interface (either WMS or WFS) provides
+an additional level of abstraction that isolates client applications
+from the database and provides a standardized grammar for obtaining the information
+(e.g. allowing the use of desktop GIS applications to
+explore the data, or the development of independent data visualizations tools).</p>
+<div class="topic">
+<p class="topic-title">GeoServer output formats</p>
+<p><strong>Image Outputs</strong></p>
+<p>All image outputs can be initiated from a WMS getMap request on either a raster,
+vector or coverage data.</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Format</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>KML</p></td>
+<td><p>KML (Keyhole Markup Language) is an XML-based language schema for expressing geographic data in an Earth browser, such as Google Earth or Google Maps. KML uses a tag-based structure with nested elements and attributes. For GeoServer, KML files are distributed as a KMZ, which is a zipped KML file.</p></td>
+</tr>
+<tr class="row-odd"><td><p>JPEG</p></td>
+<td><p>WMS output in raster format. The JPEG is a compressed graphic file format, with some loss of quality due to compression. It is best used for photos and not recommended for exact reproduction of data.</p></td>
+</tr>
+<tr class="row-even"><td><p>GIF</p></td>
+<td><p>WMS output in raster format. The GIF (Graphics Interchange Format) is a bitmap image format best suited for sharp-edged line art with a limited number of colors. This takes advantage of the format’s lossless compression, which favors flat areas of uniform color with well defined edges (in contrast to JPEG, which favors smooth gradients and softer images). GIF is limited to an 8-bit palette, or 256 colors.</p></td>
+</tr>
+<tr class="row-odd"><td><p>SVG</p></td>
+<td><p>WMS output in vector format. SVG (Scalable Vector Graphics) is a language for modeling two-dimensional graphics in XML. It differs from the GIF and JPEG in that it uses graphic objects rather than individual points.</p></td>
+</tr>
+<tr class="row-even"><td><p>TIFF</p></td>
+<td><p>WMS output in raster format. TIFF (Tagged Image File Format) is a flexible, adaptable format for handling multiple data in a single file. GeoTIFF containts geographic data embedded as tags within the TIFF file.</p></td>
+</tr>
+<tr class="row-odd"><td><p>PNG</p></td>
+<td><p>WMS output in raster format. The PNG (Portable Network Graphics) file format was created as the free, open-source successor to the GIF. The PNG file format supports truecolor (16 million colors) while the GIF supports only 256 colors. The PNG file excels when the image has large, uniformly coloured areas.</p></td>
+</tr>
+<tr class="row-even"><td><p>OpenLayers</p></td>
+<td><p>WMS GetMap request outputs a simple OpenLayers preview window. <a class="reference external" href="http://www.openlayers.org/">OpenLayers</a> is an open source JavaScript library for displaying map data in web browsers. The OpenLayers output has some advanced filters that are not available when using a standalone version of OpenLayers. Further, the generated preview contains a header with easy  configuration options for display.</p></td>
+</tr>
+<tr class="row-odd"><td><p>PDF</p></td>
+<td><p>A PDF (Portable Document Format) encapsulates a complete description of a fixed-layout 2D document,including any text, fonts, raster images, and 2D vector graphics.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Text Outputs</strong></p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Format</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>AtomPub</p></td>
+<td><p>WMS output of spatial data in XML format. The AtomPub (Atom Publishing Protocol) is an application-level protocol for publishing and editing Web Resources using HTTP and XML. Developed as a replacement for the RSS family of standards for content syndication, Atom allows subscription of geo data.</p></td>
+</tr>
+<tr class="row-odd"><td><p>GeoRss</p></td>
+<td><p>WMS GetMap request output of vector data in XML format. RSS (Rich Site Summary) is an XML format for delivering regularly changing web content. <a class="reference external" href="http://www.georss.org">GeoRss</a> is a  standard for encoding location as part of a RSS feed.supports  Layers Preview produces a RSS 2.0 documents, with GeoRSS Simple geometries using Atom.</p></td>
+</tr>
+<tr class="row-even"><td><p>GeoJSON</p></td>
+<td><p><a class="reference external" href="http://json.org/">JavaScript Object Notation</a> (JSON) is a lightweight data-interchange format based on the JavaScript programming language. This makes it an ideal interchange format for browser based applications since it can be parsed directly and easily in to javascript. GeoJSON is a plain text output format that add geographic types to JSON.</p></td>
+</tr>
+<tr class="row-odd"><td><p>CSV</p></td>
+<td><p>WFS GetFeature output in comma-delimited text. CSV (Comma Separated Values) files are text files containing rows of data. Data values in each row are separated by commas. CSV files also contain a comma-separated header row explaining each row’s value ordering. GeoServer’s CSVs are fully streaming, with no limitation on the amount of data that can be outputted.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Data Outputs</strong></p>
+<p>All data outputs are initiated from a WFS GetFeature request on vector data.</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Format</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>GML2/3</p></td>
+<td><p>GML (Geography Markup Language) is the XML grammar defined by the <a class="reference external" href="http://en.wikipedia.org/wiki/Open_Geospatial_Consortium">Open Geospatial Consortium</a> (OGC) to express geographical features. GML serves as a modeling language for geographic systems as well as an open interchange format for geographic data sharing. GML2 is the default (Common) output format, while GML3 is available from the “All Formats” menu.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Shapefile</p></td>
+<td><p>The ESRI Shapefile, or simply a shapefile, is the most commonly used format for exchanging GIS data. GeoServer outputs shapefiles in zip format, with a directory of .cst, .dbf, .prg, .shp, and .shx files.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<p class="rubric">Footnotes</p>
+<dl class="footnote brackets">
+<dt class="label" id="mapserver-licence"><span class="brackets"><a class="fn-backref" href="#id3">1</a></span></dt>
+<dd><p>The <a class="reference external" href="http://mapserver.org/copyright.html">MapServer licence</a>
+is an <a class="reference external" href="http://opensource.org/licenses/MIT">MIT like</a> permissive licence.</p>
+</dd>
+<dt class="label" id="geotools"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
+<dd><p>Geoserver incorporates <a class="reference internal" href="#geotools">GeoTools</a>,
+an open source (LGPL) Java code library which provides
+standards compliant methods for the manipulation of geospatial data,
+that is used in several GIS applications.</p>
+</dd>
+<dt class="label" id="benchmarks"><span class="brackets"><a class="fn-backref" href="#id5">3</a></span></dt>
+<dd><p>Benchmark data are available at <a class="reference external" href="http://wiki.osgeo.org/wiki/FOSS4G_Benchmark">http://wiki.osgeo.org/wiki/FOSS4G_Benchmark</a>.</p>
+<p>For products supporting WMTS services (‘GoogleMaps-like’ tiled map services),
+the following links provide useful information:
+<a class="reference external" href="http://www.esdm.co.uk/mapserver-and-geoserver-and-tilecache-comparison-serving-ordnance-survey-raster-maps">http://www.esdm.co.uk/mapserver-and-geoserver-and-tilecache-comparison-serving-ordnance-survey-raster-maps</a>,
+<a class="reference external" href="http://www.esdm.co.uk/further-load-testing-of-geoserver-and-mapserver-and-tilecache">http://www.esdm.co.uk/further-load-testing-of-geoserver-and-mapserver-and-tilecache</a> and
+<a class="reference external" href="http://developmentseed.org/blog/2010/oct/19/qa-mapnik-performance-just-important-its-beauty/">http://developmentseed.org/blog/2010/oct/19/qa-mapnik-performance-just-important-its-beauty/</a>.</p>
+</dd>
+<dt class="label" id="mapnik-portability"><span class="brackets"><a class="fn-backref" href="#id6">4</a></span></dt>
+<dd><p>It should be noted that, for high-demand image map services (WMS),
+both products where outperformed by <a class="reference external" href="http://mapnik.org/">mapnik</a>.
+Mapnik is not fully supported in Microsoft Windows operating systems.</p>
+</dd>
+<dt class="label" id="geoserver-auth-dbms"><span class="brackets"><a class="fn-backref" href="#id7">5</a></span></dt>
+<dd><p>URL: <a class="reference external" href="http://docs.geoserver.org/stable/en/user/data/database/sqlsession.html#using-sql-session-scripts-to-control-authorizations-at-the-database-level">http://docs.geoserver.org/stable/en/user/data/database/sqlsession.html#using-sql-session-scripts-to-control-authorizations-at-the-database-level</a></p>
+</dd>
+<dt class="label" id="tinyows-auth-dbms"><span class="brackets"><a class="fn-backref" href="#id8">6</a></span></dt>
+<dd><p>URL: <a class="reference external" href="https://github.com/mapserver/tinyows/issues/43">https://github.com/mapserver/tinyows/issues/43</a></p>
+</dd>
+<dt class="label" id="uk-location-geoserver"><span class="brackets"><a class="fn-backref" href="#id16">7</a></span></dt>
+<dd><p>URL: <a class="reference external" href="http://data.gov.uk/sites/default/files/Data-Publisher-How-To-Guide-Establish-a-Reference-Implementation-for-an-INSPIRE-View-Service-using-a-GeoServer.pdf">http://data.gov.uk/sites/default/files/Data-Publisher-How-To-Guide-Establish-a-Reference-Implementation-for-an-INSPIRE-View-Service-using-a-GeoServer.pdf</a></p>
+</dd>
+<dt class="label" id="jrc-gmes"><span class="brackets"><a class="fn-backref" href="#id14">8</a></span></dt>
+<dd><p>URL: <a class="reference external" href="http://rslab.disi.unitn.it/papers/R72-JSTAR-Brunner.pdf">http://rslab.disi.unitn.it/papers/R72-JSTAR-Brunner.pdf</a></p>
+</dd>
+<dt class="label" id="es-nma"><span class="brackets"><a class="fn-backref" href="#id10">9</a></span></dt>
+<dd><p>URL: <a class="reference external" href="http://inspire.jrc.ec.europa.eu/events/conferences/inspire_2012/presentations/143.pdf">http://inspire.jrc.ec.europa.eu/events/conferences/inspire_2012/presentations/143.pdf</a></p>
+</dd>
+<dt class="label" id="jrc-disaster"><span class="brackets"><a class="fn-backref" href="#id13">10</a></span></dt>
+<dd><p>URL: <a class="reference external" href="http://meetingorganizer.copernicus.org/EGU2012/EGU2012-7404.pdf">http://meetingorganizer.copernicus.org/EGU2012/EGU2012-7404.pdf</a></p>
+</dd>
+<dt class="label" id="it-giita1"><span class="brackets"><a class="fn-backref" href="#id11">11</a></span></dt>
+<dd><p>URL: <a class="reference external" href="http://www.minambiente.it/export/sites/default/archivio/allegati/INSPIRE_state_of_play_2011_ITALY.pdf">http://www.minambiente.it/export/sites/default/archivio/allegati/INSPIRE_state_of_play_2011_ITALY.pdf</a></p>
+</dd>
+<dt class="label" id="it-giita2"><span class="brackets"><a class="fn-backref" href="#id12">12</a></span></dt>
+<dd><p>URL: <a class="reference external" href="http://www.gdmc.nl/zlatanova/Gi4DM2010/gi4dm/Pdf/p116.pdf">http://www.gdmc.nl/zlatanova/Gi4DM2010/gi4dm/Pdf/p116.pdf</a></p>
+</dd>
+<dt class="label" id="fi-sdi"><span class="brackets"><a class="fn-backref" href="#id15">13</a></span></dt>
+<dd><p>URL: <a class="reference external" href="http://www.oskari.org/trac/wiki/DocumentationBackend">http://www.oskari.org/trac/wiki/DocumentationBackend</a></p>
+</dd>
+</dl>
+<hr class="docutils" />
+<p class="rubric">References</p>
+<dl class="citation">
+<dt class="label" id="cmmi10"><span class="brackets"><a class="fn-backref" href="#id2">CMMI10</a></span></dt>
+<dd><p>CMMI Product Team (2010). Capability Maturity Model® Integration for Development, Version 1.3, Improving processes for developing better products and services. no. CMU/SEI-2010-TR-033. Software Engineering Institute. URL: <a class="reference external" href="http://www.sei.cmu.edu/library/abstracts/reports/10tr033.cfm">http://www.sei.cmu.edu/library/abstracts/reports/10tr033.cfm</a></p>
+</dd>
+<dt class="label" id="weic13"><span class="brackets">Weic13</span></dt>
+<dd><p>Weichand, Jurgen (2013). Entwicklung und Anwendung von Downloaddiensten im Kontext der europäischen Geodateninfrastruktur INSPIRE.</p>
+</dd>
+<dt class="label" id="kolo04"><span class="brackets">Kolo04</span></dt>
+<dd><p>Kolodziej, Kris (ed.) (2004). OpenGIS® Web Map Server Cookbook. OGC Document Number: 03-050r1 Version: 1.0.2 URL: <a class="reference external" href="http://portal.opengeospatial.org/files/?artifact_id=7769">http://portal.opengeospatial.org/files/?artifact_id=7769</a></p>
+</dd>
+<dt class="label" id="piep10"><span class="brackets"><a class="fn-backref" href="#id9">Piep10</a></span></dt>
+<dd><p>Pieper, Gertrude (2010). Existing Open-Source Tools - Possibilities for Cadastral Systems. in Steudler, D; Torhonen, M-P and Pieper, G. (2010) (ed.) - FLOSS in Cadastre and Land Registration. Opportunities and Risks. y Food and Agriculture Organization of the United Nations (FAO) and the International Federation of Surveyors (FIG). :24-32</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="WebMapping.html" class="btn btn-neutral float-right" title="Web Mapping" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Z_RNIDOpenStandards.html" class="btn btn-neutral float-left" title="Open Standards in the Portuguese National Regulation on Digital Interoperability" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, the Nile team | CC BY-SA 3.0 | Exceptions apply! See the sources and metadata for each doc.
+      <span class="lastupdated">
+        Last updated on May 19, 2020.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

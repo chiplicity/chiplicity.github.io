@@ -1,0 +1,360 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tools for reStructuredText &mdash; Wiser 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Publishing the documents online" href="PublishingTheDocsOnline.html" />
+    <link rel="prev" title="Sphinx’s reStructuredText primer" href="OnReStructuredText.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Wiser
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Using_Forum/index.html">Using Forum or Projects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Using the technical documentation generator</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#introduction">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#references">References</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="About_Sphinx.html">About Sphinx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OnReStructuredText.html">Sphinx’s reStructuredText primer</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Tools for reStructuredText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PublishingTheDocsOnline.html">Publishing the documents online</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ShowingCodeExamplesInSphinx.html">Showing source code examples in Sphinx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UsingGraphicsAndDiagramsInSphinx.html">Creating diagrams in Sphinx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UsingBibTeXCitationsInSphinx.html">Managing bibliographic citations in Sphinx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UsingMathEquationsInSphinx.html">Creating equations in Sphinx</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Git/index.html">Using the version control system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../On_Software/index.html">Commercial-Off-the-Shelf Software Selection Process</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Notebook/index.html">Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_TaskMan/index.html">Using the issue tracking system</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Wiser</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Using the technical documentation generator</a> &raquo;</li>
+        
+      <li>Tools for reStructuredText</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Using_Sphinx/ToolsForReStructuredText.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tools-for-restructuredtext">
+<h1>Tools for reStructuredText<a class="headerlink" href="#tools-for-restructuredtext" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This document presents some of the tools available for working with
+reStructuredText.</p>
+<p>It is divided in the following parts:</p>
+<ul class="simple">
+<li><p>Editors: simple text editors providing syntax highlight for reST documents.</p></li>
+<li><p>Builder and Converters: tools that automatically convert reST documents
+to other formats such as HTML, PDF, DOC, ODT, etc.</p></li>
+<li><p>Integrated solutions:
+tools that allow the user to produce, build and convert documents
+using a single integrated environment.</p></li>
+</ul>
+</div>
+<div class="section" id="editors">
+<h2>Editors<a class="headerlink" href="#editors" title="Permalink to this headline">¶</a></h2>
+<p>reStructuredText documents are text files, and can be edited with any text editor
+or word processor (provided they are always saved as text files).</p>
+<div class="section" id="jedit">
+<h3>JEdit<a class="headerlink" href="#jedit" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="#jedit">jEdit</a> is a FOSS text editor, written in Java (so it runs in Windows, Mac OS X, Linux, etc.).
+ReST is among the 211 languages supported natively by jEdit.</p>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../_images/jEdit.png"><img alt="This document opened in jEdit." src="../_images/jEdit.png" style="width: 50%;" /></a>
+</div>
+</div>
+<div class="section" id="notepad">
+<h3>Notepad++<a class="headerlink" href="#notepad" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="#notepad">Notepad++</a> is a FOSS text editor for <strong>MS Windows OS</strong> only.</p>
+<p>reStructuredText is not among the languages natively recognised by Notepad++,
+but it can be added using a <a href="#id7"><span class="problematic" id="id8">`User Defined Language File`_</span></a>
+(see install instructions below the list of available language files).</p>
+<p>Follow the link to download the <a href="#id9"><span class="problematic" id="id10">`ReST syntax file`_</span></a>.</p>
+<p>Notepad++ is simpler and more user friendly than jEdit.</p>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../_images/NotepadPlusPlus.png"><img alt="This document opened in Notepad++." src="../_images/NotepadPlusPlus.png" style="width: 50%;" /></a>
+</div>
+</div>
+<div class="section" id="retext">
+<h3>ReText<a class="headerlink" href="#retext" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://sourceforge.net/projects/retext/">ReText</a> is a simple editor that reads your text with MarkDown or HTML markup and saves it as plain text, HTML or PDF.
+It is written in Python using Qt libraries.</p>
+</div>
+<div class="section" id="visual-studio-code">
+<h3>Visual Studio Code<a class="headerlink" href="#visual-studio-code" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://code.visualstudio.com">Visual Studio Code</a> is a FOSS text editor, written in TypeScript (so it runs in Windows, Mac OS X, Linux, etc.).
+ReST is not among the languages natively supported by Visual Studio Code, but it can be added using <a class="reference external" href="https://github.com/lextm/vscode-restructuredtext">an extension from LeXtudio</a>.</p>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../_images/vscode.png"><img alt="This document opened in Visual Studio Code." src="../_images/vscode.png" style="width: 50%;" /></a>
+</div>
+</div>
+</div>
+<div class="section" id="builders-and-converters">
+<h2>Builders and converters<a class="headerlink" href="#builders-and-converters" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-todo admonition" id="id3">
+<p class="admonition-title">Todo</p>
+<p>Section on Builders and Converters such as Sphinx and Pandoc.</p>
+</div>
+<div class="section" id="sphinx">
+<h3>Sphinx<a class="headerlink" href="#sphinx" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://sphinx-doc.org/">Sphinx</a> is a Python documentation generator.</p>
+<p>It requires <a class="reference external" href="http://www.python.org/">Python</a>, which is installed by default in Linux and Mac OS X systems.
+For Microsoft Windows systems, see <a class="reference internal" href="../Notebook/InstallingPythonOnWindows.html#installing-python-on-windows-ref"><span class="std std-ref">Installing Python on Windows</span></a> if you need help installing Python
+and two useful installation utilities (<cite>easy_install</cite> and <cite>pip</cite>).</p>
+<p>After you have Python installed, simply use the following command (in a command window):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">easy_install</span> <span class="o">-</span><span class="n">U</span> <span class="n">Sphinx</span>
+</pre></div>
+</div>
+<p>Elevated privileges (i.e. administration rights) should not be required.</p>
+<p>The Sphinx builder can produce a number of output formats (e.g. HTML, PDF).
+PDF files can be produced using the LaTeX builder (more complicated)
+or using the a direct PDF builder called rst2pdf (see below).</p>
+</div>
+<div class="section" id="rst2pdf">
+<h3>Rst2Pdf<a class="headerlink" href="#rst2pdf" title="Permalink to this headline">¶</a></h3>
+<p>rst2pdf is a tool for transforming reStructuredText to PDF using ReportLab.
+To install rst2pdf on Windows you also need <a class="reference external" href="http://www.python.org/">Python</a> because rst2pdf is coded in python.</p>
+<p>Rst2pdf uses <a class="reference external" href="http://www.reportlab.com/opensource/">ReportLab</a>, which can be installed using:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">easy_install</span> <span class="n">reportlab</span>
+</pre></div>
+</div>
+<p>Again, in Windows, there may be a problem with the required Microsoft Visual Studio version.
+While running setup.py for package installations, Python 2.7 searches for an installed Visual Studio 2008.
+The solution is to define VS90COMNTOOLS variable to point to Tools directory of Visual Studio:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SET</span> <span class="n">VS90COMNTOOLS</span><span class="o">=%</span><span class="n">VS100COMNTOOLS</span><span class="o">%</span>
+</pre></div>
+</div>
+<div class="section" id="how-to-install-rst2pdf-on-windows">
+<h4>How to install rst2pdf on Windows?<a class="headerlink" href="#how-to-install-rst2pdf-on-windows" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li><p>Download rst2pdf source from <a class="reference external" href="https://code.google.com/p/rst2pdf/downloads/list">https://code.google.com/p/rst2pdf/downloads/list</a></p></li>
+<li><p>Unzip the file to an rst2pdf folder.</p></li>
+<li><p>Goto the the rst2pdf folder which contains setup.py file.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">install</span></code> command and it will be installed.</p></li>
+<li><p>To convert any .rst file to PDF file Run rst2pdf myfile.rst command and you are done.</p></li>
+</ol>
+<ul class="simple">
+<li><p><a class="reference external" href="http://rst2pdf.ralsina.me/">http://rst2pdf.ralsina.me/</a></p></li>
+<li><p>User Manual: <a class="reference external" href="http://ralsina.me/static/manual.pdf">http://ralsina.me/static/manual.pdf</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="pandoc">
+<h3>Pandoc<a class="headerlink" href="#pandoc" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="integrated-solutions">
+<h2>Integrated solutions<a class="headerlink" href="#integrated-solutions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="rest-editor-for-eclipse">
+<h3>ReST Editor for Eclipse<a class="headerlink" href="#rest-editor-for-eclipse" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference internal" href="#rest-editor-for-eclipse">ReST editor for Eclipse</a>
+is a plug-in for the Eclipse IDE.
+If <a class="reference external" href="http://sphinx-doc.org/">Sphinx</a> is installed, it can also be used to create (and build) Sphinx projects
+from within Eclipse.
+The following <a class="reference external" href="http://www.slideshare.net/tcalmant/rest-editor-eclipse-demo-camp-grenoble-2011">presentation</a>
+documents the use of the editor.</p>
+<p>This ReST editor has several advantages, namely:</p>
+<ul class="simple">
+<li><p>integrated spell-checking using Hunspell4Eclipse</p></li>
+<li><p>contextual ReST syntax help</p></li>
+<li><p>sections outline rearrangement</p></li>
+</ul>
+<div class="figure align-default">
+<a class="reference internal image-reference" href="../_images/ReSTEditor.png"><img alt="This document opened in the Eclipse ReST Editor." src="../_images/ReSTEditor.png" style="width: 50%;" /></a>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="PublishingTheDocsOnline.html" class="btn btn-neutral float-right" title="Publishing the documents online" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="OnReStructuredText.html" class="btn btn-neutral float-left" title="Sphinx’s reStructuredText primer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, the Nile team | CC BY-SA 3.0 | Exceptions apply! See the sources and metadata for each doc.
+      <span class="lastupdated">
+        Last updated on May 19, 2020.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

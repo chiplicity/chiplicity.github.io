@@ -1,0 +1,376 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Web Server and Servlet COntainer &mdash; Wiser 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Operating Systems" href="OperatingSystems.html" />
+    <link rel="prev" title="OSGEO list of webmapping tools" href="WebMapping_ToolList.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Wiser
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Using_Forum/index.html">Using Forum or Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Sphinx/index.html">Using the technical documentation generator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Git/index.html">Using the version control system</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Commercial-Off-the-Shelf Software Selection Process</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html">Software selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#factors">Factors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#total-cost-of-ownership">Total Cost of Ownership</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#additional-references">Additional References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProjectManagementInfrastructure.html">Project Management Infrastructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VersionControlSystem.html">Version Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DocumentationGenerator.html">Documentation Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IssueTrackingSystem.html">Issue Tracking System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuestionnaireManagement.html">Questionnaire Management System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebBrowsers_DynamicCharts.html">Dynamic charts on web browser usage statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebMapping_ToolList.html">OSGEO list of webmapping tools</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Web Server and Servlet COntainer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#rationale">Rationale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#analysis-of-alternatives">Analysis of alternatives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OperatingSystems.html">Operating Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DatabaseManagementSystem.html">Database Management System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Z_RNIDOpenStandards.html">Open Standards in the Portuguese National Regulation on Digital Interoperability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeodataServer.html">Geospatial Data Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebMapping.html">Web Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebBrowsers.html">Web Browser</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Notebook/index.html">Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_TaskMan/index.html">Using the issue tracking system</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Wiser</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Commercial-Off-the-Shelf Software Selection Process</a> &raquo;</li>
+        
+      <li>Web Server and Servlet COntainer</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/On_Software/WebServer.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="web-server-and-servlet-container">
+<span id="sw-http-server-ref"></span><h1>Web Server and Servlet COntainer<a class="headerlink" href="#web-server-and-servlet-container" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>The selected COTS are:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://httpd.apache.org/">Apache HTTP Server</a>, as a web server</p></li>
+<li><p><a class="reference external" href="http://tomcat.apache.org/">Apache Tomcat</a>, as a servlet container</p></li>
+</ul>
+<p>Should a full J2EE application server be required,
+the JBoss Application Server is an adequate alternative.</p>
+</div>
+</div>
+<div class="section" id="rationale">
+<h1>Rationale<a class="headerlink" href="#rationale" title="Permalink to this headline">¶</a></h1>
+<p>The web server will deliver static resources
+(static pages, such as the documentation, JavaScript, CSS, images, etc.),
+provide a security layer between the application server(s)
+and the client applications (e.g. browsers),
+allow for load balancing (if required)
+and act as a reverse proxy
+(routing incoming requests to specific application servers).</p>
+<p>A web server is required by several of the other software components.
+For example:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://trac.edgewall.org/">Trac</a>, the issue tracking system, is a Python application
+that requires a <a class="reference external" href="https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface">WSGI</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/FastCGI">FastCGI</a> or <a class="reference external" href="https://en.wikipedia.org/wiki/Apache_JServ_Protocol">AJP</a>-capable web server
+(preferably WSGI), in production environments.</p></li>
+<li><p><a class="reference external" href="http://geoserver.org/">Geoserver</a>, the geospatial data server, is a Java application
+that requires a Java servet container application.</p></li>
+<li><p>The map visualisation component
+is based on <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">JavaScript</a> libraries that support the web mapping applications.</p></li>
+<li><p><a href="#id3"><span class="problematic" id="id4">Limesurvey_</span></a>, is a PHP application for questionnaire management
+that can provide the required functionality for microdata collection.</p></li>
+<li><p>phpPgAdmin is a PHP application that provides
+a web-based administration console for PostgreSQL
+(similar to phpMyAdmin for MySQL):
+although is not required, it is very useful for data management purposes.</p></li>
+<li><p>Similarly, publication of the project documentation pages requires a web server,
+and the Sphinx, the documentation generator may also be deployed to such a server.</p></li>
+<li><p>… and so on.</p></li>
+</ul>
+<p>In most cases, the final selection of the web server to be used
+in a production environment will be made
+by each organisation’s ICT department or provider.
+In the scope of this project,
+the objective is to select an adequate option,
+though not necessarily the one that a specific MS
+may choose to use in its particular production environment.</p>
+<p>In this perspective, the choice of web server is similar to
+the choice of supported operating systems or supported web browsers:</p>
+<ul class="simple">
+<li><p>it must be a common, well-known, stable,
+enterprise-strength and commercially supported COTS;</p></li>
+<li><p>it must comply with the <a class="reference internal" href="SoftwareSelection.html#sw-constraints-ref"><span class="std std-ref">Constraints</span></a>
+set on licence compatibility, portability and acquisition cost;</p></li>
+<li><p>it must be part of a reference platform
+on which the other COTS components (e.g. GeoServer, SDMX tools, etc.)
+have been tested on by each of their development teams.</p></li>
+<li><p>and it must support the range of foreseeable project requirements.</p></li>
+</ul>
+</div>
+<div class="section" id="analysis-of-alternatives">
+<h1>Analysis of alternatives<a class="headerlink" href="#analysis-of-alternatives" title="Permalink to this headline">¶</a></h1>
+<p>The following table presents an edited excerpt
+of an existing <a class="reference external" href="https://en.wikipedia.org/wiki/Comparison_of_web_server_software">comparison of web server software</a>,
+from which all options non-compliant with the defined constraints
+were excluded.</p>
+<p>Some of the listed options are grayed out:</p>
+<ul class="simple">
+<li><p>AOLServer and Xitami are no longer actively developed;</p></li>
+<li><p>the Cherookee Windows built is broken in the last versions
+(i.e. there is no Windows version currrently available)</p></li>
+<li><p>lighttp, NaviServer, or Mongoose have small development teams,
+and are dominated alternatives (as to maturity and adoption)
+when compared to Apache, nginx ot Jetty.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/webserver_all.png" id="sw-webserver-table-ref"><img alt="Comparison of web server software" id="sw-webserver-table-ref" src="../_images/webserver_all.png" style="width: 80%;" /></a>
+<p>For the remaining competitors, the adoption statistics made available by
+<a class="reference external" href="http://w3techs.com/technologies/overview/web_server/all">w3techs.com</a>
+and based on the top 10 million websites in the <a class="reference external" href="http://www.alexa.com/">Alexa</a> 3 month average ranking,
+are as follows:</p>
+<ul class="simple">
+<li><p>65.4% of sites use <strong>Apache HTTP Server</strong>;</p></li>
+<li><p>14.5% of sites use <strong>nginx</strong> (rank #3)</p></li>
+<li><p>0.4% of sites use <strong>Apache Tomcat</strong> (rank #6)</p></li>
+<li><p>0.1% of sites use <strong>Jetty</strong> (rank #9)</p></li>
+</ul>
+<p>The following image presents the average market position
+of the three top FOSS options
+(as well as the two most frequent proprietary options, Microsoft IIS and
+LiteSpeed, and the unpublished custom Linux-based Web server
+that Google uses for its online services).</p>
+<a class="reference internal image-reference" href="../_images/ws_tomcat.png" id="sw-webserver-market-ref"><img alt="Market Position" id="sw-webserver-market-ref" src="../_images/ws_tomcat.png" style="width: 50%;" /></a>
+<p class="rubric">Conclusions</p>
+<p>Apache HTTP Server is the dominant web server.
+It can supports Python applications via <strong>mod_wsgi</strong>
+(the Python WSGI adapter module for Apache), as well as CGI and FastCGI applications.</p>
+<p>The Apache HTTP Server also supports AJP, the Apache JServ Protocol:
+it can thus act as a reverse proxy
+(routing the requests that reach the web server to a Java application server,
+for example Apache Tomcat).</p>
+<p>Given that a Java web container will be required
+(by components such as GeoServer),
+an alternative would simply be to use Apache Tomcat (or Jetty) as a web server.
+However, globally, this solution is less flexible
+and, during the project, a WSGI-compliant web server would still
+be required for the project management infrastructure.</p>
+<p>In conclusion, the use of Apache HTTP Server
+plus Apache Tomcat as a Java web container
+provides adequate and flexible deployment options.</p>
+<p>Note that it is assume that only a Java web container will be required,
+not a full Java EE Application Server.</p>
+<p>Should such requirement exist, Apache TomEE
+(that reuses Tomcat as its web container part) might be used.
+Alternative solutions are GlassFish or JBoss (recently renamed as WildFly).</p>
+<p>The available usage statistics <a class="footnote-reference brackets" href="#survey-jee-appserver" id="id1">1</a> for JBoss or GlassFish
+are based on survey data and eventual survey bias is not documented.
+However, JBoss consistently appears with a larger usage share in the surveys,
+for comparable functionality
+(see for example the small <a class="reference external" href="http://zeroturnaround.com/rebellabs/the-great-java-application-server-debate-with-tomcat-jboss-glassfish-jetty-and-liberty-profile/#!/">comparative of Tomcat, JBoss, GlassFish and Jetty</a>,
+published by the developers of JRebel).</p>
+<p>JBoss incorporates a Tomcat 6.0 derivative (fork) as its web container,
+and</p>
+<p class="rubric">Footnotes</p>
+<dl class="footnote brackets">
+<dt class="label" id="survey-jee-appserver"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>See, for example:
+<a class="reference external" href="http://plumbr.eu/blog/most-popular-application-servers">http://plumbr.eu/blog/most-popular-application-servers</a>,
+<a class="reference external" href="http://zeroturnaround.com/rebellabs/java-ee-productivity-report-2011/#servers">http://zeroturnaround.com/rebellabs/java-ee-productivity-report-2011/#servers</a>,
+<a class="reference external" href="http://zeroturnaround.com/rebellabs/developer-productivity-report-2012-java-tools-tech-devs-and-data/4/">http://zeroturnaround.com/rebellabs/developer-productivity-report-2012-java-tools-tech-devs-and-data/4/</a>.</p>
+</dd>
+</dl>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="OperatingSystems.html" class="btn btn-neutral float-right" title="Operating Systems" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="WebMapping_ToolList.html" class="btn btn-neutral float-left" title="OSGEO list of webmapping tools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, the Nile team | CC BY-SA 3.0 | Exceptions apply! See the sources and metadata for each doc.
+      <span class="lastupdated">
+        Last updated on May 19, 2020.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

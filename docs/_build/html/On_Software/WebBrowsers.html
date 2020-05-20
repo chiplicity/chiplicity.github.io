@@ -1,0 +1,359 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Web Browser &mdash; Wiser 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Notebook" href="../Notebook/index.html" />
+    <link rel="prev" title="Web Mapping" href="WebMapping.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Wiser
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Using_Forum/index.html">Using Forum or Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Sphinx/index.html">Using the technical documentation generator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Git/index.html">Using the version control system</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Commercial-Off-the-Shelf Software Selection Process</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html">Software selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#factors">Factors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#total-cost-of-ownership">Total Cost of Ownership</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#additional-references">Additional References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProjectManagementInfrastructure.html">Project Management Infrastructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VersionControlSystem.html">Version Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DocumentationGenerator.html">Documentation Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IssueTrackingSystem.html">Issue Tracking System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuestionnaireManagement.html">Questionnaire Management System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebBrowsers_DynamicCharts.html">Dynamic charts on web browser usage statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebMapping_ToolList.html">OSGEO list of webmapping tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html">Web Server and Servlet COntainer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html#rationale">Rationale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html#analysis-of-alternatives">Analysis of alternatives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OperatingSystems.html">Operating Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DatabaseManagementSystem.html">Database Management System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Z_RNIDOpenStandards.html">Open Standards in the Portuguese National Regulation on Digital Interoperability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeodataServer.html">Geospatial Data Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebMapping.html">Web Mapping</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Web Browser</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rationale">Rationale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#analysis-of-alternatives">Analysis of alternatives</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Notebook/index.html">Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_TaskMan/index.html">Using the issue tracking system</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Wiser</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Commercial-Off-the-Shelf Software Selection Process</a> &raquo;</li>
+        
+      <li>Web Browser</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/On_Software/WebBrowsers.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="web-browser">
+<span id="sw-webbrowser-ref"></span><h1>Web Browser<a class="headerlink" href="#web-browser" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>Web User Interfaces (WUI) <strong>must</strong> tested/accepted in:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.google.com/intl/en/chrome/browser/">Google Chrome</a> 28+</p></li>
+<li><p>or <a class="reference external" href="http://www.mozilla.org/en-US/firefox/new/">Mozilla Firefox</a> 22+.</p></li>
+</ul>
+<p>Due to the specific requirements of the infrastruture provider for PT,
+WUI <strong>should</strong> also be tested in:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">Internet Explorer</a> 8+</p></li>
+</ul>
+</div>
+<div class="section" id="rationale">
+<h2>Rationale<a class="headerlink" href="#rationale" title="Permalink to this headline">¶</a></h2>
+<p>In this section, the objective is not to select a web browser, but to establish
+which web browsers should any Web User Interfaces be tested and accepted in.</p>
+<p>Two simple criteria are used in the selection process:</p>
+<ul class="simple">
+<li><p>Browser usage statistics in Europe,</p></li>
+<li><p>Feature support and performance</p></li>
+</ul>
+</div>
+<div class="section" id="analysis-of-alternatives">
+<h2>Analysis of alternatives<a class="headerlink" href="#analysis-of-alternatives" title="Permalink to this headline">¶</a></h2>
+<p class="rubric">Usage share</p>
+<p>Browser usage statistics produced by <a class="reference external" href="http://gs.statcounter.com/about">StatCounter</a> allow the identification
+of the products with the larger usage share in Europe.
+Other sources of statistics on the <a class="reference external" href="https://en.wikipedia.org/wiki/Usage_share_of_web_browsers">usage share of web browsers</a> are available,
+but the relative ranking of the products is similar.</p>
+<p><a class="reference external" href="https://www.google.com/intl/en/chrome/browser/">Google Chrome</a> is currently the most used browser in Europe (since June 2012).
+<a class="reference external" href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">Internet Explorer</a> relative usage share is declining as is, to a lesser extent,
+<a class="reference external" href="http://www.mozilla.org/en-US/firefox/new/">Mozilla Firefox</a>’s.
+However there are marked regional differences,
+for example, in Europe’s two most populous countries:</p>
+<ul class="simple">
+<li><p>In Germany, Mozilla Firefox is the dominant browser (&gt; 45%),
+and Google Chrome has only recently (April 2013) surpassed Internet Explorer;</p></li>
+<li><p>In the United Kingdom, Google Chrome is the dominant browser with a share
+similar to Internet Explorer. Mozilla Firefox and Apple’s <a class="reference external" href="http://www.apple.com/safari/">Safari</a> have
+similar usage quotas, around 15%.</p></li>
+</ul>
+<p>Alternative version: <a class="reference internal" href="WebBrowsers_DynamicCharts.html#sw-web-browser-stats-dynamic-ref"><span class="std std-ref">Dynamic charts on web browser usage statistics</span></a>)</p>
+<div class="figure align-default" id="id3">
+<span id="sw-browser-eu-monthly-ref"></span><a class="reference internal image-reference" href="../_images/BrowserStats-EU-monthly.png"><img alt="Top 5 browsers in Europe, June 2012 to May 2013, monthly average" src="../_images/BrowserStats-EU-monthly.png" style="width: 80%;" /></a>
+<p class="caption"><span class="caption-text"><strong>Legend:</strong> Top 5 browsers in Europe, June 2012 to May 2013, monthly average</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id4">
+<span id="sw-browser-de-monthly-ref"></span><a class="reference internal image-reference" href="../_images/BrowserStats-DE-monthly.png"><img alt="Top 5 browsers in Germany, June 2012 to May 2013, monthly average" src="../_images/BrowserStats-DE-monthly.png" style="width: 80%;" /></a>
+<p class="caption"><span class="caption-text"><strong>Legend:</strong> Top 5 browsers in Germany, June 2012 to May 2013, monthly average</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id5">
+<span id="sw-browser-gb-monthly-ref"></span><a class="reference internal image-reference" href="../_images/BrowserStats-GB-monthly.png"><img alt="Top 5 browsers in the United Kingdom, June 2012 to May 2013, monthly average" src="../_images/BrowserStats-GB-monthly.png" style="width: 80%;" /></a>
+<p class="caption"><span class="caption-text"><strong>Legend:</strong> Top 5 browsers in the United Kingdom, June 2012 to May 2013, monthly average</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id6">
+<span id="sw-browser-eu-daily-ref"></span><a class="reference internal image-reference" href="../_images/BrowserStats-EU-daily.png"><img alt="Top 5 browsers in Europe, June 2012 to May 2013, daily values" src="../_images/BrowserStats-EU-daily.png" style="width: 80%;" /></a>
+<p class="caption"><span class="caption-text"><strong>Legend:</strong> Top 5 browsers in Europe, June 2012 to May 2013, daily values</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p class="rubric">Relative benchmarking</p>
+<p>The current versions of the 3 most common browsers (<a class="reference external" href="https://www.google.com/intl/en/chrome/browser/">Chrome</a>, <a class="reference external" href="http://www.mozilla.org/en-US/firefox/new/">Firefox</a> and <a class="reference external" href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">IE</a>)
+can be ranked using the average of their min-max normalised scores
+on the following ‘feature support’/’performance benchmark’ tests:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="http://html5test.com">HTML5 test</a></p></li>
+<li><p><a class="reference external" href="http://www.webkit.org/perf/sunspider/sunspider.html">SunSpider</a> (Version 1)</p></li>
+<li><p><a class="reference external" href="https://developers.google.com/octane/">Octane</a> (Version 1)</p></li>
+<li><p><a class="reference external" href="http://krakenbenchmark.mozilla.org/">Kraken</a> (Version 1.1)</p></li>
+<li><p><a class="reference external" href="http://peacekeeper.futuremark.com/">Peacekeeper</a></p></li>
+<li><p><a class="reference external" href="http://www.robohornet.org/">RoboHornet</a> (alpha version)</p></li>
+</ul>
+</div></blockquote>
+<p>The tests focus on partially overlapping aspects of
+<a class="reference external" href="http://www.w3.org/TR/html5/">HTML5</a> and <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">Javascript</a> support, using different approaches
+(feature support, laboratory tests directed towards specific features,
+or performance tests that try to simulate real-world use situations).</p>
+<p>The average test score provides a more resilient indicator
+of each browser’s capabilities,
+regardless of the relative technical merits or applicability of a particular benchmark. <a class="footnote-reference brackets" href="#browser-test" id="id1">1</a></p>
+<a class="reference internal image-reference" href="../_images/BrowserTop3Scores.png" id="sw-browser-test-scores-ref"><img alt="Top 3 browsers in Europe, test scores" id="sw-browser-test-scores-ref" src="../_images/BrowserTop3Scores.png" style="width: 80%;" /></a>
+<p class="rubric">Conclusions</p>
+<p>Usage share statistics and test scores provide a consistent ranking:</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://www.google.com/intl/en/chrome/browser/">Google Chrome</a></p></li>
+<li><p><a class="reference external" href="http://www.mozilla.org/en-US/firefox/new/">Mozilla Firefox</a></p></li>
+<li><p><a class="reference external" href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">Internet Explorer</a></p></li>
+</ol>
+<p>Based on this ranking, the Google Chrome / <a class="reference external" href="http://www.chromium.org/Home">Chromium</a> is considered
+the adequate browser for WUI development and testing.</p>
+<p>An alternative option is to use Mozilla Firefox:
+if the WUI works correctly in this browser, it will most likely work correctly
+on Google Chrome.</p>
+<p>These two browsers also comply with the defined <a class="reference internal" href="SoftwareSelection.html#sw-constraints-ref"><span class="std std-ref">Constraints</span></a>
+and are supported in the selected <a class="reference internal" href="OperatingSystems.html#sw-operating-systems-ref"><span class="std std-ref">Operating Systems</span></a>.</p>
+<hr class="docutils" />
+<p class="rubric">Footnotes</p>
+<dl class="footnote brackets">
+<dt class="label" id="browser-test"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Please note that the average relative score reflects
+the comparison between the 3 products, not among all available browsers.
+Absolute test results
+are dependent on hardware and configuration:
+all tests were made on a Windows 7 (64-bit) machine,
+running an Intel Core i5-2410M processor, 6GB RAM,
+and an NVIDIA GeForce 540M graphics card.
+Firefox 23 beta version was tested instead of the current production version
+due a <a class="reference external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=855898">(fixed) bug</a>
+that affected Robohornet’s descendant selector test in Firefox 22.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Notebook/index.html" class="btn btn-neutral float-right" title="Notebook" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="WebMapping.html" class="btn btn-neutral float-left" title="Web Mapping" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, the Nile team | CC BY-SA 3.0 | Exceptions apply! See the sources and metadata for each doc.
+      <span class="lastupdated">
+        Last updated on May 19, 2020.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

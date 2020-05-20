@@ -1,0 +1,331 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Web Mapping &mdash; Wiser 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Web Browser" href="WebBrowsers.html" />
+    <link rel="prev" title="Geospatial Data Server" href="GeodataServer.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Wiser
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Using_Forum/index.html">Using Forum or Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Sphinx/index.html">Using the technical documentation generator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Git/index.html">Using the version control system</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Commercial-Off-the-Shelf Software Selection Process</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html">Software selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#factors">Factors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#total-cost-of-ownership">Total Cost of Ownership</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#additional-references">Additional References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProjectManagementInfrastructure.html">Project Management Infrastructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VersionControlSystem.html">Version Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DocumentationGenerator.html">Documentation Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IssueTrackingSystem.html">Issue Tracking System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuestionnaireManagement.html">Questionnaire Management System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebBrowsers_DynamicCharts.html">Dynamic charts on web browser usage statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebMapping_ToolList.html">OSGEO list of webmapping tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html">Web Server and Servlet COntainer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html#rationale">Rationale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html#analysis-of-alternatives">Analysis of alternatives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OperatingSystems.html">Operating Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DatabaseManagementSystem.html">Database Management System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Z_RNIDOpenStandards.html">Open Standards in the Portuguese National Regulation on Digital Interoperability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeodataServer.html">Geospatial Data Server</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Web Mapping</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rationale">Rationale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#analysis-of-alternatives">Analysis of alternatives</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="WebBrowsers.html">Web Browser</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Notebook/index.html">Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_TaskMan/index.html">Using the issue tracking system</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Wiser</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Commercial-Off-the-Shelf Software Selection Process</a> &raquo;</li>
+        
+      <li>Web Mapping</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/On_Software/WebMapping.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="web-mapping">
+<span id="sw-webmapping-ref"></span><h1>Web Mapping<a class="headerlink" href="#web-mapping" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>The selected web mapping library is <a class="reference external" href="http://www.openlayers.org/">OpenLayers</a> 2.13+.</p>
+<p>If required:</p>
+<ul class="simple">
+<li><p>The web mapping solution can be supported by compatible toolkits,
+such as <a class="reference external" href="http://geoext.org/">GeoExt</a> 1.1+.</p></li>
+<li><p>The web mapping solution can be based on the customisation of
+existing web map clients, such as <a class="reference external" href="http://suite.opengeo.org/opengeo-docs/geoexplorer/workspace.html">GeoExplorer</a>.</p></li>
+</ul>
+<p>Additional <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">JavaScript</a> libraries can be used if required,
+subject to the global constraints on COTS selection.</p>
+</div>
+<div class="section" id="rationale">
+<h2>Rationale<a class="headerlink" href="#rationale" title="Permalink to this headline">¶</a></h2>
+<p>The purpose of the web mapping component is to support
+data visualisation (thematic mapping)
+and geocoding (finding the geographic coordinates associated within geographical
+names or administrative units).</p>
+<p>The web mapping components must comply with the <a class="reference internal" href="SoftwareSelection.html#sw-constraints-ref"><span class="std std-ref">Constraints</span></a>
+set on licence compatibility, portability and acquisition cost.</p>
+<p>For thematic visualisation purposes,
+the webmapping component must support the <a class="reference internal" href="GeodataServer.html#sw-ogc-webservices-ref"><span class="std std-ref">OGC W*S protocols</span></a>
+previously identified.</p>
+<p>For geocoding purposes,
+the webmapping component must support access to the <a class="reference external" href="http://www.geonames.org/">GeoNames</a> service.</p>
+</div>
+<div class="section" id="analysis-of-alternatives">
+<h2>Analysis of alternatives<a class="headerlink" href="#analysis-of-alternatives" title="Permalink to this headline">¶</a></h2>
+<p>The preliminary candidate set was based on an updated version of the
+<a class="reference internal" href="WebMapping_ToolList.html#sw-list-webmapping-tools-ref"><span class="std std-ref">OSGEO list of webmapping tools</span></a>.</p>
+<p>The data was updated (last release, activity, licence type, etc.)
+to provide the necessary information for the application
+of the selection <a class="reference internal" href="SoftwareSelection.html#sw-constraints-ref"><span class="std std-ref">Constraints</span></a> on licence type, portability,
+QSOS maturity criteria (e.g. exclusion of inactive or imature projects)
+and open standards (e.g. exclusion of <a class="reference external" href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/index.html">ActionScript</a> components).</p>
+<p>Integration criteria are subsequently applied:
+e.g. exclusion of components that are essentially plug-ins for
+specific platforms (e.g. <a class="reference external" href="http://plone.org/">Plone</a>) or that depend on components
+otherwise unrequired (e.g. <a class="reference external" href="http://mapserver.org/mapscript/">PHP MapScript</a>).</p>
+<p>The analysis of alternatives was an update of German Carillo’s
+Web mapping client comparison v.6 <a class="reference internal" href="#carr12" id="id1"><span>[Carr12]</span></a></p>
+<p>The following diagram ilustrates the dependencies between
+the various available alternatives identified in the candidate set.</p>
+<p class="rubric">Dependencies between components</p>
+<a class="reference internal image-reference" href="../_images/WebMappingDependencies_nery.png"><img alt="Dependencies between components" src="../_images/WebMappingDependencies_nery.png" style="width: 60%;" /></a>
+<p>The majority of components are based on the <a class="reference external" href="http://geoext.org/">GeoExt</a> toolkit and
+the <a class="reference external" href="http://www.openlayers.org/">OpenLayers</a> library which currently the <em>de facto</em> standard
+for web mapping applications.</p>
+<p>In the following table a number of components is identified
+that have EUPL incompatible licences,
+or development/API language incompatible with the PT Open Standards regulation,
+or technical documentation not available in English.</p>
+<a class="reference internal image-reference" href="../_images/WebMapping_1.png"><img alt="Basic criteria" src="../_images/WebMapping_1.png" style="width: 100%;" /></a>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>Include updated table with the supported protocols.</p>
+</div>
+<p class="rubric">Examples</p>
+<p>The following demos illustrate the use of <a class="reference external" href="http://www.openlayers.org/">OpenLayers</a> for:</p>
+<ul class="simple">
+<li><p>Geocoding or routing purposes</p>
+<ul>
+<li><p><a class="reference external" href="http://www.openrouteservice.org/">OpenRouteService</a></p></li>
+<li><p>Using the <a class="reference external" href="http://projects.bryanmcbride.com/sandbox/OL_geocode.html">GeoNames service</a> (or the ESRI Locator Service);</p></li>
+<li><p>Using the <a class="reference external" href="http://nominatim.openstreetmap.org/search?q=ADDRESS_HERE&amp;format=XML/JSON/HTML">OpenStreetMap Nominatim service</a></p></li>
+<li><p>Using the <a class="reference external" href="http://openlayers.org/dev/examples/openls.html">an OpenLS service</a></p></li>
+</ul>
+</li>
+<li><p>Visualisation purposes</p>
+<ul>
+<li><p><a class="reference external" href="http://tools.geofabrik.de/mc/">Map Compare</a> using different base map service providers (Google, Bing, OpenStreetMap, etc.).</p></li>
+<li><p><a class="reference external" href="http://thematicmapping.org/playground/">Thematic mapping with OpenLayers</a></p></li>
+<li><p><a class="reference external" href="http://blog.felipebarriga.cl/olheatmap_demo/">Interactive Heatmap</a> or <a class="reference external" href="http://www.patrick-wied.at/static/heatmapjs/demo/maps_heatmap_layer/openlayers.php">Heatmap Overlay</a></p></li>
+</ul>
+</li>
+</ul>
+<p class="rubric">References</p>
+<dl class="citation">
+<dt class="label" id="carr12"><span class="brackets"><a class="fn-backref" href="#id1">Carr12</a></span></dt>
+<dd><p>Carillo, G. (2012). Web mapping client comparison v.6. 03 January 2012. <a class="reference external" href="http://geotux.tuxfamily.org/index.php/en/geo-blogs/item/291-comparacion-clientes-web-v6">http://geotux.tuxfamily.org/index.php/en/geo-blogs/item/291-comparacion-clientes-web-v6</a></p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="WebBrowsers.html" class="btn btn-neutral float-right" title="Web Browser" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="GeodataServer.html" class="btn btn-neutral float-left" title="Geospatial Data Server" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, the Nile team | CC BY-SA 3.0 | Exceptions apply! See the sources and metadata for each doc.
+      <span class="lastupdated">
+        Last updated on May 19, 2020.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

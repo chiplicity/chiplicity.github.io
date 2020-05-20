@@ -1,0 +1,514 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Open Source Software Guidelines &mdash; Wiser 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Wiser
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Forum/index.html">Using Forum or Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Sphinx/index.html">Using the technical documentation generator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Git/index.html">Using the version control system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../On_Software/index.html">Commercial-Off-the-Shelf Software Selection Process</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Notebook/index.html">Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_TaskMan/index.html">Using the issue tracking system</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Wiser</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Open Source Software Guidelines</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/On_ICT_Procurement/JRC-OSS-guidelines.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#open-source-software-guidelines" id="id1">Open Source Software Guidelines</a></p>
+<ul>
+<li><p><a class="reference internal" href="#early-determination-principle" id="id2">Early Determination Principle</a></p>
+<ul>
+<li><p><a class="reference internal" href="#early-determination-of-distribution-policy" id="id3">Early determination of distribution policy</a></p></li>
+<li><p><a class="reference internal" href="#early-determination-of-the-open-source-license" id="id4">Early determination of the Open Source license</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#oss-guidelines-for-developers" id="id5">OSS Guidelines for Developers</a></p>
+<ul>
+<li><p><a class="reference internal" href="#document-your-work" id="id6">Document your work</a></p></li>
+<li><p><a class="reference internal" href="#where-can-you-get-open-source-software" id="id7">Where can you get Open Source Software?</a></p></li>
+<li><p><a class="reference internal" href="#use-of-oss-development-tools-or-environments" id="id8">Use of OSS development tools or environments</a></p></li>
+<li><p><a class="reference internal" href="#incorporation-of-open-source-code-in-a-project" id="id9">Incorporation of Open Source code in a project</a></p></li>
+<li><p><a class="reference internal" href="#linking-the-software-to-oss-libraries" id="id10">Linking the software to OSS libraries</a></p></li>
+<li><p><a class="reference internal" href="#copyright-notices-and-disclaimer" id="id11">Copyright notices and disclaimer</a></p></li>
+<li><p><a class="reference internal" href="#keep-and-send-copies-of-your-code-for-archiving-purposes" id="id12">Keep and send copies of your code for archiving purposes</a></p></li>
+<li><p><a class="reference internal" href="#relationships-with-external-developers" id="id13">Relationships with external developers</a></p></li>
+<li><p><a class="reference internal" href="#use-of-these-guidelines-in-tenders-and-contracts" id="id14">Use of these guidelines in tenders and contracts</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#checklist" id="id15">Checklist</a></p></li>
+<li><p><a class="reference internal" href="#open-source-licences" id="id16">Open Source Licences</a></p>
+<ul>
+<li><p><a class="reference internal" href="#copyright-and-conditions-of-use" id="id17">Copyright and conditions of use</a></p></li>
+<li><p><a class="reference internal" href="#copyleft-effect" id="id18">Copyleft effect</a></p></li>
+<li><p><a class="reference internal" href="#compatibility" id="id19">Compatibility</a></p>
+<ul>
+<li><p><a class="reference internal" href="#examples-of-compatibility-incompatibility" id="id20">Examples of compatibility /incompatibility</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is an <strong>abridged and edited version</strong>
+of the EU Joint Research Center Guidelines on Open Source Software (September 2010).
+The original document is available online at:
+&lt;<a class="reference external" href="https://joinup.ec.europa.eu/sites/default/files/OSS-guidelines-v-DIGIT-2.pdf">https://joinup.ec.europa.eu/sites/default/files/OSS-guidelines-v-DIGIT-2.pdf</a>&gt;</p>
+<p>This version has been prepared for internal use only
+and should not be distributed publicly.</p>
+<p>Further references:</p>
+<p>A similar guide, also available, in the 22 official languages of the EU.
+&lt;<a class="reference external" href="http://joinup.ec.europa.eu/system/files/guidelines/EUPL%201.1%20Guidelines%20EN.pdf">http://joinup.ec.europa.eu/system/files/guidelines/EUPL%201.1%20Guidelines%20EN.pdf</a>&gt;</p>
+<p>An updated compatibility matrix between EUPL and other FOSS licences:
+&lt;<a class="reference external" href="http://joinup.ec.europa.eu/software/page/licence_compatibility_and_interoperability%20">http://joinup.ec.europa.eu/software/page/licence_compatibility_and_interoperability%20</a>&gt;
+&lt;<a class="reference external" href="https://joinup.ec.europa.eu/software/page/eupl/eupl-compatible-open-source-licences">https://joinup.ec.europa.eu/software/page/eupl/eupl-compatible-open-source-licences</a>&gt;</p>
+<p>Guideline For Public Administrations On Partnering With Free Software Developers
+<a class="reference external" href="http://ec.europa.eu/idabc/servlets/Docbe59.pdf?id=28128">http://ec.europa.eu/idabc/servlets/Docbe59.pdf?id=28128</a></p>
+<p>Guideline on Public Procurement of Open Source Software
+<a class="reference external" href="http://joinup.ec.europa.eu/sites/default/files/OSS-procurement-guideline%20-final.pdf">http://joinup.ec.europa.eu/sites/default/files/OSS-procurement-guideline%20-final.pdf</a></p>
+</div>
+<div class="section" id="open-source-software-guidelines">
+<span id="jrc-oss-guidelines"></span><h1><a class="toc-backref" href="#id1">Open Source Software Guidelines</a><a class="headerlink" href="#open-source-software-guidelines" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="early-determination-principle">
+<h2><a class="toc-backref" href="#id2">Early Determination Principle</a><a class="headerlink" href="#early-determination-principle" title="Permalink to this headline">¶</a></h2>
+<p>The following guidelines are meant to help developers
+managing Open Source Software
+(‘OSS’) in the JRC development projects.</p>
+<div class="section" id="early-determination-of-distribution-policy">
+<h3><a class="toc-backref" href="#id3">Early determination of distribution policy</a><a class="headerlink" href="#early-determination-of-distribution-policy" title="Permalink to this headline">¶</a></h3>
+<p>There are basically three options concerning distribution of software
+developed or contributions made to existing software:</p>
+<ol class="arabic simple">
+<li><p>No distribution (software development for internal use only);</p></li>
+<li><p>« Proprietary » distribution (grant of individual licenses, either free of charge or with a license fee);</p></li>
+<li><p>distribution under an Open Source license.</p></li>
+</ol>
+</div>
+<div class="section" id="early-determination-of-the-open-source-license">
+<h3><a class="toc-backref" href="#id4">Early determination of the Open Source license</a><a class="headerlink" href="#early-determination-of-the-open-source-license" title="Permalink to this headline">¶</a></h3>
+<p>If the Open Source model is chosen as the desired distribution policy,
+the type of license under which software in development will be released
+must also be determined at the earliest stage of the project.</p>
+<p>[An] Open Source license was specifically drafted
+at the initiative of the European Commission.</p>
+<p>This license, named EUPL (European Union Public License)
+is designed to use the concepts of European law
+and to respect the legal and linguistic diversity
+of the Member States of the European Union.</p>
+<p>In this case, the EUPL will most often be chosen,
+but other licenses could also be used in certain situations.</p>
+</div>
+</div>
+<div class="section" id="oss-guidelines-for-developers">
+<h2><a class="toc-backref" href="#id5">OSS Guidelines for Developers</a><a class="headerlink" href="#oss-guidelines-for-developers" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="document-your-work">
+<h3><a class="toc-backref" href="#id6">Document your work</a><a class="headerlink" href="#document-your-work" title="Permalink to this headline">¶</a></h3>
+<p>This is probably the most important requirement:
+when you insert pre-existing OSS in your own software
+or use OSS and want to adapt it,
+you must carefully document your use of OSS in the JRC projects.
+You must always record:</p>
+<ul class="simple">
+<li><p>The origin of any OSS component used,
+the date of its download,
+its version number and the license under which it is released;</p></li>
+<li><p>The ‘place’ in the code where you inserted pieces of OSS;</p></li>
+<li><p>The identification and description of your developments
+and of the modifications that you have made in OSS source code,
+and the date(s);</p></li>
+</ul>
+<p>The contractors and collaborators
+who are involved in the software development project
+[must] follow the above instructions.</p>
+</div>
+<div class="section" id="where-can-you-get-open-source-software">
+<h3><a class="toc-backref" href="#id7">Where can you get Open Source Software?</a><a class="headerlink" href="#where-can-you-get-open-source-software" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Download OSS directly on its official author’s,
+editor’s or project’s website, if there is any;</p></li>
+<li><p>Download OSS from OSOR.EU if functionally relevant software is available;</p></li>
+<li><p>If not, choose repositories that are largely accepted
+and recognized through the OSS community.</p></li>
+</ul>
+</div>
+<div class="section" id="use-of-oss-development-tools-or-environments">
+<h3><a class="toc-backref" href="#id8">Use of OSS development tools or environments</a><a class="headerlink" href="#use-of-oss-development-tools-or-environments" title="Permalink to this headline">¶</a></h3>
+<p>Certain OSS are development tools (like compilers or automated test tools)
+or environments (like website environments or operating systems of workstations).</p>
+<p>The use of such tools or environments in software development projects
+is not problematic from a legal point of view.</p>
+</div>
+<div class="section" id="incorporation-of-open-source-code-in-a-project">
+<h3><a class="toc-backref" href="#id9">Incorporation of Open Source code in a project</a><a class="headerlink" href="#incorporation-of-open-source-code-in-a-project" title="Permalink to this headline">¶</a></h3>
+<p>“Incorporate” here means both include pieces of OSS code
+into software that you are developing and/or modify existing OSS
+in order to create new or customized software.
+The result is the same: you intend to integrate pre-existing OSS code
+into the project which you are working on.</p>
+<p>There is no direct answer to the question
+whether to include or not OSS code in a project;
+the answer [depends] on 2 elements:</p>
+<ul class="simple">
+<li><p>The distribution scheme chosen for this project
+[namely if it will be distributed] under an Open Source license;</p></li>
+<li><p>The license of OSS which you want to incorporate or modify.</p></li>
+</ul>
+</div>
+<div class="section" id="linking-the-software-to-oss-libraries">
+<h3><a class="toc-backref" href="#id10">Linking the software to OSS libraries</a><a class="headerlink" href="#linking-the-software-to-oss-libraries" title="Permalink to this headline">¶</a></h3>
+<p>Some of the OSS available are released as libraries.</p>
+<p>Instead of incorporating it into the software,
+you may want to create links between your software and
+these (unmodified) libraries and to distribute them along with your software,
+either by compiling them together (“static linking”) or not (“dynamic linking”).</p>
+<p>There are cases where dynamic linking to OSS libraries is allowed while static linking is not.
+It depends from the Open Source license under which such library is released.
+A case-by-case approach is thus necessary.</p>
+<p>Just like what is indicated above about “incorporating” OSS in projects,
+the possibility to link certain parts of OSS libraries to projects
+depends on the distribution scheme chosen for the project
+and the license under which such OSS is released.</p>
+</div>
+<div class="section" id="copyright-notices-and-disclaimer">
+<h3><a class="toc-backref" href="#id11">Copyright notices and disclaimer</a><a class="headerlink" href="#copyright-notices-and-disclaimer" title="Permalink to this headline">¶</a></h3>
+<p>OSS usually contains copyright notices and disclaimers
+in their source code or in attached files.</p>
+<p>They typically indicate the name and version number of these software,
+the identity of the creator (or of the different contributors),
+the reference (or the full text) of the license under which it is released
+and a disclaimer.</p>
+<p>You must <strong>always copy such copyright notices and disclaimers</strong>
+along with the pieces of code that you insert or use in your project.</p>
+</div>
+<div class="section" id="keep-and-send-copies-of-your-code-for-archiving-purposes">
+<h3><a class="toc-backref" href="#id12">Keep and send copies of your code for archiving purposes</a><a class="headerlink" href="#keep-and-send-copies-of-your-code-for-archiving-purposes" title="Permalink to this headline">¶</a></h3>
+<p>A copy of all software developed is kept for legal archiving purposes.</p>
+<p>You must send a copy of the code of all software developed
+and subsequent (major) versions thereof.
+This also applies to OSS developed or modified.</p>
+<p>You should also check with your project manager/action leader
+whether the developed software should be uploaded
+on online repositories or forges (e.g. OSOR.eu).</p>
+</div>
+<div class="section" id="relationships-with-external-developers">
+<h3><a class="toc-backref" href="#id13">Relationships with external developers</a><a class="headerlink" href="#relationships-with-external-developers" title="Permalink to this headline">¶</a></h3>
+<p>Some (parts of) software developed may come from external developers,
+usually contractors, their sub-contractors or other providers.
+If they are dealing with OSS, they will be asked to follow similar guidelines.
+If you have contacts with such external developers during the course of your work,
+do not hesitate to draw their attention on these guidelines
+and to require from them the relevant documentation about their own use of OSS.
+Such requirement should be stipulated in the relevant contract with the contractor.
+If while examining part of software developed by external developers,
+you notice that the current guidelines have not been respected
+(e.g. the copyright notices are not present,
+the use of OSS inserted is not documented,
+the software contains parts of code released under a license
+that is not allowed for this type of project, etc.),
+you must refer to your action leader/project manager.</p>
+</div>
+<div class="section" id="use-of-these-guidelines-in-tenders-and-contracts">
+<h3><a class="toc-backref" href="#id14">Use of these guidelines in tenders and contracts</a><a class="headerlink" href="#use-of-these-guidelines-in-tenders-and-contracts" title="Permalink to this headline">¶</a></h3>
+<p>The principles set out in these guidelines
+must also be respected in case of software procurement
+from external developers or contractors.
+Make sure that calls for tenders and contracts oblige the contractors
+to respect these guidelines, which must be annexed thereto.
+Such calls for tenders and contracts
+should also indicate the specific requirements about the use of OSS
+in the concerned project (if any) and oblige the tenderers and contractors
+to explain and document in advance the use of OSS that they intend to make.</p>
+</div>
+</div>
+<div class="section" id="checklist">
+<h2><a class="toc-backref" href="#id15">Checklist</a><a class="headerlink" href="#checklist" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Did you determine if you intend to distribute externally your software?</p></li>
+<li><p>Did you decide the type of license
+you are going to use for distributing the software?</p></li>
+<li><p>Did you document, or ask your contractors/collaborators to document
+the use of pre-existing OSS-code in the development project?</p></li>
+<li><p>Did you check the compatibility of the licenses in case of modification,
+insertion or linking of pre-existing OSS components?</p></li>
+<li><p>Did you copy all copyright notices and disclaimers
+appearing on the pre-existing software used in your project?</p></li>
+<li><p>Did you send copies of your code for legal archiving
+and check whether such code should be made available in online repositories?</p></li>
+</ul>
+</div>
+<div class="section" id="open-source-licences">
+<h2><a class="toc-backref" href="#id16">Open Source Licences</a><a class="headerlink" href="#open-source-licences" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="copyright-and-conditions-of-use">
+<h3><a class="toc-backref" href="#id17">Copyright and conditions of use</a><a class="headerlink" href="#copyright-and-conditions-of-use" title="Permalink to this headline">¶</a></h3>
+<p>Like any software, OSS is protected by intellectual property rights
+– in particular copyright – of its creator,
+which grant him certain exclusive rights
+(e.g. exclusivity to copy it, to modify it, etc.).
+The particularity of Open Source Software is that the owner of copyright
+chooses to allow others to exercise such prerogatives,
+instead of preserving its exclusivity.
+However, these permitted uses are generally granted
+subject to the respect by the user of certain conditions.
+The permitted uses of OSS and the conditions of use are determined in licenses.
+There exist dozens of Open Source licenses,
+although some of them are more widespread than others (e.g. the GPL-family).</p>
+<p>The use of OSS is legal as long as
+the user stays inside the limits of the permitted uses
+and respects the conditions imposed by the OSS-licenses.
+It is thus essential to know and respect the terms of licenses
+which govern OSS parts used in the projects.</p>
+</div>
+<div class="section" id="copyleft-effect">
+<h3><a class="toc-backref" href="#id18">Copyleft effect</a><a class="headerlink" href="#copyleft-effect" title="Permalink to this headline">¶</a></h3>
+<p>Some Open Source licenses oblige the user who distributes the original software
+and any derivative work thereof to do so under the same license terms.
+The GPL and the EUPL are examples of licenses containing such obligation.
+Examples of practical consequences are the following:</p>
+<ul class="simple">
+<li><p>You modify software released under the GPL
+and you want to distribute the modified work:
+you are obliged to release it under the GPL.</p></li>
+<li><p>You integrate some lines of code of software
+released under the GPL into a bigger work.
+If you want to distribute it,
+you are obliged to release the whole resulting work under the GPL,
+as it will be considered as a “derivative work” of the GPL software,
+even if only a small part of it is used.</p></li>
+</ul>
+<p>Licenses which contain such obligation are said “copyleft” licenses
+and are often referred to as having a “viral effect”,
+because they propagate through derivative works.
+At the opposite, licenses that do not contain such obligations and let you choose
+under which conditions you want to distribute derivative software are said “permissive”.</p>
+</div>
+<div class="section" id="compatibility">
+<h3><a class="toc-backref" href="#id19">Compatibility</a><a class="headerlink" href="#compatibility" title="Permalink to this headline">¶</a></h3>
+<p>An Open Source license A is said “compatible” with an Open Source License B
+when software originally licensed under a license A may be re-distributed
+under a license B after modification or merger with other software.</p>
+<p>Compatibility is not necessary reciprocal:
+it is possible that a license A is compatible with a license B,
+while license B is not compatible with the license A.</p>
+<div class="section" id="examples-of-compatibility-incompatibility">
+<h4><a class="toc-backref" href="#id20">Examples of compatibility /incompatibility</a><a class="headerlink" href="#examples-of-compatibility-incompatibility" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li><p>Merger between two parts of software, one released under BSD and the other under the EUPL.</p></li>
+</ol>
+<p>BSD + EUPL = EUPL     (OK)</p>
+<p>In this case, software originally released under the BSD license is integrated into a final result which is distributed under the EUPL license after merger with other software.
+The terms of the BSD license authorize this subsequent change of license.
+One could say that BSD is compatible with EUPL.</p>
+<p>BSD + EUPL = BSD  (Not possible)</p>
+<p>This case is exactly the same as previous operation, but you want to distribute the final result under the BSD license.
+This is not possible, because the terms of the EUPL impose that derivative works of software released under the EUPL are also released under the EUPL (copyleft).
+One could say that EUPL is not compatible with BSD.
+This is thus a case where compatibility between BSD and EUPL is not reciprocal.</p>
+<ol class="arabic simple" start="2">
+<li><p>Merger of two parts of software, one released under EUPL and the other under the GPL v2.</p></li>
+</ol>
+<p>GPLv2 + EUPL = EUPL (Not possible)</p>
+<p>The GPL v2 imposes that the final result, which is a “derivative work” is released under the GPL v2.
+This operation is thus impossible without infringing the terms of the GPL v2.
+The GPL v2 is not compatible with the EUPL.</p>
+<p>This case seems exactly the same as the previous, because the EUPL also imposes that derivative works are released under the EUPL.
+But the EUPL contains a clause which explicitly allows releasing derivative works under the GPL v2 in case of merger between EUPL and GPL v2 pieces of software.</p>
+<p>This is a case of <em>express compatibility</em>: The EUPL is compatible with the
+GPL v2.</p>
+<p>Here again, one could note that compatibility between EUPL and GPL v2 is not reciprocal.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, the Nile team | CC BY-SA 3.0 | Exceptions apply! See the sources and metadata for each doc.
+      <span class="lastupdated">
+        Last updated on May 19, 2020.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

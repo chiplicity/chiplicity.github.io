@@ -1,0 +1,459 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Set up SSH for Git &mdash; Wiser 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Commercial-Off-the-Shelf Software Selection Process" href="../On_Software/index.html" />
+    <link rel="prev" title="Setting up an online Git Repository" href="UsingAnOnlineGitRepository.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Wiser
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Using_Forum/index.html">Using Forum or Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Sphinx/index.html">Using the technical documentation generator</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Using the version control system</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#introduction">Introduction</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#references">References</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="OnVersionControl.html">On Version Control</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UsingGit.html">Version Control using Git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="UsingAnOnlineGitRepository.html">Setting up an online Git Repository</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Set up SSH for Git</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-check-if-you-have-existing-default-identity">Step 1. Check if you have existing default Identity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-set-up-your-default-identity">Step 2. Set up your default identity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-create-a-ssh-config-file">Step 3. Create a SSH config file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-update-your-bashrc-profile-file">Step 4. Update your .bashrc profile file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-5-install-the-public-key-on-your-bitbucket-github-account">Step 5. Install the public key on your Bitbucket|Github account</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-6-configure-your-repository-to-use-the-ssh-protocol">Step 6. Configure your repository to use the SSH protocol</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../On_Software/index.html">Commercial-Off-the-Shelf Software Selection Process</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Notebook/index.html">Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_TaskMan/index.html">Using the issue tracking system</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Wiser</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Using the version control system</a> &raquo;</li>
+        
+      <li>Set up SSH for Git</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Using_Git/SetUpSSHForGit.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="set-up-ssh-for-git">
+<h1>Set up SSH for Git<a class="headerlink" href="#set-up-ssh-for-git" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Sources</p>
+<p>Mostly from:
+<a class="reference external" href="https://confluence.atlassian.com/display/BITBUCKET/Set+up+SSH+for+Git">https://confluence.atlassian.com/display/BITBUCKET/Set+up+SSH+for+Git</a></p>
+<p>Mixed with:
+<a class="reference external" href="https://help.github.com/categories/56/articles">https://help.github.com/categories/56/articles</a>
+<a class="reference external" href="https://help.github.com/articles/working-with-ssh-key-passphrases">https://help.github.com/articles/working-with-ssh-key-passphrases</a>
+<a class="reference external" href="http://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/">http://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/</a></p>
+</div>
+<p>When you use HTTPS, you need to authenticate (supply a username and password)
+each time you take an action that communicates with the remote server.
+This page shows you how to use secure shell (SSH)
+to communicate with the Bitbucket or Github server and avoid having to manually type a password.</p>
+<div class="section" id="step-1-check-if-you-have-existing-default-identity">
+<h2>Step 1. Check if you have existing default Identity<a class="headerlink" href="#step-1-check-if-you-have-existing-default-identity" title="Permalink to this headline">¶</a></h2>
+<p>The Git Bash shell comes with an SSH client. Do the following to verify your installation:</p>
+<ol class="arabic">
+<li><p>Double-click the Git Bash icon to start a terminal session.</p></li>
+<li><p>Enter the following command to verify the SSH client is available:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ssh -v
+OpenSSH_4.6p1, OpenSSL 0.9.8e 23 Feb 2007
+usage: ssh [-1246AaCfgkMNnqsTtVvXxY] [-b bind_address] [-c cipher_spec]
+[-D [bind_address:]port] [-e escape_char] [-F configfile]
+[-i identity_file] [-L [bind_address:]port:host:hostport]
+[-l login_name] [-m mac_spec] [-O ctl_cmd] [-o option] [-p port]
+[-R [bind_address:]port:host:hostport] [-S ctl_path]
+[-w local_tun[:remote_tun]] [user@]hostname [command]
+</pre></div>
+</div>
+</li>
+<li><p>If you have ssh installed, go to the next step.</p>
+<p>If you don’t have ssh installed, install it now with your package manager.</p>
+</li>
+<li><p>List the contents of your ~/.ssh directory.</p>
+<p>If you have not used SSH on Bash you might see something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls -a ~/.ssh
+ls: /c/Users/your-user-name/.ssh: No such file or directory
+</pre></div>
+</div>
+<p>If you have a default identity already, you’ll see two id_* files:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls -a ~/.ssh
+.    ..    id_rsa    id_rsa.pub  known_hosts
+</pre></div>
+</div>
+<p>In this case, the default identity used RSA encryption (id_rsa.pub).
+If you want to use an existing default identity for your Bitbucket account,
+skip the next section and go to create a config file.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="step-2-set-up-your-default-identity">
+<h2>Step 2. Set up your default identity<a class="headerlink" href="#step-2-set-up-your-default-identity" title="Permalink to this headline">¶</a></h2>
+<p>By default, the system adds keys for all identities to the /Users/your-user-name/.ssh directory.
+The following procedure creates a default identity.</p>
+<ol class="arabic">
+<li><p>Open a terminal in your local system.
+Enter ssh-keygen at the command line:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key:
+</pre></div>
+</div>
+<p>To create a key with a name other than the default, specify the full path to the key.
+Enter and renter a passphrase when prompted.
+Unless you need a key for a process such as script, you should always provide a passphrase.
+The command creates your default identity with its public and private keys.</p>
+</li>
+<li><p>List the contents of ~/.ssh to view the key files.
+You should see something like the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls ~/.ssh
+id_rsa  id_rsa.pub
+</pre></div>
+</div>
+<p>The command created two files,
+one for the public key ( for example id_rsa.pub )
+and one for the private key (for example, id_rsa ).</p>
+</li>
+</ol>
+</div>
+<div class="section" id="step-3-create-a-ssh-config-file">
+<h2>Step 3. Create a SSH config file<a class="headerlink" href="#step-3-create-a-ssh-config-file" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Using a text editor, edit the ~/.ssh/config file.
+Add the following entries to the configuration file using the following format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Host</span> <span class="n">bitbucket</span><span class="o">.</span><span class="n">org</span>
+ <span class="n">IdentityFile</span> <span class="o">~/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span>
+
+<span class="n">Host</span> <span class="n">github</span><span class="o">.</span><span class="n">com</span>
+ <span class="n">IdentityFile</span> <span class="o">~/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span>
+</pre></div>
+</div>
+<p>Every second line is indented.
+That indentation (a single space) is important, so make sure you include it.
+The second line is the location of your private key file.</p>
+</li>
+<li><p>Save and close the file.</p></li>
+<li><p>Restart the GitBash terminal.</p></li>
+</ol>
+</div>
+<div class="section" id="step-4-update-your-bashrc-profile-file">
+<h2>Step 4. Update your .bashrc profile file<a class="headerlink" href="#step-4-update-your-bashrc-profile-file" title="Permalink to this headline">¶</a></h2>
+<p>It is a good idea to configure your GitBash shell
+to automatically start the agent when launch the shell.
+The .bashrc file is the shell initialization file.
+To start the agent automatically, do the following.</p>
+<ol class="arabic">
+<li><p>Start GitBash.</p></li>
+<li><p>Edit your ~/.bashrc file.</p>
+<p>Add the following lines to the file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>SSH_ENV=$HOME/.ssh/environment
+
+# start the ssh-agent
+function start_agent {
+    echo &quot;Initializing new SSH agent...&quot;
+    # spawn ssh-agent
+    /usr/bin/ssh-agent | sed &#39;s/^echo/#echo/&#39; &gt; &quot;${SSH_ENV}&quot;
+    echo succeeded
+    chmod 600 &quot;${SSH_ENV}&quot;
+    . &quot;${SSH_ENV}&quot; &gt; /dev/null
+    /usr/bin/ssh-add
+}
+
+if [ -f &quot;${SSH_ENV}&quot; ]; then
+     . &quot;${SSH_ENV}&quot; &gt; /dev/null
+     ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ &gt; /dev/null || {
+        start_agent;
+    }
+else
+    start_agent;
+fi
+</pre></div>
+</div>
+</li>
+<li><p>Save and close the file.</p></li>
+<li><p>Restart the GitBash terminal.</p></li>
+<li><p>The system prompts you for your passphrase.</p></li>
+<li><p>Enter your passphrase.
+After accepting your passphrase, the system displays the command shell prompt.
+Verify that the script identity added your identity successfully by querying the SSH agent:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ssh-add -l
+</pre></div>
+</div>
+<p>After you install your public key to Bitbucket|Github,
+having this script should prevent you
+from having to enter a password each time you push or pull a repository from Bitbucket.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="step-5-install-the-public-key-on-your-bitbucket-github-account">
+<h2>Step 5. Install the public key on your Bitbucket|Github account<a class="headerlink" href="#step-5-install-the-public-key-on-your-bitbucket-github-account" title="Permalink to this headline">¶</a></h2>
+<p>In Bitbucket:</p>
+<ol class="arabic">
+<li><p>Open a browser and log into Bitbucket.</p></li>
+<li><p>Choose avatar &gt; Manage Account from the menu bar.</p></li>
+<li><p>The system displays the Account settings page.
+Click SSH keys.
+The SSH Keys page displays. It shows a list of any existing keys. Then, below that, a dialog for labeling and entering a new key.</p>
+<p>Copy the contents of the public key file into the SSH Key field.
+Click the Add key button.
+The system adds the key to your account.</p>
+</li>
+</ol>
+<p>In Github:</p>
+<ol class="arabic simple">
+<li><p>Goto to the account settings, everything is pretty much as above.</p></li>
+</ol>
+<p>Return to the GitBash terminal window:</p>
+<ol class="arabic">
+<li><p>Verify your configuration by entering the following commands:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="o">-</span><span class="n">T</span> <span class="n">git</span><span class="nd">@bitbucket</span><span class="o">.</span><span class="n">org</span>
+
+<span class="n">ssh</span> <span class="o">-</span><span class="n">T</span> <span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span>
+</pre></div>
+</div>
+<p>The command message tells you which Bitbucket account can log in with that key.
+Verify that the command returns your account name.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="step-6-configure-your-repository-to-use-the-ssh-protocol">
+<h2>Step 6. Configure your repository to use the SSH protocol<a class="headerlink" href="#step-6-configure-your-repository-to-use-the-ssh-protocol" title="Permalink to this headline">¶</a></h2>
+<p>The URL you use for a repository
+depends on which protocol you are using, HTTPS and SSH.</p>
+<p>In Bitbucket:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="ssh://git&#64;bitbucket.org/accountname/reponame.git">ssh://git&#64;bitbucket.org/accountname/reponame.git</a></p></li>
+<li><p><a class="reference external" href="https://accountname&#64;bitbucket.org/accountname/reponame.git">https://accountname&#64;bitbucket.org/accountname/reponame.git</a></p></li>
+</ul>
+</div></blockquote>
+<p>The same goes for Github:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span>  <span class="n">ssh</span><span class="p">:</span><span class="o">//</span><span class="n">git</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">accountname</span><span class="o">/</span><span class="n">reponame</span><span class="o">.</span><span class="n">git</span>
+
+<span class="o">*</span>  <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">accountname</span><span class="nd">@github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">accountname</span><span class="o">/</span><span class="n">reponame</span><span class="o">.</span><span class="n">git</span>
+</pre></div>
+</div>
+<p>So…</p>
+<ol class="arabic">
+<li><p>View your current repository configuration file <cite>.git/config</cite>, that should similar to this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">remote</span> <span class="s2">&quot;origin&quot;</span><span class="p">]</span>
+  <span class="n">fetch</span> <span class="o">=</span> <span class="o">+</span><span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/*</span><span class="p">:</span><span class="n">refs</span><span class="o">/</span><span class="n">remotes</span><span class="o">/</span><span class="n">origin</span><span class="o">/*</span>
+  <span class="n">url</span> <span class="o">=</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">accountname</span><span class="nd">@domain</span><span class="o">/</span><span class="n">accountname</span><span class="o">/</span><span class="n">reponame</span><span class="o">.</span><span class="n">git</span>
+<span class="p">[</span><span class="n">branch</span> <span class="s2">&quot;master&quot;</span><span class="p">]</span>
+  <span class="n">remote</span> <span class="o">=</span> <span class="n">origin</span>
+  <span class="n">merge</span> <span class="o">=</span> <span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">master</span>
+</pre></div>
+</div>
+</li>
+<li><p>Change the url:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">remote</span> <span class="s2">&quot;origin&quot;</span><span class="p">]</span>
+  <span class="n">fetch</span> <span class="o">=</span> <span class="o">+</span><span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/*</span><span class="p">:</span><span class="n">refs</span><span class="o">/</span><span class="n">remotes</span><span class="o">/</span><span class="n">origin</span><span class="o">/*</span>
+  <span class="n">url</span> <span class="o">=</span> <span class="n">ssh</span><span class="p">:</span><span class="o">//</span><span class="n">git</span><span class="nd">@domain</span><span class="o">/</span><span class="n">accountname</span><span class="o">/</span><span class="n">reponame</span><span class="o">.</span><span class="n">git</span>
+<span class="p">[</span><span class="n">branch</span> <span class="s2">&quot;master&quot;</span><span class="p">]</span>
+  <span class="n">remote</span> <span class="o">=</span> <span class="n">origin</span>
+  <span class="n">merge</span> <span class="o">=</span> <span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">master</span>
+</pre></div>
+</div>
+</li>
+<li><p>Save your edits and close the file.</p></li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../On_Software/index.html" class="btn btn-neutral float-right" title="Commercial-Off-the-Shelf Software Selection Process" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="UsingAnOnlineGitRepository.html" class="btn btn-neutral float-left" title="Setting up an online Git Repository" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, the Nile team | CC BY-SA 3.0 | Exceptions apply! See the sources and metadata for each doc.
+      <span class="lastupdated">
+        Last updated on May 19, 2020.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

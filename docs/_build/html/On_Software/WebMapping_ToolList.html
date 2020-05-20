@@ -1,0 +1,604 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>OSGEO list of webmapping tools &mdash; Wiser 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Web Server and Servlet COntainer" href="WebServer.html" />
+    <link rel="prev" title="Dynamic charts on web browser usage statistics" href="WebBrowsers_DynamicCharts.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Wiser
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Using_Forum/index.html">Using Forum or Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Sphinx/index.html">Using the technical documentation generator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Git/index.html">Using the version control system</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Commercial-Off-the-Shelf Software Selection Process</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html">Software selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#factors">Factors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#total-cost-of-ownership">Total Cost of Ownership</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#additional-references">Additional References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProjectManagementInfrastructure.html">Project Management Infrastructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VersionControlSystem.html">Version Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DocumentationGenerator.html">Documentation Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IssueTrackingSystem.html">Issue Tracking System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuestionnaireManagement.html">Questionnaire Management System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebBrowsers_DynamicCharts.html">Dynamic charts on web browser usage statistics</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">OSGEO list of webmapping tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html">Web Server and Servlet COntainer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html#rationale">Rationale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html#analysis-of-alternatives">Analysis of alternatives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OperatingSystems.html">Operating Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DatabaseManagementSystem.html">Database Management System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Z_RNIDOpenStandards.html">Open Standards in the Portuguese National Regulation on Digital Interoperability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeodataServer.html">Geospatial Data Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebMapping.html">Web Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebBrowsers.html">Web Browser</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Notebook/index.html">Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_TaskMan/index.html">Using the issue tracking system</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Wiser</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Commercial-Off-the-Shelf Software Selection Process</a> &raquo;</li>
+        
+      <li>OSGEO list of webmapping tools</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/On_Software/WebMapping_ToolList.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="osgeo-list-of-webmapping-tools">
+<span id="sw-list-webmapping-tools-ref"></span><h1>OSGEO list of webmapping tools<a class="headerlink" href="#osgeo-list-of-webmapping-tools" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For completeness sake, the original of the following list was retrieved from
+<a class="reference external" href="http://wiki.osgeo.org/wiki/A_comprehensive_list_of_webmapping_toolkits">http://wiki.osgeo.org/wiki/A_comprehensive_list_of_webmapping_toolkits</a>.</p>
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 44%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Software</strong></p></td>
+<td><p><strong>Last release (date)</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+<td><p><strong>Licence</strong></p></td>
+<td><p><strong>Map engines and protocols</strong></p></td>
+<td><p><strong>Language</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://code.google.com/p/atlasmapper/">AtlasMapper</a></p></td>
+<td><p>1.3 (2012-11)</p></td>
+<td><p>The AtlasMapper is a cross platform JavaScript/Java mapping application
+that allows a catalogue of map layers
+to be easily browsed, layered, re-styled and compared side-by-side in a web browser.</p></td>
+<td><p>GPLv3</p></td>
+<td><p>WMS, NCWMS, ArcGIS Server, XYZ / OSM</p></td>
+<td><p>Java, JavaScript (GetExt, Openlayers, Ext JS)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://www.cartoweb.org/">CartoWeb</a></p></td>
+<td><p>3.5.0 (2008-09-04) <strong>Inactive</strong></p></td>
+<td><p>CartoWeb is a comprehensive and ready-to-use Web-GIS as well as a
+convenient framework for building advanced and customised applications.</p></td>
+<td><p>GPLv2.0+</p></td>
+<td><p>See <a class="reference external" href="http://www.mapserver.org/">MapServer</a></p></td>
+<td><p><a class="reference external" href="http://php.net/">PHP</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://chameleon.maptools.org/index.phtml">Chameleon</a></p></td>
+<td><p>2.4.1 (2006.09.06) <strong>Inactive</strong></p></td>
+<td><p>Chameleon is a distributed, highly configurable, environment for
+developing Web Mapping applications. It is built on MapServer as the
+core mapping engine and works with all MapServer supported data formats
+through a regular MAP file.</p></td>
+<td><p>MIT</p></td>
+<td><p>See <a class="reference external" href="http://www.mapserver.org/">MapServer</a>, WMS</p></td>
+<td><p><a class="reference external" href="http://php.net/">PHP</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://github.com/collective/collective.geo.bundle">collective.geo</a> (Plone Maps)</p></td>
+<td><p><strong>Active</strong></p></td>
+<td><p>The goal is to provide a comprehensive set of tools to manage and
+publish geospatial data into the <a class="reference external" href="http://plone.org/">Plone</a>, using
+existing and proven technologies as much as possible.</p></td>
+<td><p>GPLv2.0</p></td>
+<td><p>(See <a class="reference external" href="http://www.openlayers.org/">OpenLayers</a>, <a class="reference external" href="http://polymaps.org/">Polymaps</a>)</p></td>
+<td><p><a class="reference external" href="http://www.python.org/">Python</a>, <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">JavaScript</a>, <a class="reference external" href="http://www.openlayers.org/">OpenLayers</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://maps.dnr.state.mn.us/tools/dbox/">dbox</a></p></td>
+<td><p>0.9a1 (2006-05-08) <strong>Inactive</strong></p></td>
+<td><p>dbox is really a collection of DHTML-based libraries for building highly
+interactive web-based mapping applications. The tools are meant to work
+directly with the <a class="reference external" href="http://www.mapserver.org/">MapServer</a> web mapping system. They provide relatively
+autonomous functionality without restricting overall design. In fact,
+they were designed to be used with old fashioned elements like tables.</p></td>
+<td><p>?</p></td>
+<td><p><a class="reference external" href="http://www.mapserver.org/">MapServer</a></p></td>
+<td><p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">JavaScript</a>, DHTML</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://surveillance.mcgill.ca/dracones/">Dracones</a></p></td>
+<td><p>1.1.3 (2010-12-06) <strong>Inactive</strong></p></td>
+<td><p>Dracones is a <a class="reference external" href="http://www.mapserver.org/">MapServer</a>-based web mapping framework. Core components: A
+lightweight map widget, with a smooth navigation interface; Map layers
+with interactive behaviours, like mouse selection or tooltip (mouseover)
+information; Flexible query/extension mechanism; Handy other services
+like map image export, and history navigation</p></td>
+<td><p>BSD</p></td>
+<td><p>See <a class="reference external" href="http://www.mapserver.org/">MapServer</a>, WMS</p></td>
+<td><p><a class="reference external" href="http://php.net/">PHP</a>, <a class="reference external" href="http://www.python.org/">Python</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://code.google.com/p/flexlayers">Flexlayers</a></p></td>
+<td><p>Unknown (2009) <strong>Inactive</strong></p></td>
+<td><p>Partial port of the OpenLayers mapping API from its native JavaScript to ActionScript 3</p></td>
+<td><p>LGPLv3</p></td>
+<td><p>WMS, WMS-C, and WFS</p></td>
+<td><p>ActionScript 3</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://trac.osgeo.org/fusion">Fusion</a></p></td>
+<td><p>2.2.0 (2011-06-01) <strong>Active</strong></p></td>
+<td><p>Fusion is a web-mapping application development framework for MapGuide
+OS and MapServer built primarily in JavaScript. It allows non-spatial
+web developers to build rich mapping applications quickly and easily.</p></td>
+<td><p>MIT</p></td>
+<td><p>See <a class="reference external" href="http://www.mapserver.org/">MapServer</a>, <a class="reference external" href="http://mapguide.osgeo.org/">MapGuide</a></p></td>
+<td><p><a class="reference external" href="http://php.net/">PHP</a>, <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">JavaScript</a> (<a class="reference external" href="http://www.openlayers.org/">Openlayers</a>)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://geoext.org/">GeoExt</a></p></td>
+<td><p>1.1 (2011.12.22) <strong>Active</strong></p></td>
+<td><p>GeoExt is a JavaScript Toolkit for Rich Web Mapping Applications
+that combines the OpenLayers library (for mapping components)
+with the Ext JS JavaScript Framework.
+See for example <a class="reference external" href="http://suite.opengeo.org/opengeo-docs/geoexplorer/workspace.html">GeoExplorer</a>.</p></td>
+<td><p>BSD-3-Clause</p></td>
+<td><p>See <a class="reference external" href="http://www.openlayers.org/">OpenLayers</a></p></td>
+<td><p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">JavaScript</a>, (<a class="reference external" href="http://www.openlayers.org/">OpenLayers</a>, <a class="reference external" href="http://www.sencha.com/products/extjs">Ext JS</a>)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://geojsp.org/">geojsp</a></p></td>
+<td><p>Unknown (Unknown) <strong>No public sourceforge</strong></p></td>
+<td><p>geojsp is an open source (GPL) component that integrates geographic
+elements in your business intelligence infrastructure (geo-BI): thematic
+maps; flow maps; indicators; graphics (bar charts, pie chart, etc.)</p></td>
+<td><p>GPL</p></td>
+<td><p>See <a class="reference external" href="http://www.openlayers.org/">OpenLayers</a></p></td>
+<td><p>Java</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://www.spatialytics.org/projects/geomondrian/">GeoMondrian</a></p></td>
+<td><p>1.0 (Unknown) <strong>Last commit in 2012-04</strong></p></td>
+<td><p>GeoMondrian is a spatially-enabled version of <a class="reference external" href="http://www.pentaho.com/">Pentaho</a> Analysis Services
+<a class="reference external" href="http://mondrian.pentaho.com/">Mondrian</a>. It provides a consistent
+integration of spatial objects into the OLAP data cube structure,
+instead of fetching them from a separate spatial database, web service
+or GIS file.</p></td>
+<td><p>EPL</p></td>
+<td><p>See <a class="reference external" href="http://www.openlayers.org/">OpenLayers</a></p></td>
+<td><p>Java</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://www.geomoose.org/">GeoMOOSE</a></p></td>
+<td><p>2.6.1 (2012-02-12) <strong>Active: OSGEO Incubation</strong></p></td>
+<td><p>GeoMOOSE is a Web Client JavaScript Framework for displaying distributed
+cartographic data. GeoMOOSE has a number of strengths including
+modularity, configurability, and delivers a number of core
+functionalities in its packages.
+GeoMOOSE is built <a class="reference external" href="http://www.mapserver.org/">MapServer</a>, <a class="reference external" href="http://www.openlayers.org/">OpenLayers</a> and the Dojo Toolkit.</p></td>
+<td><p>MIT</p></td>
+<td><p>MapServer, see <a class="reference external" href="http://www.openlayers.org/">OpenLayers</a></p></td>
+<td><p>JavaScript, PHP</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://geoprisma.org/">GeoPrisma</a></p></td>
+<td><p>1.6.3 (2012-11-27) <strong>No information</strong></p></td>
+<td><p>GeoPrisma is a Web mapping application featuring Access Control
+(Permissions) to geospatial data (Resources).
+A single Resource can be served by multiple different
+geodata servers (Services), such as WMS, TileCache, MapServer,
+FeatureServer, etc.</p></td>
+<td><p>BSD-3-clause</p></td>
+<td><p>see <a class="reference external" href="http://www.openlayers.org/">OpenLayers</a></p></td>
+<td><p>PHP</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://sites.google.com/site/geoshieldproject/">GeoShield</a></p></td>
+<td><p>0.3.0 (2012-04) <strong>Immature</strong></p></td>
+<td><p>GeoShield is a project born to offer a centralised way to define
+security access-control to geo-services. It acts like a proxy,
+intercepting all the communications between clients and OGC compliant
+services</p></td>
+<td><p>BSD-3-clause</p></td>
+<td><p>See <a class="reference external" href="http://geoserver.org/">GeoServer</a>, WMS, WFS, WPS, SOS</p></td>
+<td><p>Java</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://geowebcache.org/">GeoWebCache</a></p></td>
+<td><p>1.4.0 (2013-07-09) <strong>Active</strong></p></td>
+<td><p>GeoWebCache is a Java web application used to cache map tiles coming
+from a variety of sources such as OGC Web Map Service (WMS). It
+implements various service interfaces (such as WMS-C, WMTS, TMS, Google
+Maps KML, Virtual Earth) in order to accelerate and optimise map image
+delivery. It can also recombine tiles to work with regular WMS clients.</p></td>
+<td><p>LGPL</p></td>
+<td><p>WMS, WMS-C, TMS, WMTS</p></td>
+<td><p>Java</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://www.gisclient.org/">GisClient</a></p></td>
+<td><p>3.5.3 (2012-06-2012) <strong>Inactive?</strong></p></td>
+<td><p>Web authoring tool configurator for MapServer that enables the user
+both to build Mapfiles and to  provide OpenLayers maps.</p></td>
+<td><p>GPLv3</p></td>
+<td><p>See <a class="reference external" href="http://www.mapserver.org/">Mapserver</a></p></td>
+<td><p>AJAX, Javascript, PHP/MapScript</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://code.google.com/p/gbif-geospatial/">GPAAMP</a> (Global Protected Areas Assessment and Monitoring Pilot)</p></td>
+<td><p>0.7 (2010-10) <strong>Inactive</strong></p></td>
+<td><p>Supporting viewing and download services,
+it functions primarily as a means for visualising information
+from disparate sources delivered through standards-based web services.
+It is based on the stack ExtJS, OpenLayers and GeoExt.</p></td>
+<td><p>Apache Licence 2.0</p></td>
+<td><p>See <a class="reference external" href="http://www.openlayers.org/">OpenLayers</a></p></td>
+<td><p>Javascript (GeoExt, OpenLayers, ExtJs)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://heron-mc.org/">Heron Mapping Client</a></p></td>
+<td><p>0.73 (2013-06-07) <strong>Active</strong></p></td>
+<td><p>GeoExt is a toolkit that combines OpenLayers with Ext JS
+to help build desktop style GIS apps on the web with JavaScript.
+The Heron MC leverages these frameworks by providing high-level
+components and a convention to quickly assemble applications
+merely through configuration (“Look ma no programming”).</p></td>
+<td><p>GPLv3</p></td>
+<td><p>See <a class="reference external" href="http://www.openlayers.org/">OpenLayers</a></p></td>
+<td><p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">Javascript</a> (<a class="reference external" href="http://geoext.org/">GeoExt</a>, <a class="reference external" href="http://www.openlayers.org/">OpenLayers</a>, <a class="reference external" href="http://www.sencha.com/products/extjs">Ext JS</a>)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://bnhelp.cz/hslayers/">HSLayers</a></p></td>
+<td><p>3.4.0 (2012-11-02) <strong>Inactive</strong></p></td>
+<td><p>HSLayers combines OpenLayers (for mapping part) and ExtJS (for the
+graphical user interface) for complete desktop-like WebGIS toolkit in
+JavaScript. It also has several server-side little script for support of
+the web interface.</p></td>
+<td><p>GPL</p></td>
+<td><p>See <a class="reference external" href="http://www.openlayers.org/">OpenLayers</a>, <a class="reference external" href="http://www.mapserver.org/">MapServer</a>, WCS and WFS</p></td>
+<td><p>JavaScript, Python</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://mapas.mma.gov.br/i3geo/documentacao/files/principal-htm.html">i3geo</a></p></td>
+<td><p>Unknown (Unknown) <strong>Active</strong></p></td>
+<td><p>i3geo provides a set of navigation tools, generation of analysis,
+sharing and generation of maps on demand.</p></td>
+<td><p>GPLv2.0+</p></td>
+<td><p>See <a class="reference external" href="http://www.mapserver.org/">MapServer</a></p></td>
+<td><p><a class="reference external" href="http://php.net/">PHP</a>, <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">JavaScript</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://ka-map.maptools.org/">ka-Map</a></p></td>
+<td><p>1.0 (2007-05-02) <strong>Inactive</strong></p></td>
+<td><p>ka-Map is an open source project that is aimed at providing a JavaScript
+API for developing highly interactive web-mapping interfaces using
+features available in modern web browsers.</p></td>
+<td><p>MapServer licence</p></td>
+<td><p><a class="reference external" href="http://www.mapserver.org/">MapServer</a></p></td>
+<td><p><a class="reference external" href="http://php.net/">PHP</a>, <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">JavaScript</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://leafletjs.com/">leaflet</a></p></td>
+<td><p>0.6 (2013-06-26) <strong>Active</strong></p></td>
+<td><p>Leaflet is a modern, lightweight JavaScript library for making
+tile-based interactive maps for both desktop and mobile web browsers.</p></td>
+<td><p>BSD-2-Clause</p></td>
+<td><p>tiled layers, WMS</p></td>
+<td><p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">JavaScript</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://mapbender3.org/en">Mapbender</a></p></td>
+<td><p>3.0.0 (2013-05-29) <strong>Active: OSGEO project</strong></p></td>
+<td><p>Mapbender is the back office software and client framework for spatial
+data infrastructures. It provides a data model and web based interfaces
+for displaying, navigating and querying OGC compliant map services.
+It if based on the frameworks Symfony2, <a class="reference external" href="http://jquery.com/">JQuery</a> and <a class="reference external" href="http://www.openlayers.org/">OpenLayers</a></p></td>
+<td><p>GPL, BSD</p></td>
+<td><p>WMS, WFS</p></td>
+<td><p><a class="reference external" href="http://php.net/">PHP</a>, <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">JavaScript</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://mapfish.org/">MapFish</a></p></td>
+<td><p>2.2 (2011-06-27) <strong>Inactive</strong></p></td>
+<td><p>MapFish is a flexible and complete framework for building rich
+web-mapping applications. It emphasises high productivity, and
+high-quality development.</p></td>
+<td><p>BSD-3-Clause</p></td>
+<td><p>WMS, WFS</p></td>
+<td><p><a class="reference external" href="http://www.python.org/">Python</a>, <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">JavaScript</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://mapproxy.org/">MapProxy</a></p></td>
+<td><p>1.5.0 (2012-12-05) <strong>Active</strong></p></td>
+<td><p>It caches, accelerates and transforms data from existing map services
+and serves any desktop or web GIS client. MapProxy is a tile cache
+solution, but also offers many new and innovative features like full
+support for WMS clients.</p></td>
+<td><p>ASLv2.0</p></td>
+<td><p>WMS, TMS</p></td>
+<td><p><a class="reference external" href="http://www.python.org/">Python</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://mapquery.org/">MapQuery</a></p></td>
+<td><p>0.1 (2011-07-28) <strong>Inactive</strong></p></td>
+<td><p>MapQuery is a <a class="reference external" href="http://jquery.com/">jQuery</a> plug-in that you can use to add mapping to your
+website. Whether you quickly want to add a simple map to a page, or
+build a feature rich web application, MapQuery is just the thing you
+need.</p></td>
+<td><p>MIT</p></td>
+<td><p>See <a class="reference external" href="http://www.openlayers.org/">OpenLayers</a></p></td>
+<td><p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">JavaScript</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://modestmaps.com/">Modest Maps</a></p></td>
+<td><p>Unknown (Unknown) <strong>Very low activity</strong></p></td>
+<td><p>Modest Maps is a small, extensible, and free library for designers and
+developers who want to use interactive maps in their own projects. It
+provides a core set of features in a tight, clean package with plenty of
+hooks for additional functionality</p></td>
+<td><p>BSD</p></td>
+<td><p>?</p></td>
+<td><p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">JavaScript</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://www.openlayers.org/">OpenLayers</a></p></td>
+<td><p>2.13.1 (2013-07-09) <strong>Active</strong>
+3.0.0alpha (2013-07-12) <strong>Active</strong></p></td>
+<td><p>OpenLayers makes it easy to put a dynamic map in any web page. It can
+display map tiles and markers loaded from any source. OpenLayers has
+been developed to further the use of geographic information of all
+kinds.</p></td>
+<td><p>BSD-2-Clause</p></td>
+<td><p>ArcGIS Server, GML, Google Maps, KML, MapGuide, MapServer, TMS, Bing Maps, WFS, WMS, etc.</p></td>
+<td><p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">JavaScript</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://openscales.org/">OpenScales</a></p></td>
+<td><p>2.2 (2012-07-11) <strong>Active</strong></p></td>
+<td><p>OpenScales is an open source (LGPL) mapping framework written in
+ActionScript 3 and Flex that enables developers to build Rich Internet
+Mapping Applications.</p></td>
+<td><p>Lesser GPL</p></td>
+<td><p>GML, KML, OSM, TMS, WFS, WMS and others.</p></td>
+<td><p>ActionScript, Flex, AIR</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://www.pmapper.net/">p.mapper</a></p></td>
+<td><p>4.3.1 (2013-04-04) <strong>Active</strong></p></td>
+<td><p>The p.mapper framework is intended to offer broad functionality and
+multiple configurations in order to facilitate the setup of a MapServer
+application based on PHP/MapScript.</p></td>
+<td><p>GPLv2+</p></td>
+<td><p>MapServer</p></td>
+<td><p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">JavaScript</a>, <a class="reference external" href="http://php.net/">PHP</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://polymaps.org/">Polymaps</a></p></td>
+<td><p>2.5.1 (2011-06-14) <strong>Inactive</strong></p></td>
+<td><p>Polymaps is a free JavaScript library for making dynamic, interactive
+maps in modern web browsers. It provides speedy display of multi-zoom
+datasets over maps, and supports a variety of visual presentations for
+tiled vector data, in addition to the usual cartography from
+OpenStreetMap, CloudMade, Bing, and other providers of image-based web
+maps.</p></td>
+<td><p>BSD 3-clause</p></td>
+<td><p>Bing Maps, Cloudmade, OSM</p></td>
+<td><p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">JavaScript</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://readymap.com/websdk.html">ReadyMap Web SDK</a></p></td>
+<td><p>?</p></td>
+<td><p>ReadyMap SDK is a free JavaScript library for embedding 3D maps in a web page.
+Build 3D maps using ReadyMap’s API,
+or turn your OpenLayers or Leaflet maps into 3D globes.</p></td>
+<td><p>GPLv3</p></td>
+<td><p>See <a class="reference external" href="http://www.openlayers.org/">Openlayers</a></p></td>
+<td><p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">JavaScript</a> (osgjs, <a class="reference external" href="http://jquery.com/">jQuery</a>)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://tilecache.org/">TileCache</a></p></td>
+<td><p>2.11 (2010-10-15) <strong>Inactive</strong></p></td>
+<td><p>TileCache provides a Python-based <a class="reference external" href="http://wiki.osgeo.org/index.php/WMS_Tiling_Client_Recommendation/TMS">WMS-C</a>
+server, with pluggable caching mechanisms and rendering backends. In the
+simplest use case, TileCache requires only write access to a disk, the
+ability to run Python CGI scripts, and a WMS you want to be cached.</p></td>
+<td><p>BSD-3-Clause</p></td>
+<td><p>Mapnik, MapServer, WMS</p></td>
+<td><p><a class="reference external" href="http://www.python.org/">Python</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://mapbox.com/tilemill/">TileMill</a></p></td>
+<td><p>0.10.1 (2012-10-10) <strong>Active</strong></p></td>
+<td><p>TileMill is an application for making beautiful maps. Whether you’re a
+journalist, web designer, researcher, or seasoned cartographer, TileMill
+is the design studio you need to create compelling, interactive maps.</p></td>
+<td><p>BSD</p></td>
+<td><p>Mapnik</p></td>
+<td><p>CSS-like map styling language</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://thematicmapping.org/engine/">Thematic Mapping Engine</a></p></td>
+<td><p>2009 <strong>Inactive</strong></p></td>
+<td><p>TME enables you to visualise global statistics on Google Earth. The
+engine returns a KMZ file that you can open in Google Earth or download
+to your computer.</p></td>
+<td><p>GPLv3</p></td>
+<td><p>KML</p></td>
+<td><p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">JavaScript</a>, <a class="reference external" href="http://php.net/">PHP</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="WebServer.html" class="btn btn-neutral float-right" title="Web Server and Servlet COntainer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="WebBrowsers_DynamicCharts.html" class="btn btn-neutral float-left" title="Dynamic charts on web browser usage statistics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, the Nile team | CC BY-SA 3.0 | Exceptions apply! See the sources and metadata for each doc.
+      <span class="lastupdated">
+        Last updated on May 19, 2020.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

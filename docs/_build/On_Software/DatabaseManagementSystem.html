@@ -1,0 +1,611 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Database Management System &mdash; Wiser 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Open Standards in the Portuguese National Regulation on Digital Interoperability" href="Z_RNIDOpenStandards.html" />
+    <link rel="prev" title="Operating Systems" href="OperatingSystems.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Wiser
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Using_Forum/index.html">Using Forum or Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Sphinx/index.html">Using the technical documentation generator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Git/index.html">Using the version control system</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Commercial-Off-the-Shelf Software Selection Process</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html">Software selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#factors">Factors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#total-cost-of-ownership">Total Cost of Ownership</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#additional-references">Additional References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProjectManagementInfrastructure.html">Project Management Infrastructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VersionControlSystem.html">Version Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DocumentationGenerator.html">Documentation Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IssueTrackingSystem.html">Issue Tracking System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuestionnaireManagement.html">Questionnaire Management System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebBrowsers_DynamicCharts.html">Dynamic charts on web browser usage statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebMapping_ToolList.html">OSGEO list of webmapping tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html">Web Server and Servlet COntainer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html#rationale">Rationale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html#analysis-of-alternatives">Analysis of alternatives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OperatingSystems.html">Operating Systems</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Database Management System</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rationale">Rationale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#analysis-of-alternatives">Analysis of alternatives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#real-world-use">Real-world use</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Z_RNIDOpenStandards.html">Open Standards in the Portuguese National Regulation on Digital Interoperability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeodataServer.html">Geospatial Data Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebMapping.html">Web Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebBrowsers.html">Web Browser</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Notebook/index.html">Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_TaskMan/index.html">Using the issue tracking system</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Wiser</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Commercial-Off-the-Shelf Software Selection Process</a> &raquo;</li>
+        
+      <li>Database Management System</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/On_Software/DatabaseManagementSystem.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="database-management-system">
+<span id="sw-database-ref"></span><h1>Database Management System<a class="headerlink" href="#database-management-system" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>The selected spatial object-relational database management system
+is <a class="reference external" href="http://www.postgresql.org/">PostgreSQL</a> 9.2+ with <a class="reference external" href="http://postgis.net/">PostGIS</a> 2.0+.</p>
+</div>
+<div class="section" id="rationale">
+<h2>Rationale<a class="headerlink" href="#rationale" title="Permalink to this headline">¶</a></h2>
+<p>The database management system must comply with the <a class="reference internal" href="SoftwareSelection.html#sw-constraints-ref"><span class="std std-ref">Constraints</span></a>
+set on licence compatibility, portability and acquisition cost.</p>
+<p>Compliance with ANSI-SQL:2008 <a class="reference internal" href="#iso-iec-9075-2008" id="id1"><span>[ISO.IEC_9075:2008]</span></a>
+is a basic technical interoperability requisite.</p>
+<ul class="simple">
+<li><p>In Portugal, this is also a legal requisite
+for Public Administration IT systems development and procurement
+as established by the
+National Regulation on Digital Interoperability (Open Standards). <a class="reference internal" href="SoftwareSelection.html#rnid12" id="id2"><span>[RNID12]</span></a></p></li>
+</ul>
+<p>Project specific functional requirements
+(further discussed in the analysis of alternatives) are:</p>
+<ul class="simple">
+<li><p>Support for spatial data types and spatial analysis</p></li>
+<li><p>Support for (or coupling to) statistical computing tools</p></li>
+<li><p>Support for key-value data storage and/or XML data storage</p></li>
+</ul>
+</div>
+<div class="section" id="analysis-of-alternatives">
+<h2>Analysis of alternatives<a class="headerlink" href="#analysis-of-alternatives" title="Permalink to this headline">¶</a></h2>
+<p>Progressive filtering is based on maturity and sustainability criteria
+that are not specific to this project,
+but guarantee that the chosen solution
+can be used at enterprise level in distinct projects,
+indirectly reducing the cost of support, database administration, etc.</p>
+<p>Detailed information on the nature, characteristics and
+market share of major RDBMS products
+is available in Section B (Databases) of the Competitive Assessment in the
+<a class="reference external" href="http://ec.europa.eu/competition/mergers/cases/decisions/m5529_20100121_20682_en.pdf">European Commission’s Report on the Oracle/Sun Microsystems merger</a>.</p>
+<p>The <a class="reference external" href="http://itknowledgeexchange.techtarget.com/eye-on-oracle/oracle-the-clear-leader-in-24-billion-rdbms-market/">proprietary DBMS market share</a> estimates vary.
+The following ranking is based on annual revenue:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.oracle.com">Oracle</a> (circa 50%),</p></li>
+<li><p>IBM <a class="reference external" href="http://www-01.ibm.com/software/data/db2/">DB2</a> (circa 20%),</p></li>
+<li><p>Microsoft <a class="reference external" href="http://www.microsoft.com/en-us/sqlserver/default.aspx">SQL Server</a> (circa 17%).</p></li>
+</ul>
+<p>Three additional open source RDBMS are identified in the <a class="reference external" href="http://ec.europa.eu/competition/mergers/cases/decisions/m5529_20100121_20682_en.pdf">EC Report</a>:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.mysql.com/">MySQL</a></p></li>
+<li><p><a class="reference external" href="http://www.postgresql.org/">PostgreSQL</a></p></li>
+<li><p><a class="reference external" href="http://community.actian.com/wiki/ingres_projects">Ingres</a></p></li>
+</ul>
+<p><a class="reference external" href="http://www.mysql.com/">MySQL</a> (and its various clones and forks,
+such as <a class="reference external" href="https://mariadb.org/">MariaDB</a>, <a class="reference external" href="http://www.drizzle.org/">Drizzle</a> and <a class="reference external" href="http://www.percona.com/software/percona-server">Percona Server</a>)
+has the largest market share of open source RDBMS.</p>
+<p>Oracle’s evaluation of the relative technical merits
+of the three open source RDBMS
+is quoted in the <a class="reference external" href="http://ec.europa.eu/competition/mergers/cases/decisions/m5529_20100121_20682_en.pdf">EC Report</a>:</p>
+<blockquote class="epigraph">
+<div><p>The notifying party argues that the database products
+Ingres and PostgreSQL are also available under open source licenses
+and are technically superior to MySQL,
+in particular with regard to higher-end enterprise usage
+targeting existing Oracle customers.
+Therefore if any open source database product
+were able to exercise a competitive constraint on Oracle,
+it would be Ingres or PostgreSQL rather than MySQL.</p>
+<p class="attribution">—§662</p>
+</div></blockquote>
+<p>Presently, <a class="reference external" href="http://community.actian.com/wiki/ingres_projects">Ingres</a> could not be included in the candidate set,
+as the community version does not appear to be under active development.
+<a class="reference external" href="http://community.actian.com/wiki/ingres_projects">Ingres</a> utilises a dual licensing model:
+the open source (community) version is available
+without charge to the end users under GPLv2;
+a proprietary version is commercialised by <a class="reference external" href="http://www.actian.com">Actian</a>.
+The information available at the <a class="reference external" href="http://community.actian.com/wiki/Welcome_to_the_Ingres_Community">Ingres Community</a> site
+does not provide a clear separation between the
+the community and the enterprise versions.
+Furthermore, an analysis the <a class="reference external" href="http://www.ohloh.net/p/ingres">Ingres commit activity</a>
+on the <a class="reference external" href="http://code.ingres.com/ingres/">Ingres source code repository</a>
+indicates that no commits have been made to the main branch in the past 12 months.
+Regarding the <a class="reference external" href="http://community.actian.com/wiki/IngresGeospatial">IngresGeospatial</a> component,
+the available roadmap also indicates
+that there is no recent activity on the project.</p>
+<p>The <a class="reference external" href="http://ec.europa.eu/competition/mergers/cases/decisions/m5529_20100121_20682_en.pdf">EC report</a> provides an overview of the total cost of ownership (TCO),
+based on 3rd party evaluations performed in 2009, stating that:</p>
+<blockquote class="epigraph">
+<div><p>MySQL and PostgreSQL are comparable in terms of price
+for the smallest deployments,
+and have by far the lowest prices for the largest.
+While the price levels of MySQL and PostgreSQL
+are directly comparable with each other,
+none of the other [proprietary] vendors comes close
+to either of these software packages for a large deployment.</p>
+<p class="attribution">—§243 et seq.</p>
+</div></blockquote>
+<p><a class="reference external" href="http://virtuoso.openlinksw.com/">OpenVirtuoso</a>, another object relational database management system,
+meets the minimum maturity criteria and is included in the candidate set of alternatives
+(OpenVirtuoso is not mentioned in the EC report
+that focuses on direct competitors to Oracle and MySQL).</p>
+<p>The candidate set includes:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.mysql.com/">MySQL</a></p></li>
+<li><p><a class="reference external" href="http://www.postgresql.org/">PostgreSQL</a></p></li>
+<li><p>and <a class="reference external" href="http://virtuoso.openlinksw.com/">OpenVirtuoso</a>.</p></li>
+</ul>
+<p class="rubric">Spatial data support</p>
+<p>Support for the spatial components is a project-specific requirement
+that, in practice, allows a decision between the 3 candidates.</p>
+<p>The selected RDBMS <strong>must</strong> support spatial data:</p>
+<ul class="simple">
+<li><p>OGC Well-Known Text (WKT) and OGC Well-Known Binary (WKB) datatypes <a class="reference internal" href="#iso-19125-1-2004" id="id3"><span>[ISO_19125-1:2004]</span></a></p></li>
+<li><p>Geography Markup Language (GML) import/export  <a class="reference internal" href="#iso-19136-2007" id="id4"><span>[ISO_19136:2007]</span></a> <a class="reference internal" href="#iso-iec-13249-3-2011" id="id5"><span>[ISO.IEC_13249-3:2011]</span></a></p></li>
+<li><p>Spatial Reference System transformations <a class="reference internal" href="#iso-iec-13249-3-2011" id="id6"><span>[ISO.IEC_13249-3:2011]</span></a></p></li>
+<li><p>DE-9IM spatial operators (Clementini/Egenhofer Operators) <a class="reference internal" href="#iso-19125-2-2004" id="id7"><span>[ISO_19125-2:2004]</span></a></p></li>
+</ul>
+<p><a class="reference external" href="http://www.mysql.com/">MySQL</a> currently lacks a full implementation of the spatial components.</p>
+<p>The spatial components of <a class="reference external" href="http://virtuoso.openlinksw.com/">OpenVirtuoso</a> are only available
+in the proprietary version of the program.</p>
+<p><a class="reference external" href="http://www.postgresql.org/">PostgreSQL</a> + <a class="reference external" href="http://postgis.net/">PostGIS</a> is the selected option:</p>
+<ul class="simple">
+<li><p>PostGIS is the extension to PostgreSQL
+that allows spatial objects to be stored in the database,
+using the OGC WKT and WKB formats.
+(PostgreSQL is an object relational database that allows the definition
+of complex user datatypes).</p></li>
+<li><p>Spatial data can be exported to GML,
+the XML grammar defined by OCG
+as a data modelling and open interchange format for geographic information.
+GML is used in the EU INSPIRE data models and data exchange specifications.
+<a class="reference internal" href="#inspire" id="id8"><span>[Inspire]</span></a>.</p></li>
+<li><p>Support for the Dimensionally Extended 9 Intersection Model (<a class="reference external" href="http://postgis.refractions.net/documentation/manual-1.5SVN/ch04.html#DE-9IM">DE-9IM</a>)
+basically guarantees that all relevant topological predicates
+(functions to check topological relations between two geometries)
+are implemented.</p></li>
+<li><p>PostGIS also supports <a class="reference external" href="http://www.geojson.org/">GeoJSON</a> and <a class="reference external" href="https://github.com/mbostock/topojson/wiki/Specification">TopoJSON</a>,
+that may be useful for map visualisation purposes
+(e.g. using Javascript libraries such as <a class="reference external" href="http://d3js.org/">D3.js</a>).</p></li>
+<li><p>Finally, PostGIS includes support for GiST-based R-Tree spatial indexes.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If or where only a simple SQL database engine is required,
+while maintaining support for spatial data and operators,
+the recommended option is <a class="reference external" href="http://www.sqlite.org/">SQLite</a> + <a class="reference external" href="https://www.gaia-gis.it/fossil/libspatialite/index">SpatiaLite</a>.</p>
+<p>SpatiaLite is available under an <a class="reference external" href="http://www.mozilla.org/MPL/MPL-1.1.html">MPLv1.1</a> licence,
+which if fully compatible with EUPLv1.1.</p>
+<p>SQLite is under a <a class="reference external" href="http://creativecommons.org/licenses/publicdomain/">Public Domain</a> licence,
+that is not an <a class="reference external" href="http://opensource.org/licenses/alphabetical">OSI-approved licence</a>:
+that may require the acquisition of licence from the <a class="reference external" href="http://www.hwaci.com/cgi-bin/license-step1">Hwaci</a>
+(depending on the specific legal requirements of a Member State).</p>
+</div>
+<p class="rubric">Statistical computing support</p>
+<p>Another project-specific requirement is also supported by PostgreSQL:
+the support for statistical analysis.</p>
+<p>At least two alternatives exist (see <a class="reference internal" href="#conw11" id="id9"><span>[Conw11]</span></a> for examples):</p>
+<ul class="simple">
+<li><p>Using PL/R, a loadable procedural language extension
+that supports writing PostgreSQL functions and triggers
+in the <a class="reference external" href="http://www.r-project.org/">GNU R</a> statistical computing language;</p></li>
+<li><p>Accessing the database using <a class="reference external" href="http://cran.r-project.org/web/packages/RPostgreSQL/index.html">RPostgreSQL</a>,
+the <a class="reference external" href="http://www.r-project.org/">GNU R</a> interface to the PostgreSQL database system.</p></li>
+</ul>
+<p>Basically this means that, if required:</p>
+<ul class="simple">
+<li><p>The statistical capabilities provided by GNU R
+can be called by the PostgreSQL database
+in a way that database programmers are familiar with;</p></li>
+<li><p>The data stored in the PostgreSQL database
+can be accessed by GNU R
+in a way that statisticians are familiar with.</p></li>
+</ul>
+<p>Implicit in the above discussion in the adoption of <a class="reference external" href="http://www.r-project.org/">GNU R</a> (GPLv2)
+should any ‘out-of-the-ordinary’ statistical procedures be required
+(e.g. for statistical disclosure control). <a class="footnote-reference brackets" href="#gnu-r" id="id10">1</a></p>
+<p class="rubric">Key-value and/or XML data storage</p>
+<p>Support for either key-value data storage or XML data storage
+is a (plausible) functional project requirement.</p>
+<p>A common data model at national level can be specified
+based on well-known <em>a priori</em> requirements,
+namely the need to produce the Eurostat THB indicators data cubes
+and, consequently, to store the appropriate variables at microdata level.</p>
+<p>However, it is likely that different countries
+will need/want to store additional variables regarding victims, traffickers,
+routes, etc., to comply with national reporting requirements.
+These needs can not be foreseen and accommodated
+into a single and canonical relational database model.
+Two alternatives exist (which may complement each other):</p>
+<ul class="simple">
+<li><p>a <a class="reference external" href="https://en.wikipedia.org/wiki/NoSQL">NoSQL</a>-like approach, whereby the additional data
+is stored as a semi-structured set of key-value pairs;</p></li>
+<li><p>an SDMX-like approach,
+whereby the structure of the data is described using an XML schema
+and the data itself is stored in XML structured text.</p></li>
+</ul>
+<p>PostgreSQL provides basic functionality to support either option:
+key-value data storage using the <a class="reference external" href="http://www.postgresql.org/docs/9.2/static/hstore.html">hstore</a> module (that defines the hstore datatype and functions)
+and XML data storage using the native XML datatype and functions
+(that use the <a class="reference external" href="http://www.xmlsoft.org/">xmllib2</a> parser and toolkit).</p>
+<p class="rubric">Note on portability and support</p>
+<ol class="arabic">
+<li><p>PostgreSQL is included by default in the main Linux distributions
+(Debian/Ubuntu and RedHat/CentOS/Fedora/Scientific), although
+the version maintained in each Linux distribution’s official repository
+may not be the last one.
+However, all PostgreSQL releases are available
+in the PostgreSQL Apt Repository (for the Debian family)
+and the PostgreSQL Yum Repository (for the Red Hat family).</p>
+<p>PostgreSQL is also available for Microsoft Windows and Mac OS X.</p>
+</li>
+<li><p>As with the selected FOSS operating systems,
+both PostgreSQL and PostGIS are free of charge,
+but commercial versions and technical support are available for PostgreSQL
+(<em>inter alia</em>, by one of main developers, <a class="reference external" href="http://www.enterprisedb.com/">EnterpriseDB</a>)
+and for PostGIS
+(<em>inter alia</em>, by one of the main developers, <a class="reference external" href="http://www.refractions.net/">Refractions Research</a>).</p></li>
+</ol>
+</div>
+<div class="section" id="real-world-use">
+<h2>Real-world use<a class="headerlink" href="#real-world-use" title="Permalink to this headline">¶</a></h2>
+<p>The following table lists a sample of projects running on PostgreSQL + PostGIS solutions.</p>
+<p>The selection is (completely) biased toward spatial data systems:
+it focuses on national mapping and cadastral (land surveying) agencies,
+spatial data infrastructures, and security and emergency response systems.</p>
+<p>However, spatial data types are more complex than text, numeric or date data types
+and spatial databases generally support a heavier workload than non-spatial databases.
+So, even if a given system will not have a major spatial component,
+these examples can be seen as ‘stress testing’ results for the proposed solution.</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 90%" />
+<col style="width: 10%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Organization, system or project</strong></p></td>
+<td><p><strong>References</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://www.eurogeographics.org/">Eurogeographics</a> (MCA)</p></td>
+<td><p><a class="footnote-reference brackets" href="#eurogeo" id="id11">2</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://www.dta.cnr.it/">Gestione Integrata e Interoperativa dei Dati Ambientali</a> (SDI), Italy</p></td>
+<td><p><a class="footnote-reference brackets" href="#it-giita1" id="id12">3</a> <a class="footnote-reference brackets" href="#it-giita2" id="id13">4</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://www.gst.dk/English/">Geodatastyrelsen</a> (MCA), Denmark</p></td>
+<td><p><a class="footnote-reference brackets" href="#dk-nma" id="id14">5</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://www.gdacs.org/">Global Disaster Alert and Coordination System</a> (SDI), UN &amp; EC-JRC</p></td>
+<td><p><a class="footnote-reference brackets" href="#jrc-disaster" id="id15">6</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Global Monitoring for Environment and Security, EC-JRC</p></td>
+<td><p><a class="footnote-reference brackets" href="#jrc-gmes" id="id16">7</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://www.ign.fr">Institut national de l’information géographique et forestière</a> (MCA), France</p></td>
+<td><p><a class="footnote-reference brackets" href="#fr-nma" id="id17">8</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://www.ign.es/ign/main/index.do">Instituto Geográfico Nacional</a> (MCA), Spain</p></td>
+<td><p><a class="footnote-reference brackets" href="#es-nma" id="id18">9</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://vermessung.bayern.de/">Landesamt für Vermessung und Geoinformation Bayern</a> (MCA), Germany</p></td>
+<td><p><a class="footnote-reference brackets" href="#de-fma" id="id19">10</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://www.maanmittauslaitos.fi/en/file_download_service">Maanmittauslaitos</a> (MCA), Finland</p></td>
+<td><p><a class="footnote-reference brackets" href="#fi-nma" id="id20">11</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://www.ordnancesurvey.co.uk/oswebsite/products/os-mastermap/index.html">Ordnance Survey</a> (MCA), UK</p></td>
+<td><p><a class="footnote-reference brackets" href="#uk-nma" id="id21">12</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://www.paikkatietoikkuna.fi/web/fi">Paikkatietoikkuna</a> (SDI), Finland</p></td>
+<td><p><a class="footnote-reference brackets" href="#fi-sdi" id="id22">13</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://www.police.uk/">Police Crime Map</a>, UK</p></td>
+<td><p><a class="footnote-reference brackets" href="#uk-police" id="id23">14</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://www.pdok.nl">Publieke Dienstverlening op de Kaart</a> (SDI), Netherlands</p></td>
+<td><p><a class="footnote-reference brackets" href="#nl-sdi" id="id24">15</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://www.statkart.no/en/">Statens Kartverk</a> (MCA), Norway</p></td>
+<td><p><a class="footnote-reference brackets" href="#no-nma1" id="id25">16</a> <a class="footnote-reference brackets" href="#no-nma2" id="id26">17</a></p></td>
+</tr>
+</tbody>
+</table>
+<p>MCA: Mapping/Cadastral Agency</p>
+<p>SDI: Spatial Data Infrastructure</p>
+<hr class="docutils" />
+<p class="rubric">Footnotes</p>
+<dl class="footnote brackets">
+<dt class="label" id="gnu-r"><span class="brackets"><a class="fn-backref" href="#id10">1</a></span></dt>
+<dd><p>A discussion/comparison of statistical software packages is beyond the scope of this document. In this context, it is also deemed unnecessary as the GNU R Project is the <em>de facto</em> standard in statistical computing.</p>
+</dd>
+<dt class="label" id="eurogeo"><span class="brackets"><a class="fn-backref" href="#id11">2</a></span></dt>
+<dd><p>URL: <a class="reference external" href="http://inspire.jrc.ec.europa.eu/events/conferences/inspire_2011/presentations/workshops/269/ESDIN_D5_2_EuroGeographics_Technical_Architecture.pdf">http://inspire.jrc.ec.europa.eu/events/conferences/inspire_2011/presentations/workshops/269/ESDIN_D5_2_EuroGeographics_Technical_Architecture.pdf</a></p>
+</dd>
+<dt class="label" id="it-giita1"><span class="brackets"><a class="fn-backref" href="#id12">3</a></span></dt>
+<dd><p>URL: <a class="reference external" href="http://www.minambiente.it/export/sites/default/archivio/allegati/INSPIRE_state_of_play_2011_ITALY.pdf">http://www.minambiente.it/export/sites/default/archivio/allegati/INSPIRE_state_of_play_2011_ITALY.pdf</a></p>
+</dd>
+<dt class="label" id="it-giita2"><span class="brackets"><a class="fn-backref" href="#id13">4</a></span></dt>
+<dd><p>URL: <a class="reference external" href="http://www.gdmc.nl/zlatanova/Gi4DM2010/gi4dm/Pdf/p116.pdf">http://www.gdmc.nl/zlatanova/Gi4DM2010/gi4dm/Pdf/p116.pdf</a></p>
+</dd>
+<dt class="label" id="dk-nma"><span class="brackets"><a class="fn-backref" href="#id14">5</a></span></dt>
+<dd><p>URL: <a class="reference external" href="http://www.eurosdr.net/workshops/PostGIS/7_Rasmussen_de_Martino_Nielsen_KMS_Denmark.pdf">http://www.eurosdr.net/workshops/PostGIS/7_Rasmussen_de_Martino_Nielsen_KMS_Denmark.pdf</a></p>
+</dd>
+<dt class="label" id="jrc-disaster"><span class="brackets"><a class="fn-backref" href="#id15">6</a></span></dt>
+<dd><p>URL: <a class="reference external" href="http://meetingorganizer.copernicus.org/EGU2012/EGU2012-7404.pdf">http://meetingorganizer.copernicus.org/EGU2012/EGU2012-7404.pdf</a></p>
+</dd>
+<dt class="label" id="jrc-gmes"><span class="brackets"><a class="fn-backref" href="#id16">7</a></span></dt>
+<dd><p>URL: <a class="reference external" href="http://rslab.disi.unitn.it/papers/R72-JSTAR-Brunner.pdf">http://rslab.disi.unitn.it/papers/R72-JSTAR-Brunner.pdf</a></p>
+</dd>
+<dt class="label" id="fr-nma"><span class="brackets"><a class="fn-backref" href="#id17">8</a></span></dt>
+<dd><p>URL: <a class="reference external" href="http://postgis.net/2012/10/18/ign">http://postgis.net/2012/10/18/ign</a></p>
+</dd>
+<dt class="label" id="es-nma"><span class="brackets"><a class="fn-backref" href="#id18">9</a></span></dt>
+<dd><p>URL: <a class="reference external" href="http://inspire.jrc.ec.europa.eu/events/conferences/inspire_2012/presentations/143.pdf">http://inspire.jrc.ec.europa.eu/events/conferences/inspire_2012/presentations/143.pdf</a></p>
+</dd>
+<dt class="label" id="de-fma"><span class="brackets"><a class="fn-backref" href="#id19">10</a></span></dt>
+<dd><p>URL: <a class="reference external" href="http://www.fig.net/pub/fao/floss_cadastre.pdf">http://www.fig.net/pub/fao/floss_cadastre.pdf</a>.</p>
+</dd>
+<dt class="label" id="fi-nma"><span class="brackets"><a class="fn-backref" href="#id20">11</a></span></dt>
+<dd><p>URL: <a class="reference external" href="http://www.paikkatietoikkuna.fi/web/en/open-spatial-data">http://www.paikkatietoikkuna.fi/web/en/open-spatial-data</a></p>
+</dd>
+<dt class="label" id="uk-nma"><span class="brackets"><a class="fn-backref" href="#id21">12</a></span></dt>
+<dd><p>URL: <a class="reference external" href="http://www.eurosdr.net/workshops/PostGIS/8_Bennett_Ordnance_Survey_UK.pdf">http://www.eurosdr.net/workshops/PostGIS/8_Bennett_Ordnance_Survey_UK.pdf</a></p>
+</dd>
+<dt class="label" id="fi-sdi"><span class="brackets"><a class="fn-backref" href="#id22">13</a></span></dt>
+<dd><p>URL: <a class="reference external" href="http://www.oskari.org/trac/wiki/DocumentationBackend">http://www.oskari.org/trac/wiki/DocumentationBackend</a></p>
+</dd>
+<dt class="label" id="uk-police"><span class="brackets"><a class="fn-backref" href="#id23">14</a></span></dt>
+<dd><p>URL: <a class="reference external" href="https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/78964/Open_Source_Options_v2_0.pdf">https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/78964/Open_Source_Options_v2_0.pdf</a></p>
+</dd>
+<dt class="label" id="nl-sdi"><span class="brackets"><a class="fn-backref" href="#id24">15</a></span></dt>
+<dd><p>URL: <a class="reference external" href="http://www.tudelft.nl//fileadmin/Faculteit/LR/Documenten/Onderwijszaken/lecture_postgis.pdf">http://www.tudelft.nl//fileadmin/Faculteit/LR/Documenten/Onderwijszaken/lecture_postgis.pdf</a>.</p>
+</dd>
+<dt class="label" id="no-nma1"><span class="brackets"><a class="fn-backref" href="#id25">16</a></span></dt>
+<dd><p>URL: <a class="reference external" href="http://joinup.ec.europa.eu/sites/default/files/studies/IDABC-case-study-Norwegian%20Mapping%20Authority-final-version.pdf">http://joinup.ec.europa.eu/sites/default/files/studies/IDABC-case-study-Norwegian%20Mapping%20Authority-final-version.pdf</a></p>
+</dd>
+<dt class="label" id="no-nma2"><span class="brackets"><a class="fn-backref" href="#id26">17</a></span></dt>
+<dd><p>URL: <a class="reference external" href="http://www.eurosdr.net/workshops/PostGIS/6_Pedersen_Statkart_Norway.pdf">http://www.eurosdr.net/workshops/PostGIS/6_Pedersen_Statkart_Norway.pdf</a></p>
+</dd>
+<dt class="label" id="no-sdi"><span class="brackets">18</span></dt>
+<dd><p>URL: <a class="reference external" href="http://norgedigitalt.no/norge_digitalt/engelsk/about_norway_digital/">http://norgedigitalt.no/norge_digitalt/engelsk/about_norway_digital/</a></p>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<dl class="citation">
+<dt class="label" id="conw11"><span class="brackets"><a class="fn-backref" href="#id9">Conw11</a></span></dt>
+<dd><p>Conway (2011) - PL/R - The Fast Path to Advanced Analytics.  URL: <a class="reference external" href="http://bunsen.credativ.com/~jco/2011/plr-PostgresOpen-2011.pdf">http://bunsen.credativ.com/~jco/2011/plr-PostgresOpen-2011.pdf</a> <a class="reference external" href="http://bunsen.credativ.com/~jco/2011/plr-PGEast-2011.pdf">http://bunsen.credativ.com/~jco/2011/plr-PGEast-2011.pdf</a></p>
+</dd>
+<dt class="label" id="inspire"><span class="brackets"><a class="fn-backref" href="#id8">Inspire</a></span></dt>
+<dd><p>Directive 2007/2/EC of the European Parliament and of the Council of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE) URL: <a class="reference external" href="http://inspire.jrc.ec.europa.eu">http://inspire.jrc.ec.europa.eu</a></p>
+</dd>
+<dt class="label" id="iso-iec-13249-3-2011"><span class="brackets">ISO.IEC_13249-3:2011</span><span class="fn-backref">(<a href="#id5">1</a>,<a href="#id6">2</a>)</span></dt>
+<dd><p>“Information technology – Database languages – SQL multimedia and application packages – Part 3: Spatial” URL: <a class="reference external" href="http://webstore.iec.ch/preview/info_isoiec13249-3%7Bed4.0%7Den.pdf">http://webstore.iec.ch/preview/info_isoiec13249-3%7Bed4.0%7Den.pdf</a></p>
+</dd>
+<dt class="label" id="iso-iec-9075-2008"><span class="brackets"><a class="fn-backref" href="#id1">ISO.IEC_9075:2008</a></span></dt>
+<dd><p>“Information technology – Database languages – SQL”</p>
+</dd>
+<dt class="label" id="iso-19125-1-2004"><span class="brackets"><a class="fn-backref" href="#id3">ISO_19125-1:2004</a></span></dt>
+<dd><p>“Geographic information – Simple feature access – Part 1: Common architecture.” URL: <a class="reference external" href="http://portal.opengeospatial.org/files/?artifact_id=25355">http://portal.opengeospatial.org/files/?artifact_id=25355</a></p>
+</dd>
+<dt class="label" id="iso-19125-2-2004"><span class="brackets"><a class="fn-backref" href="#id7">ISO_19125-2:2004</a></span></dt>
+<dd><p>“Geographic information – Simple feature access – Part 2: SQL option” URL: <a class="reference external" href="http://portal.opengeospatial.org/files/?artifact_id=25354">http://portal.opengeospatial.org/files/?artifact_id=25354</a></p>
+</dd>
+<dt class="label" id="iso-19136-2007"><span class="brackets"><a class="fn-backref" href="#id4">ISO_19136:2007</a></span></dt>
+<dd><p>“Geographic information – Geography Markup Language (GML)” URL: <a class="reference external" href="http://www.opengeospatial.org/standards/gml">http://www.opengeospatial.org/standards/gml</a></p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Z_RNIDOpenStandards.html" class="btn btn-neutral float-right" title="Open Standards in the Portuguese National Regulation on Digital Interoperability" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="OperatingSystems.html" class="btn btn-neutral float-left" title="Operating Systems" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, the Nile team | CC BY-SA 3.0 | Exceptions apply! See the sources and metadata for each doc.
+      <span class="lastupdated">
+        Last updated on May 19, 2020.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

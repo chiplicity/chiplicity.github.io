@@ -1,0 +1,418 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Operating Systems &mdash; Wiser 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Database Management System" href="DatabaseManagementSystem.html" />
+    <link rel="prev" title="Web Server and Servlet COntainer" href="WebServer.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Wiser
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Using_Forum/index.html">Using Forum or Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Sphinx/index.html">Using the technical documentation generator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_Git/index.html">Using the version control system</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Commercial-Off-the-Shelf Software Selection Process</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html">Software selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#factors">Factors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#total-cost-of-ownership">Total Cost of Ownership</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SoftwareSelection.html#additional-references">Additional References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ProjectManagementInfrastructure.html">Project Management Infrastructure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="VersionControlSystem.html">Version Control System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="DocumentationGenerator.html">Documentation Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IssueTrackingSystem.html">Issue Tracking System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="QuestionnaireManagement.html">Questionnaire Management System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebBrowsers_DynamicCharts.html">Dynamic charts on web browser usage statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebMapping_ToolList.html">OSGEO list of webmapping tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html">Web Server and Servlet COntainer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html#rationale">Rationale</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebServer.html#analysis-of-alternatives">Analysis of alternatives</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Operating Systems</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rationale">Rationale</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#analysis-of-alternatives">Analysis of alternatives</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="DatabaseManagementSystem.html">Database Management System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Z_RNIDOpenStandards.html">Open Standards in the Portuguese National Regulation on Digital Interoperability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GeodataServer.html">Geospatial Data Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebMapping.html">Web Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebBrowsers.html">Web Browser</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Notebook/index.html">Notebook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Using_TaskMan/index.html">Using the issue tracking system</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Wiser</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Commercial-Off-the-Shelf Software Selection Process</a> &raquo;</li>
+        
+      <li>Operating Systems</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/On_Software/OperatingSystems.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="operating-systems">
+<span id="sw-operating-systems-ref"></span><h1>Operating Systems<a class="headerlink" href="#operating-systems" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>Commercial Off-the-shelf (COTS) components <strong>must</strong> be available for:</p>
+<ul class="simple">
+<li><p>Microsoft Windows Server and Windows 7</p></li>
+<li><p><a class="reference external" href="http://www.ubuntu.com/">Ubuntu</a> 12.04.02 LTS</p></li>
+<li><p><a class="reference external" href="http://www.centos.org/">CentOS</a> 6</p></li>
+</ul>
+<p>Software components to be developed <strong>must</strong> be supported/tested/accepted in:</p>
+<ul class="simple">
+<li><p>Microsoft Windows Server and Windows 7</p></li>
+<li><p>Ubuntu 12.04.02 LTS <strong>or</strong> CentOS 6</p></li>
+</ul>
+</div>
+<div class="section" id="rationale">
+<h2>Rationale<a class="headerlink" href="#rationale" title="Permalink to this headline">¶</a></h2>
+<p class="rubric">Portability</p>
+<p>Cross-platform compatibility is a non-functional project requirement:
+the objective is to facilitate the sharing, reuse and future improvement
+of the software solution to be developed
+(and of existing software components it may incorporate).</p>
+<p>For the end users, the majority of the interfaces
+will probably be web-based user interfaces (WUI):
+thus web browser compatibility will be a more stringent requirement
+than operating system compatibility.</p>
+<p>Nevertheless, when software is available for different platforms,
+potential users may install and test the server-side components
+in their local machines, thus promoting reuse and adoption.</p>
+</div>
+<div class="section" id="analysis-of-alternatives">
+<h2>Analysis of alternatives<a class="headerlink" href="#analysis-of-alternatives" title="Permalink to this headline">¶</a></h2>
+<p>The selected software components must have cross-platform compatibility and
+must be available for and supported on the most common operating systems.
+Thus, it must be determined which are the <em>most common operating systems</em>.</p>
+<p>Except for proprietary operating systems
+(e.g. Microsoft Windows and Mac OS X)
+no reliable market share statistics exist.
+Most FOSS (Free and Open Source Software) operating systems
+can be freely downloaded and installed
+and do not require any kind of user registration:
+thus, only indirect estimates of their use are available.</p>
+<ul>
+<li><p>For the server segment,
+the <a class="reference external" href="http://w3techs.com/technologies/overview/operating_system/all">W3Techs report on web servers operating systems</a>
+provides a rough estimate:</p>
+<ul class="simple">
+<li><p>65% are UNIX systems, 50% of which are Linux distributions</p></li>
+<li><p>35% are Microsoft Windows systems</p></li>
+<li><p>less than 0.1% are Mac OS systems.</p></li>
+</ul>
+<p>Among the 3  major <a class="reference external" href="http://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg">Linux families</a>, the relative proportion is:</p>
+<ul class="simple">
+<li><p>57% for the ‘Debian family’, including
+<a class="reference external" href="http://www.debian.org/">Debian</a> (approximately 58% of the Debian-based distributions)
+and <a class="reference external" href="http://www.ubuntu.com/">Ubuntu</a> (42%)</p></li>
+<li><p>39% for the ‘Red Hat family’, including
+<a class="reference external" href="http://www.centos.org/">CentOS</a> (70%), <a class="reference external" href="http://www.redhat.com/">Red Hat</a> (23%) and <a class="reference external" href="http://fedoraproject.org/">Fedora</a> (7%);</p></li>
+<li><p>1.8% for the ‘Slackware family’, that includes
+<a class="reference external" href="https://www.suse.com/">SUSE</a> (99.9%).</p></li>
+</ul>
+<p>These values do not include servers
+that are not exposed to the Internet
+(e.g. database servers in corporate intranets).</p>
+</li>
+<li><p>For the desktop/mobile user segment,
+the <a class="reference external" href="http://stats.wikimedia.org/archive/squid_reports/2012-12/SquidReportOperatingSystems.htm">Wikipedia request statistics</a>
+provides another rough estimate:</p>
+<ul class="simple">
+<li><p>68% are Microsoft Windows systems</p></li>
+<li><p>20% are Apple Mac OS or iOS systems</p></li>
+<li><p>7% are Linux systems (including Android)</p></li>
+</ul>
+<p>If only non-mobile Linux systems are considered,
+the available sample again reveals the 3 major Linux families:</p>
+<ul class="simple">
+<li><p>96% for the ‘Debian family’, represented by
+Ubuntu (98% of the Debian-based distributions),
+Mint and Debian (both with less than 1%);</p></li>
+<li><p>3% for the ‘Red Hat family’, divided among
+Fedora (59%), Mandriva (22%), CentOS (10%) and Red Hat (9%);</p></li>
+<li><p>less than 2% for the ‘Slackware family’, represented by
+SUSE (99.9%) and OpenSUSE (0.1%).</p></li>
+</ul>
+<p>These values reflect a specific type of use
+(Wikipedia queries) by (mostly) domestic users.
+However, the usage ranking of operating systems is similar
+to that obtained in other indirect sources like <a class="reference external" href="http://www.google.com/trends/explore#cat=0-5&amp;q=Ubuntu%20Linux%2C%20Mint%20Linux%2C%20Fedora%20Linux%2C%20CentOS%20Linux%2C%20SUSE%20Linux&amp;date=today%2012-m&amp;cmpt=q">Google Trends on operating systems</a>
+or the <a class="reference external" href="http://www.statowl.com/operating_system_market_share.php">StatOWL Operating System Market Share</a> report.
+Based on the StatOWL’s data,
+the relative proportion of the 7 most frequent Linux distributions is:</p>
+<ul class="simple">
+<li><p>97% for the ‘Debian family’, including
+Ubuntu (98% of the Debian-based distributions)
+Mint (1%) and Debian (&lt;1%);</p></li>
+<li><p>2% for the ‘Red Hat family’, including
+Fedora (40%), CentOS (40%) and Red Hat (20%);</p></li>
+<li><p>1% for the ‘Slackware family’,
+represented only by SUSE.</p></li>
+</ul>
+</li>
+</ul>
+<p>The global patterns that may be inferred from these data sources are:</p>
+<ul class="simple">
+<li><p>The operating systems’ usage share is completely different
+on the server segment and the user segment.</p></li>
+<li><p>On the server segment, Microsoft Windows and Linux distributions
+such as Debian, Ubuntu and CentOS are common.</p></li>
+<li><p>On the user segment, proprietary systems (Microsoft Windows, Mac OS X)
+are dominant. The (largely) dominant Linux distribution is Ubuntu.</p></li>
+</ul>
+<p>These patterns support the following conclusions:</p>
+<ul class="simple">
+<li><p>Server-side software components <strong>should</strong> be available for:</p>
+<ul>
+<li><p>Microsoft Windows Server 2008 R2</p></li>
+<li><p>The ‘Debian family’ and ‘Red Hat family’ Linux distributions;</p></li>
+<li><p>Mac OS X support is not a requirement,
+but may be a nice-to-have feature for developers.</p></li>
+</ul>
+</li>
+<li><p>Client-side software components <strong>should</strong> be available for:</p>
+<ul>
+<li><p>Microsoft Windows (at least for Windows 7);</p></li>
+<li><p>The ‘Debian family’ distributions,
+at least for Ubuntu 12.04.2 LTS
+(a Debian-based distribution that
+has Long Term Support releases with longer support life-cycles);</p></li>
+<li><p>The ‘Red Hat family’ distributions,
+at least for CentOS 6
+(a free Red Hat Enterprise Linux clone
+that has a longer life-cycle than Fedora);</p></li>
+<li><p>Mac OS X (although this OS is uncommon
+in the European public administration).</p></li>
+</ul>
+</li>
+</ul>
+<p>These conclusions can further be synthesised in the following <strong>must</strong> requirements:</p>
+<ul class="simple">
+<li><p>Software components <strong>must</strong> be available for:</p>
+<ul>
+<li><p>Microsoft Windows Server 2008 R2 and Windows 7</p></li>
+<li><p>Ubuntu 12.04.02 LTS</p></li>
+<li><p>CentOS 6</p></li>
+</ul>
+</li>
+<li><p>Software components to be developed <strong>must</strong> be tested/accepted in:</p>
+<ul>
+<li><p>Microsoft Windows Server 2012 and Windows 7</p></li>
+<li><p>Ubuntu 12.04.02 LTS <strong>or</strong> CentOS 6</p></li>
+</ul>
+</li>
+</ul>
+<p>Regarding the two selected Linux operating systems:</p>
+<ul class="simple">
+<li><p>Software distribution in Ubuntu is based on DEB packages
+(as in all of the ‘Debian family’);
+in CentOS, it is based on RPM packages
+(as in all of the ‘Red Hat family’).
+Software packaging requirements are distinct
+for the two types (DEB and RPM):
+no packaging requirements will be defined for the project,
+other then the common .tar.gz (compressed tar archives) file type
+for source code distribution (when applicable/required).</p></li>
+<li><p>Both operating systems are gratis,
+but commercial technical support is available for Ubuntu
+(e.g. by its main developer, <a class="reference external" href="http://www.canonical.com/">Canonical</a>) and
+CentOS is basically a free clone of the commercial Red Hat distribution
+(so any organisation requiring commercial support
+can acquire and use the <a class="reference external" href="http://www.redhat.com/">Red Hat</a> distribution).</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="DatabaseManagementSystem.html" class="btn btn-neutral float-right" title="Database Management System" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="WebServer.html" class="btn btn-neutral float-left" title="Web Server and Servlet COntainer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, the Nile team | CC BY-SA 3.0 | Exceptions apply! See the sources and metadata for each doc.
+      <span class="lastupdated">
+        Last updated on May 19, 2020.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
