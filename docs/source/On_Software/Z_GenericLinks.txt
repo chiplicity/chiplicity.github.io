@@ -217,7 +217,7 @@
 
 .. bibliographic reference managers et al...
 
-.. _JabRef: http://jabref.sourceforge.net/
+.. _JabRef: http://www.jabref.org/
 .. _bibtex: http://www.bibtex.org/
 
 .. wiki
