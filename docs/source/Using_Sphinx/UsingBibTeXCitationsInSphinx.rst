@@ -93,8 +93,6 @@ command.
 The references are stored in a separate plain text BibTeX format file.
 Currently, only the ``unsrt`` and ``plain`` BibTeX styles are supported.
 
-Please note that the current sphinxcontrib-bibtex_ is a **beta** version.
-
 Installing the extension
 ========================
 
