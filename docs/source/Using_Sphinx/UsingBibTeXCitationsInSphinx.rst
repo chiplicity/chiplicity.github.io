@@ -145,10 +145,10 @@ including an entry for:
 .. topic:: Using the Sphinx Natbib Extension
 
    A more flexible alternative is to use
-   http://wnielson.bitbucket.org/projects/sphinx-natbib/
+   https://github.com/pmeier82-zz/sphinx-natbib
    
    This documentation can be completed 
-   iff required in this specific project.
+   if required in this specific project.
 
 .. topic:: Using the Sphinx Thesis Resource
 
